@@ -1,4 +1,4 @@
-My Awesome Book
+tech notes of wynemo
 =======
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+my notes about tech and programming.
