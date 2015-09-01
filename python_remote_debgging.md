@@ -22,5 +22,5 @@ the other way is using pycharm IDE
 * 
 File - Settings - Project Interpreters - Add Remote
 
-*
-Run - 
+* 
+Run - Add Run Configuration - python and write these: script, script parameters, python interpreter, working directory(remote), path mappings.
