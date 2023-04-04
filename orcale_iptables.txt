@@ -1,0 +1,12 @@
+cat /etc/iptables/rules.v4
+# CLOUD_IMG: This file was created/modified by the Cloud Image build process
+# iptables configuration for Oracle Cloud Infrastructure
+
+# See the Oracle-Provided Images section in the Oracle Cloud Infrastructure
+# documentation for security impact of modifying or removing these rule
+
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+COMMIT
