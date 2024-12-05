@@ -1,0 +1,93 @@
+profile:
+  store-selected: true
+
+geodata-mode: false
+geox-url:
+  geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
+  asn: "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
+geo-auto-update: true
+geo-update-interval: 24
+dns:
+  enable: true
+  prefer-h3: true
+  ipv6: true
+  use-system-hosts: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fallback:
+    - https://doh.apad.pro/dns-query
+    - https://dns.cooluc.com/dns-query
+  default-nameserver:
+    - tls://223.5.5.5
+    - tls://1.12.12.12
+  nameserver:
+    - tls://223.5.5.5
+    - tls://1.12.12.12
+
+proxy-groups:
+  - { name: 🌐 全部节点, type: select, include-all: true }
+  - {
+      name: 🚀 节点选择,
+      type: select,
+      proxies: [🌐 全部节点, DIRECT, 🇺🇲 美国节点, ♻️ 美国自动, ♻️ 香港自动],
+    }
+  - {
+      name: 🤖 claude,
+      type: select,
+      proxies: [🇺🇲 美国节点, ♻️ 美国自动, 🌐 全部节点],
+    }
+  - { name: 🍎 Apple, type: select, proxies: [DIRECT, 🚀 节点选择] }
+  - {
+      name: 🇺🇲 美国节点,
+      type: select,
+      include-all: true,
+      filter: "(?i)美|us|unitedstates|united states",
+    }
+  - {
+      name: ♻️ 香港自动,
+      type: url-test,
+      include-all: true,
+      tolerance: 20,
+      interval: 300,
+      filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$",
+    }
+  - {
+      name: ♻️ 美国自动,
+      type: url-test,
+      include-all: true,
+      tolerance: 20,
+      interval: 300,
+      filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$",
+    }
+
+rules:
+  #- 'IP-CIDR,0.0.0.0/8,DIRECT,no-resolve'
+  #- 'IP-CIDR,10.0.0.0/8,DIRECT,no-resolve'
+  - DOMAIN-SUFFIX,googleadservices.com,DIRECT
+  - DOMAIN-SUFFIX,imgse.com,DIRECT
+  - DOMAIN-SUFFIX,s21.ax1x.com,DIRECT
+  - DOMAIN-KEYWORD,anthropic,🤖 claude
+  - DOMAIN-KEYWORD,Claude,🤖 claude
+  - RULE-SET,apple_domain,🍎 Apple
+  - RULE-SET,private_domain,DIRECT
+  - GEOSITE,CN,DIRECT
+  - GEOIP,CN,DIRECT
+  - GEOIP,private,DIRECT
+  - MATCH,🚀 节点选择
+
+rule-anchor:
+  domain: &domain { type: http, interval: 86400, behavior: domain, format: mrs }
+
+rule-providers:
+  private_domain:
+    {
+      !!merge <<: *domain,
+      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs",
+    }
+  apple_domain:
+    {
+      !!merge <<: *domain,
+      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-cn.mrs",
+    }
