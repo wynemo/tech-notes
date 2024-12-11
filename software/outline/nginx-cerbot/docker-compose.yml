@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  nginx:
+    image: jonasal/nginx-certbot:latest
+    restart: unless-stopped
+    env_file:
+      - ./nginx-certbot.env
+    network_mode: "host"
+    volumes:
+      - nginx_secrets:/etc/letsencrypt
+      - ./user_conf.d:/etc/nginx/user_conf.d
+      - ./html:/usr/share/nginx/html
+
+volumes:
+  nginx_secrets:

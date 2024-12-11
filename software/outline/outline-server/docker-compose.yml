@@ -1,0 +1,63 @@
+version: "3.2"
+services:
+  outline:
+    image: docker.getoutline.com/outlinewiki/outline:latest
+    env_file: ./docker.env
+    ports:
+      - "127.0.0.1:3002:3000"
+    volumes:
+      - storage-data:/var/lib/outline/data
+    depends_on:
+      - postgres
+      - redis
+      - nginx
+
+  redis:
+    image: redis
+    env_file: ./docker.env
+    expose:
+      - 6379
+    volumes:
+      - ./redis.conf:/redis.conf
+    command: ["redis-server", "/redis.conf"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 30s
+      retries: 3
+
+  postgres:
+    image: postgres
+    env_file: ./docker.env
+    expose:
+      - 5432
+    volumes:
+      - database-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+    environment:
+      POSTGRES_USER: "user"
+      POSTGRES_PASSWORD: "pass"
+      POSTGRES_DB: "outline"
+
+  oidc-server:
+    image: vicalloy/oidc-server
+    volumes:
+      - ./data/db:/app/db:z
+      - ./data/static_root:/app/static_root:z
+    restart: always
+  nginx:
+    image: nginx
+    ports:
+      - 127.0.0.1:8888:8888
+    volumes:
+      - ./nginx/:/etc/nginx/conf.d/:ro
+      - ./data/static_root:/static_root:ro
+    restart: always
+
+volumes:
+  storage-data:
+  database-data:
