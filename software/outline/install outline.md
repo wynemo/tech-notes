@@ -132,3 +132,5 @@ OIDC_AUTH_URI=https://outline.foo.info:2443/oauth/authorize/
 ```
 
 URL 要改
+
+最后换域名 outline.foo.info
