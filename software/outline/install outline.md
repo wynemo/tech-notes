@@ -1,136 +1,100 @@
-安装 outline
+# 安装outline
 
-outline用起来了 配置比较麻烦
+### 前言
 
-1. 跑 oidc server 单独跑docker compose
+我使用的笔记软件主要是3个 苹果自带的笔记，obsidian，outline
 
-<https://github.com/vicalloy/oidc-server>
+苹果自带的notes主要多端同步，在外记录一些灵感、待办事项到手机上
 
-监听在 127.0.0.1:8888 上
+obsidian写工作日报以及一些技术笔记（整理了苹果自带的notes中的笔记），我没使用付费服务，也不想使用icloud来同步，不靠谱！丢东西警告，而且用icloud就不好同步到windows；我用的syncthing来同步笔记目录到各个系统（ios 据说也有syncthing了 后面试试 但估计obsidian与它不好互通 不同应用只能打开自己的icloud 目录）
 
-```bash
-ubuntu@oracle:~/oidc-server/docker-demo$ cat docker-compose.yml
-version: "3"
-services:
-  oidc-server:
-    image: vicalloy/oidc-server
-    volumes:
-      - ./data/db:/app/db:z
-      - ./data/static_root:/app/static_root:z
-    restart: always
-  nginx:
-    image: nginx
-    ports:
-      - 127.0.0.1:8888:8888
-    volumes:
-      - ./nginx/:/etc/nginx/conf.d/:ro
-      - ./data/static_root:/static_root:ro
-    restart: always
-```
+outline 主要用来写一些文章，可以导入导出，分享给他人，相当于一个发布服务
 
-`docker-compose up -d` 先跑起来
-`docker compose exec -it oidc-server bash -c "make init"` 获得root密码
+### 组件说明
 
-http://127.0.0.1:8888/admin 访问这个 用root登录
+outline 用起来了 配置比较麻烦
 
-创建client
-Response types 全选中
+outline 它给的教程 __<https://docs.getoutline.com/s/hosting/doc/docker-7pfeLP5a8t#h-docker-compose>__
 
-Redirect URIs: 填写这两行
+但是它给的 https-portal 和 我的 nginx-certbot 冲突了(都需要用80端口去申请证书)，我就不用 https-portal 了
 
-https://outline.foo.info:2443/auth/oidc.callback
+我的 nginx-certbot 还要代理其他服务，所以和oidc-server分别跑两个docker compose
+
+
+1. oidc-server 跑在127.0.0.1:8888
+2. outline跑在 127.0.0.1:3002
+3. nginx-certbot https 监听在2443 用域名 （可选）
+4. nginx-certbot 反向代理 oidc-server与outline （可选）
+
+### 安装步骤
+
+
+1. 启动outline 以及 oidc-server
+
+   docker.env 配置要注意 用这个模板文件 __<https://github.com/outline/outline/blob/main/.env.sample>__
+
+   ```bash
+   NODE_ENV=production
+   PGSSLMODE=disable
+   ```
+
+   docker.env 里 `to change` 的地方都需要改 （两处密钥）
+
+   进入outline-server目录 运行 `docker compose up -d`
+
+   outline 监听在 127.0.0.1:3002，oidc-server 监听在127.0.0.1:8888
+
+2. 配置本地oidc
+
+outline没有本地用户(github 上有一个issue 用户呼声很大 但就没有)，如果你想用google slack之类的来做认证也可以 这里就可以忽略，配置google之类的oidc
+
+然后 `docker compose exec -it oidc-server bash -c "make init"` 获得 root 密码
+
+__<http://127.0.0.1:8888/admin>__ 访问这个 用 root 登录
+
+创建 client， Response types 全选中
+
+Redirect URIs: 填写这一行
+
+```javascript
 http://localhost:3002/auth/oidc.callback
+```
 
 client id , client secret 保存 后面用
 
 Credentials 这里填写 openid profile email
 
-创建一个普通用户 填写 first name， last name， email，以后outline用这个登录
+创建一个普通用户 填写 first name， last name， email，以后 outline 用这个登录
 
+然后会过都去配置 docker.env 的 OIDC 这样配置
 
-2. outline
-它给的教程
-<https://docs.getoutline.com/s/hosting/doc/docker-7pfeLP5a8t#h-docker-compose>
-
-但是它给的https-portal 和 我的nginx-certbot 冲突了，我就不用 https-portal 了
-
-docker.env配置要注意 用这个模板文件 https://github.com/outline/outline/blob/main/.env.sample
-
-```bash
-NODE_ENV=production
-PGSSLMODE=disable
-```
-
-
-docker-compose 这样配置
-
-
-```yaml
-version: "3.2"
-services:
-
-  outline:
-    image: docker.getoutline.com/outlinewiki/outline:latest
-    env_file: ./docker.env
-    expose:
-      - 3000
-    ports:
-      - '127.0.0.1:3002:3000'
-    volumes:
-      - storage-data:/var/lib/outline/data
-    depends_on:
-      - postgres
-      - redis
-      - nginx
-
-  redis:
-    image: redis
-    env_file: ./docker.env
-    expose:
-      - 6379
-    volumes:
-      - ./redis.conf:/redis.conf
-    command: ["redis-server", "/redis.conf"]
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 10s
-      timeout: 30s
-      retries: 3
-
-  postgres:
-    image: postgres
-    env_file: ./docker.env
-    expose:
-      - 5432
-    volumes:
-      - database-data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD", "pg_isready"]
-      interval: 30s
-      timeout: 20s
-      retries: 3
-    environment:
-      POSTGRES_USER: 'user'
-      POSTGRES_PASSWORD: 'pass'
-      POSTGRES_DB: 'outline'
-
-volumes:
-  storage-data:
-  database-data
-```
-
-最后整个服务监听在 127.0.0.1:3002
-
-docker.env  里 to change的地方都需要改
-
-docker.env 的 OIDC 这样配置
-
-```bash
+```javascript
 OIDC_CLIENT_ID=上面说的，填写
 OIDC_CLIENT_SECRET=上面说的，填写
-OIDC_AUTH_URI=https://outline.foo.info:2443/oauth/authorize/
+```
+
+到这里，已经可以通过 http://127.0.01:3002 把outline用起来
+
+
+3. 配置nginx-cerbot 提供公网服务（可选）
+
+2中说的Redirect URIs 添加一行  outline.foo.info:2443 换成你的域名 端口 (下同，不再赘述), 保存
+
+```javascript
+https://outline.foo.info:2443/auth/oidc.callback
+http://localhost:3002/auth/oidc.callback
 ```
 
 URL 要改
 
-最后换域名 outline.foo.info
+把 `URL=http://localhost:3002`
+
+改为 `URL=https://outline.foo.info:2443`
+
+然后进nginx-cerbot目录 ，修改user_conf.d 中 域名 `outline.foo.info` 端口 2443 为你的
+
+把nginx-certbot.env中邮箱换为你的
+
+最后 `docker-compose up -d`
+
+然后就可以在公网上使用了
