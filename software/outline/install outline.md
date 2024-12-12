@@ -60,18 +60,18 @@ Redirect URIs: 填写这一行
 http://localhost:3002/auth/oidc.callback
 ```
 
-client id , client secret 保存 后面用
-
-Credentials 这里填写 openid profile email
+保存 拿到 client id , client secret 下面用
 
 创建一个普通用户 填写 first name， last name， email，以后 outline 用这个登录
 
-然后会过都去配置 docker.env 的 OIDC 这样配置
+修改 docker.env 的 OIDC 的配置
 
-```javascript
-OIDC_CLIENT_ID=上面说的，填写
-OIDC_CLIENT_SECRET=上面说的，填写
+```bash
+OIDC_CLIENT_ID=上面说的clientid
+OIDC_CLIENT_SECRET=上面说的clientsecret
 ```
+
+进入outline-server 目录，用`docker compose restart` 重启下服务
 
 到这里，已经可以通过 http://127.0.01:3002 把outline用起来
 
@@ -85,13 +85,15 @@ https://outline.foo.info:2443/auth/oidc.callback
 http://localhost:3002/auth/oidc.callback
 ```
 
-URL 要改
-
 把 `URL=http://localhost:3002`
 
 改为 `URL=https://outline.foo.info:2443`
 
-然后进nginx-cerbot目录 ，修改user_conf.d 中 域名 `outline.foo.info` 端口 2443 为你的
+把 `OIDC_AUTH_URI=http://localhost:8888/oauth/authorize/`
+
+改为 `OIDC_AUTH_URI=https://outline.foo.info:2443/oauth/authorize/`
+
+然后进nginx-cerbot目录 ，修改user_conf.d 中的outline.conf 域名 `outline.foo.info` 端口 2443 为你的
 
 把nginx-certbot.env中邮箱换为你的
 
