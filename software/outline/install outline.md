@@ -1,5 +1,9 @@
 # 安装outline
 
+### 视频讲解
+
+https://youtu.be/6oW9ScOLdso
+
 ### 前言
 
 我使用的笔记软件主要是3个 苹果自带的笔记，obsidian，outline
