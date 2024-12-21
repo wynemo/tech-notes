@@ -1,4 +1,4 @@
-[视频讲解](https://youtu.be/Liu5hKso7ew)
+[youtube视频讲解](https://youtu.be/o_VFFCWX2bE)
 编辑 /etc/sysctl.conf 把  ip_forward 设置为1，打开流量转发
 ```
 cat /etc/sysctl.conf|grep ip_forward
