@@ -1,3 +1,5 @@
+[youtube视频讲解](https://www.youtube.com/watch?v=9pZ6w6lmaLs)
+
 参考 https://t.me/zhetengsha/1070
 
 文件管理 来源选 远程，输入 （这是sing-box模板文件）
