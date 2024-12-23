@@ -1,0 +1,58 @@
+1. 局域网科学上网
+在 mac mini 上打开流量转发 `sudo sysctl -w net.inet.ip.forwarding=1`
+跑一个小火箭或者 sing-box （推荐后者，性能更好，也不要钱）
+其他机器只要让mac mini做网关，实现了局域网科学上网
+
+2. wifi共享
+局域网科学上网以后，可以用系统自带的wifi共享功能，开启热点，做为无线路由器
+![[Pasted image 20241223162243.png]]
+稍微有点麻烦，因为这里“share your connection from” 选了小火箭或者sing-box的接口，热点无法启动，所以还是共享有线网络，然后敲命令： `bash proxy.sh` ，文件内容如下：
+```
+tommygreen@tommys-Mac-mini-4 nebula-darwin % cat nat.pf
+nat on utun5 from bridge100:network to any -> (utun5)
+
+tommygreen@tommys-Mac-mini-4 nebula-darwin % cat proxy.sh
+  # Enable packet forwarding
+
+  sysctl -w net.inet.ip.forwarding=1
+
+  # Unless you have any rules you want to keep, let's flush existing NAT rules
+  pfctl -F nat
+
+  # Enable packet filtering
+  pfctl -e
+
+  # Load rules from our file
+  pfctl -f nat.pf
+
+  # Confirm rules are loaded
+  pfctl -s nat
+
+  # Check to see connections
+  pfctl -s states
+```
+其中utun5 为sing-box的tun接口，bridge100为共享的无线网络接口
+
+3. 在外面用手机访问家里的网络；同时科学上网
+
+在手机上用 wiregurad 连接到家里的 macmini  
+实现科学上网 以及访问家里的局域网的服务  
+这个方案要求有公网 IP 有自己的域名  
+然后用 DDNS 把自己的公网 IP 指向自己的域名  
+推荐用 cloudflare 来做 ddns  
+  
+mac 商店里下载一个 wireguard 配置好打开服务，作为服务节点  
+路由器里把 macmini 的监听端口映射到公网  
+  
+iphone 上下载一个 shadowrocket 来连接家里  ，添加一个wiregurad节点
+android 可用手机版的 wiregurad  
+  
+用 shadowrocket 记得去掉家里局域网的网段  
+一个是旁路由  
+一个是跳过代理那里  
+添加一个代理局域网的规则  ，选wiregurad节点
+这样访问局域网就是通过 wireguard 用 mac mni 去访问
+
+这样当你使用这个wireguard节点，你可以同时访问家中服务，科学上网的流量也是通过wireguard转到家里
+
+如果只想访问家里服务，科学上网不想回家里绕一圈，可以选用其他节点来科学上网，只用上面说的的局域网规则来访问家里
