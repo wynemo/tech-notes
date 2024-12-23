@@ -1,15 +1,23 @@
-#### 局域网科学上网
+#### 局域网科学上网:
 在 mac mini 上打开流量转发 `sudo sysctl -w net.inet.ip.forwarding=1`
 
 跑一个小火箭或者 sing-box （推荐后者，性能更好，也不要钱）
 
 其他机器只要让mac mini做网关，实现了局域网科学上网
 
-#### wifi共享
+#### wifi共享:
 
-局域网科学上网以后，可以用系统自带的wifi共享功能，开启热点，做为无线路由器
+局域网科学上网以后，可以用系统自带的wifi共享功能
+
+开启热点，做为无线路由器
 ![[Pasted image 20241223162243.png]]
-稍微有点麻烦，因为这里“share your connection from” 选了小火箭或者sing-box的接口，热点无法启动，所以还是共享有线网络，然后敲命令： `sudo bash proxy.sh` ，文件内容如下：
+稍微有点麻烦
+
+因为这里“share your connection from” 选了小火箭或者sing-box的接口
+
+热点无法启动，所以还是共享有线网络
+
+然后敲命令： `sudo bash proxy.sh` ，文件内容如下：
 ```
 tommygreen@tommys-Mac-mini-4 nebula-darwin % cat nat.pf
 nat on utun5 from bridge100:network to any -> (utun5)
@@ -36,7 +44,7 @@ tommygreen@tommys-Mac-mini-4 nebula-darwin % cat proxy.sh
 ```
 其中utun5 为sing-box的tun接口，bridge100为共享的无线网络接口
 
-#### 在外面用手机访问家里的网络；同时科学上网
+#### 在外面用手机访问家里的网络 同时科学上网:
 
 在手机上用 wiregurad 连接到家里的 macmini  
 
