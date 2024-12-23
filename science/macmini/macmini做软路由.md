@@ -1,5 +1,7 @@
 #### 局域网科学上网:
+
 [youtube视频讲解](https://www.youtube.com/watch?v=Sfku8XTFeoE)
+
 在 mac mini 上打开流量转发 `sudo sysctl -w net.inet.ip.forwarding=1`
 
 跑一个小火箭或者 sing-box （推荐后者，性能更好，也不要钱）
@@ -12,13 +14,13 @@
 
 开启热点，做为无线路由器
 ![](Pasted%20image%2020241223162243.png)
-稍微有点麻烦
 
-因为这里“share your connection from” 选了小火箭或者sing-box的接口
 
-热点无法启动，所以还是共享有线网络
+但这里“share your connection from” 选了小火箭或者sing-box的接口后
 
-然后敲命令： `sudo bash proxy.sh` ，文件内容如下：
+热点无法启动，所以还是共享有线网络，因此我们用pf把wifi流量手动转发到sing-box/shadowrocket的接口
+
+敲命令： `sudo bash proxy.sh` ，文件内容如下：
 ```
 tommygreen@tommys-Mac-mini-4 nebula-darwin % cat nat.pf
 nat on utun5 from bridge100:network to any -> (utun5)
@@ -46,7 +48,9 @@ tommygreen@tommys-Mac-mini-4 nebula-darwin % cat proxy.sh
 其中utun5 为sing-box的tun接口，bridge100为共享的无线网络接口
 
 #### 在外面用手机访问家里的网络 同时科学上网:
+
 [youtube视频讲解](https://www.youtube.com/watch?v=9FHTtZc3rJw)
+
 在手机上用 wiregurad 连接到家里的 macmini  
 
 实现科学上网 以及访问家里的局域网的服务  
