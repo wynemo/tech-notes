@@ -10,7 +10,7 @@
 局域网科学上网以后，可以用系统自带的wifi共享功能
 
 开启热点，做为无线路由器
-![[Pasted image 20241223162243.png]]
+![](Pasted%20image%2020241223162243.png)
 稍微有点麻烦
 
 因为这里“share your connection from” 选了小火箭或者sing-box的接口
