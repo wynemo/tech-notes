@@ -1,3 +1,4 @@
+[youtube 讲解](https://www.youtube.com/watch?v=brnxkoetJA4)
 sing-box服务端模式 
 访问家里局域网
 不用怕运营商QoS
