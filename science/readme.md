@@ -52,9 +52,12 @@ https://p3terx.com/archives/cheap-and-costeffective-vps-recommended.html 可以�
 `wget -c https://github.com/SagerNet/sing-box/releases/download/v1.10.5/sing-box-1.10.5-linux-amd64.tar.gz`
 
 解压 `tar xf sing-box-1.10.5-linux-amd64.tar.gz`
+
 进入 sing-box 目录 `cd sing-box-1.10.5-linux-amd64`
+
 把本地编辑好的文件sing-box配置文件 传到这个服务器目录 （可以用scp winscp之类的工具传）
 `scp ~/Documents/test-sing-box.json user@your_domain.info:~/sing-box-1.10.5-linux-amd64/`
+
 最后启动sing-box
 `sudo ./sing-box run -c test-sing-box.json`
 
