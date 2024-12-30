@@ -1,0 +1,4 @@
+hysteria2://PK2WxrGN282LyEZHYBM3Lv7xvhh5J09xMh@xx.your_domain.info:1957?obfs=none#US,hysteria2
+trojan://xxxyyy@xx.your_domain.info:41268?peer=xx.your_domain.info&obfs=grpc&type=grpc&path=cancanneed&serviceName=cancanneed#US,trojantest
+vless://f131ddb4-f69e-48a0-91ec-f7fede7050ce@xx.your_domain.info:7443?security=reality&type=none&sni=icloud.cdn-apple.com&flow=xtls-rprx-vision&sid=a81fba46b2c38bc7&pbk=N3CtsWVv8UF9HrUro736t5DQiQecNt9OiYiveSVMhhE#US%2Cvless
+{"name":"US,vmess","type":"vmess","server":"xx.your_domain.info","port":4809,"cipher":"auto","uuid":"b8c7278-6d8be-4c8c-b21c-d90f339e6ad1","alterId":0,"tls":true,"network":"grpc","grpc-opts":{"grpc-service-name":"cancanneed"},"servername":"xx.your_domain.info"}

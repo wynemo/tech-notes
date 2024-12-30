@@ -1,0 +1,147 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "inbounds": [
+    {
+      "type": "vmess",
+      "tag": "vmess-tls-grpc-in",
+      "listen": "::",
+      "listen_port": 4809,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "transport": {
+        "type": "grpc",
+        "service_name": "cancanneed",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s",
+        "permit_without_stream": false
+      },
+      "users": [
+        {
+          "uuid": "b8c7278-6d8be-4c8c-b21c-d90f339e6ad1",
+          "alterId": 0
+        }
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "xx.your_domain.info",
+        "alpn": ["http/1.1"],
+        "min_version": "1.2",
+        "max_version": "1.3",
+        "acme": {
+          "domain": ["xx.your_domain.info"],
+          "data_directory": "/etc/sing-box",
+          "default_server_name": "",
+          "email": "you_email@gmail.com",
+          "provider": "letsencrypt"
+        }
+      },
+      "multiplex": {
+        "enabled": false
+      }
+    },
+    {
+      "tag": "trojan-tls-grpc-in",
+      "type": "trojan",
+      "listen": "::",
+      "listen_port": 41268,
+      "users": [
+        {
+          "name": "test",
+          "password": "xxxyyy"
+        }
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "xx.your_domain.info",
+        "alpn": ["http/1.1"],
+        "min_version": "1.2",
+        "max_version": "1.3",
+        "acme": {
+          "domain": ["xx.your_domain.info"],
+          "data_directory": "/etc/sing-box",
+          "default_server_name": "",
+          "email": "you_email@gmail.com",
+          "provider": "letsencrypt"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "cancanneed",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s",
+        "permit_without_stream": false
+      },
+      "multiplex": {
+        "enabled": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-reality-in",
+      "listen": "::",
+      "listen_port": 7443,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "users": [
+        {
+          "uuid": "f131ddb4-f69e-48a0-91ec-f7fede7050ce",
+          "flow": "xtls-rprx-vision"
+        }
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "icloud.cdn-apple.com",
+        "reality": {
+          "enabled": true,
+          "handshake": {
+            "server": "icloud.cdn-apple.com",
+            "server_port": 443
+          },
+          "private_key": "WEMo7QC_fowt_i78v3_cuiY4H7TWDmGUhawCv9qKrXc",
+          "short_id": ["a81fba46b2c38bc7"]
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-in",
+      "listen": "::",
+      "listen_port": 1957,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "up_mbps": 600,
+      "down_mbps": 600,
+      "users": [
+        {
+          "name": "anyone",
+          "password": "PK2WxrGN282LyEZHYBM3Lv7xvhh5J09xMh"
+        }
+      ],
+      "ignore_client_bandwidth": false,
+      "masquerade": "https://news.ycombinator.com/",
+      "tls": {
+        "enabled": true,
+        "server_name": "xx.your_domain.info",
+        "alpn": ["h3"],
+        "min_version": "1.2",
+        "max_version": "1.3",
+        "acme": {
+          "domain": ["xx.your_domain.info"],
+          "data_directory": "/etc/sing-box",
+          "default_server_name": "",
+          "email": "you_email@gmail.com",
+          "provider": "letsencrypt"
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ]
+}
