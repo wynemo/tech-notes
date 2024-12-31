@@ -129,14 +129,35 @@
     {
       "type": "selector",
       "tag": "proxy",
-      "outbounds": ["direct", "block", "自动选择", "local-hy2"],
-      "default": "自动选择"
+      "outbounds": ["direct", "block", "自动选择", "local-hy2", "KR,群友1"],
+      "default": "KR,群友1"
     },
     {
       "type": "selector",
       "tag": "GLOBAL",
       "outbounds": ["direct", "proxy"],
       "default": "proxy"
+    },
+    {
+      "tag": "KR,群友1",
+      "type": "vless",
+      "server": "your_domain.info",
+      "server_port": 12345,
+      "uuid": "b21d0202-03d6-4caf-bd2a-2bdd3fcc0a63",
+      "tls": {
+        "enabled": true,
+        "server_name": "your_domain.info",
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "flow": "xtls-rprx-vision"
     },
     {
       "type": "socks",
