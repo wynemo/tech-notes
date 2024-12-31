@@ -43,15 +43,15 @@
         "tag": "geosite-geolocation-!cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
-        "download_detour": "proxy"
+        "url": "https://fastly.jsdelivr.net/gh/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
+        "download_detour": "direct"
       },
       {
         "tag": "geoip-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
-        "download_detour": "proxy"
+        "url": "https://fastly.jsdelivr.net/gh/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "direct"
       }
     ],
     "rules": [
@@ -65,10 +65,7 @@
         "outbound": "block"
       },
       {
-        "port": [
-          443,
-          853
-        ],
+        "port": [443, 853],
         "network": "udp",
         "outbound": "block"
       },
@@ -102,10 +99,7 @@
     {
       "type": "tun",
       "tag": "tun-in",
-      "address": [
-        "172.18.0.1/30",
-        "fdfe:dcba:9876::1/126"
-      ],
+      "address": ["172.18.0.1/30", "fdfe:dcba:9876::1/126"],
       "mtu": 1492,
       "auto_route": true,
       "strict_route": true,
@@ -117,8 +111,7 @@
   "outbounds": [
     {
       "type": "direct",
-      "tag": "direct",
-      "routing_mark": 100
+      "tag": "direct"
     },
     {
       "type": "block",
@@ -131,28 +124,18 @@
     {
       "type": "urltest",
       "tag": "自动选择",
-      "outbounds": [
-        "local-hy2"
-      ]
+      "outbounds": ["local-hy2"]
     },
     {
       "type": "selector",
       "tag": "proxy",
-      "outbounds": [
-        "direct",
-        "block",
-        "自动选择",
-        "local-hy2"
-      ],
+      "outbounds": ["direct", "block", "自动选择", "local-hy2"],
       "default": "自动选择"
     },
     {
       "type": "selector",
       "tag": "GLOBAL",
-      "outbounds": [
-        "direct",
-        "proxy"
-      ],
+      "outbounds": ["direct", "proxy"],
       "default": "proxy"
     },
     {
