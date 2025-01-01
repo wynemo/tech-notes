@@ -129,7 +129,15 @@
     {
       "type": "selector",
       "tag": "proxy",
-      "outbounds": ["direct", "block", "自动选择", "local-hy2", "KR,群友1"],
+      "outbounds": [
+        "direct",
+        "block",
+        "自动选择",
+        "local-hy2",
+        "KR,群友1",
+        "all_auto",
+        "all"
+      ],
       "default": "KR,群友1"
     },
     {
@@ -165,6 +173,19 @@
       "server": "127.0.0.1",
       "server_port": 7890,
       "version": "5"
+    },
+    {
+      "tag": "all",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "all-auto",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
     }
   ],
   "experimental": {
