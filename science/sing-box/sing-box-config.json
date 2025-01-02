@@ -122,20 +122,22 @@
       "tag": "dns-out"
     },
     {
-      "type": "urltest",
-      "tag": "自动选择",
-      "outbounds": ["local-hy2"]
-    },
-    {
-      "type": "selector",
       "tag": "proxy",
+      "type": "selector",
       "outbounds": [
-        "direct",
-        "block",
-        "自动选择",
-        "local-hy2",
+        "hk",
+        "hk-auto",
+        "tw",
+        "tw-auto",
+        "jp",
+        "jp-auto",
+        "sg",
+        "sg-auto",
+        "us",
+        "us-auto",
+        "all",
         "all-auto",
-        "all"
+        "direct"
       ],
       "default": "all-auto"
     },
@@ -146,16 +148,74 @@
       "default": "proxy"
     },
     {
-      "type": "socks",
-      "tag": "local-hy2",
-      "server": "127.0.0.1",
-      "server_port": 7890,
-      "version": "5"
+      "tag": "hk",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "tw",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "jp",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "sg",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "us",
+      "type": "selector",
+      "outbounds": []
     },
     {
       "tag": "all",
       "type": "selector",
       "outbounds": []
+    },
+    {
+      "tag": "hk-auto",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "tw-auto",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "jp-auto",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "sg-auto",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "us-auto",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
     },
     {
       "tag": "all-auto",
@@ -172,7 +232,7 @@
       "path": "cache.db"
     },
     "clash_api": {
-      "external_controller": "192.168.0.105:9090",
+      "external_controller": "0.0.0.0:9090",
       "external_ui": "ui",
       "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
       "external_ui_download_detour": "proxy"
