@@ -52,6 +52,20 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
         "download_detour": "proxy"
+      },
+      {
+        "tag": "geoip-apple",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo-lite/geoip/apple.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-apple",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo-lite/geosite/apple.srs",
+        "download_detour": "direct"
       }
     ],
     "rules": [
@@ -90,6 +104,10 @@
       {
         "ip_is_private": true,
         "outbound": "direct"
+      },
+      {
+        "rule_set": ["geoip-apple", "geosite-apple"],
+        "outbound": "apple"
       }
     ],
     "final": "proxy",
@@ -120,6 +138,27 @@
     {
       "type": "dns",
       "tag": "dns-out"
+    },
+    {
+      "tag": "apple",
+      "type": "selector",
+      "outbounds": [
+        "proxy",
+        "direct",
+        "hk",
+        "hk-auto",
+        "tw",
+        "tw-auto",
+        "jp",
+        "jp-auto",
+        "sg",
+        "sg-auto",
+        "us",
+        "us-auto",
+        "all",
+        "all-auto"
+      ],
+      "default": "direct"
     },
     {
       "tag": "proxy",
