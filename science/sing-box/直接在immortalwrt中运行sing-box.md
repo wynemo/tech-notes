@@ -1,3 +1,5 @@
+youtube视频讲解: https://youtu.be/6AdNPM7Gqxo
+
 immortalwrt qcow2 下载链接： https://downloads.immortalwrt.org/releases/23.05.3/targets/armsr/armv8/immortalwrt-23.05.3-armsr-armv8-generic-ext4-combined-efi.qcow2.gz
 
 sing-box模板文件:
