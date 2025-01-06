@@ -84,6 +84,14 @@
         "outbound": "block"
       },
       {
+        "rule_set": ["geoip-apple", "geosite-apple"],
+        "outbound": "apple"
+      },
+      {
+        "domain_suffix": ["claude.ai", "anthropic.com"],
+        "outbound": "claude"
+      },
+      {
         "type": "logical",
         "mode": "and",
         "rules": [
@@ -104,10 +112,6 @@
       {
         "ip_is_private": true,
         "outbound": "direct"
-      },
-      {
-        "rule_set": ["geoip-apple", "geosite-apple"],
-        "outbound": "apple"
       }
     ],
     "final": "proxy",
@@ -159,6 +163,27 @@
         "all-auto"
       ],
       "default": "direct"
+    },
+    {
+      "tag": "claude",
+      "type": "selector",
+      "outbounds": [
+        "proxy",
+        "direct",
+        "hk",
+        "hk-auto",
+        "tw",
+        "tw-auto",
+        "jp",
+        "jp-auto",
+        "sg",
+        "sg-auto",
+        "us",
+        "us-auto",
+        "all",
+        "all-auto"
+      ],
+      "default": "us-auto"
     },
     {
       "tag": "proxy",
