@@ -25,25 +25,34 @@
 tommygreen@tommys-Mac-mini-4 nebula-darwin % cat nat.pf
 nat on utun5 from bridge100:network to any -> (utun5)
 
+#sing-box
+#nat on utun5 from bridge100:network to any -> (utun5)
+
+#苹果内置的规则 保留
+nat-anchor "com.apple/*" all
+nat-anchor "com.apple.internet-sharing" all
+rdr-anchor "com.apple/*" all
+rdr-anchor "com.apple.internet-sharing" all
+
 tommygreen@tommys-Mac-mini-4 nebula-darwin % cat proxy.sh
-  # Enable packet forwarding
+# Enable packet forwarding
 
-  sysctl -w net.inet.ip.forwarding=1
+sysctl -w net.inet.ip.forwarding=1
 
-  # Unless you have any rules you want to keep, let's flush existing NAT rules
-  pfctl -F nat
+# Unless you have any rules you want to keep, let's flush existing NAT rules
+pfctl -F nat
 
-  # Enable packet filtering
-  pfctl -e
+# Enable packet filtering
+pfctl -e
 
-  # Load rules from our file
-  pfctl -f nat.pf
+# Load rules from our file
+pfctl -f nat.pf
 
-  # Confirm rules are loaded
-  pfctl -s nat
+# Confirm rules are loaded
+pfctl -s nat
 
-  # Check to see connections
-  pfctl -s states
+# Check to see connections
+pfctl -s states
 ```
 其中utun5 为sing-box的tun接口，bridge100为共享的无线网络接口
 
