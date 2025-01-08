@@ -6,7 +6,15 @@
 
 跑一个小火箭或者 sing-box （推荐后者，性能更好，也不要钱）
 
-其他机器只要让mac mini做网关，实现了局域网科学上网
+接下来打开sing-box开启代理
+
+（也可以用小火箭来做代理 就是要2.9刀 往期有介绍 另外就是要劫持114的dns 配置 - 本地文件 - 规则 - ℹ️ - 通用 - 劫持dns - 添加114.114.114.114:53  最后打勾 确认）
+
+其他机器上，把你的mac mini的IP地址填写为网关
+
+这样其他机器就以mac mini作为路由
+
+并且dns设置为114.114.114.114
 
 #### wifi共享:
 
@@ -60,27 +68,27 @@ pfctl -s states
 
 [youtube视频讲解](https://www.youtube.com/watch?v=9FHTtZc3rJw)
 
-在手机上用 wiregurad 连接到家里的 macmini  
+在手机上用 wiregurad 连接到家里的 macmini
 
-实现科学上网 以及访问家里的局域网的服务  
+实现科学上网 以及访问家里的局域网的服务
 
-这个方案要求有公网 IP 有自己的域名  
+这个方案要求有公网 IP 有自己的域名
 
-然后用 DDNS 把自己的公网 IP 指向自己的域名  
+然后用 DDNS 把自己的公网 IP 指向自己的域名
 
-推荐用 cloudflare 来做 ddns  
-  
-mac 商店里下载一个 wireguard 配置好打开服务，作为服务节点  
+推荐用 cloudflare 来做 ddns
 
-路由器里把 macmini 的监听端口映射到公网  
-  
+mac 商店里下载一个 wireguard 配置好打开服务，作为服务节点
+
+路由器里把 macmini 的监听端口映射到公网
+
 iphone 上下载一个 shadowrocket 来连接家里  ，添加一个wiregurad节点
 
-android 可用手机版的 wiregurad  
-  
-用 shadowrocket 记得去掉家里局域网的网段  
-一个是旁路由  
-一个是跳过代理那里  
+android 可用手机版的 wiregurad
+
+用 shadowrocket 记得去掉家里局域网的网段
+一个是旁路由
+一个是跳过代理那里
 添加一个代理局域网的规则  ，选wiregurad节点
 
 这样当你使用这个wireguard节点，你可以同时访问家中服务，科学上网的流量也是通过wireguard转到家里
