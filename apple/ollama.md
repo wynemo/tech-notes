@@ -41,6 +41,3 @@ gemma:7b                 	430ed3535049	5.2 GB	18 minutes ago
 openchat:7b              	537a4e03b649	4.1 GB	32 minutes ago
 zephyr:latest            	bbe38b81adec	4.1 GB	25 hours ago
 ```
-
-
-\
