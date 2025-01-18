@@ -8,6 +8,8 @@ macos，先装comfyui
 
 安装brew
 
+安装comfyui 并运行
+```
 git clone https://github.com/comfyanonymous/ComfyUI
 cd ComfyUI
 brew install uv
@@ -15,6 +17,7 @@ uv venv --python 3.12
 uv pip install --pre torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/nightly/cpu
 uv pip install -r requirements.txt
 uv run main.py
+```
 
 接着装flux gguf模型，跑
 
