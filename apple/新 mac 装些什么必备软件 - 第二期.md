@@ -4,9 +4,10 @@
 * ryujinx switch 模拟器 玩switch 游戏 在 mac 上也不会太发热
 * marta/peazip 解压软件，比如解压 rar 文件
 * raycast - 启动器 剪贴板历史、窗口管理工具 划词翻译 AI 等等
-* ice 菜单栏隐藏管理程序 
+* ice 菜单栏隐藏管理程序
 * snippetslab 代码片段管理 可以当作笔记以及代码片段管理
-* iterm2 终端模拟器 
+* iterm2 终端模拟器
 * utm 虚拟机 基于qemu，可以模拟除了arm其他架构的
 
 
+[![视频讲解](https://img.youtube.com/vi/K-_4okXmX3Q/0.jpg)](https://www.youtube.com/watch?v=K-_4okXmX3Q)
