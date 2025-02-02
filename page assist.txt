@@ -17,3 +17,5 @@ rag settings这里选刚才下载的nomic-embed-text这个模型，然后点击�
 这个现在chatgpt也有这个功能，可以直接联网查询
 比如我们这里查询一个韩国女团的信息，ITZY成员的信息，比如年龄等
 联网查询可以把搜索结果条数在设置里改下，从2改到10
+
+视频讲解：https://youtu.be/w_HuP1ytZGQ
