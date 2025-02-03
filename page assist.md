@@ -4,7 +4,7 @@
 今天来一个浏览器插件page assist，使用ollama，进行联网查询，知识库查询，与网页聊天
 
 首先是安装ollama 这个在上期视频中有讲过，这里就不再赘述
-首先我们需要下载嵌入式模型，可使用 ollama pull nomic-embed-text 这个命令
+首先我们需要下载嵌入式模型，可使用 `ollama pull nomic-embed-text` 这个命令
 
 然后我们到插件商店，搜索page assist，安装这个插件
 打开page assist 这个 chrome插件
@@ -26,7 +26,7 @@ rag settings这里选刚才下载的nomic-embed-text这个模型，然后点击�
 
 可以选上deepseek-r1，deepseek-v3这些聊天模型
 
-然后我们就可以使用openai的api来查询了
+然后我们就可以使用 openai 兼容 的 api 提供的模型
 
 ## 联网查询
 
