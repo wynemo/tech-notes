@@ -4,7 +4,7 @@ youtube视频讲解: https://youtu.be/6AdNPM7Gqxo
 
 https://downloads.immortalwrt.org 你可以根据你的设备选择对应的版本
 
-可以在sub-store中生成sing-box文件
+可以在sub-store中生成sing-box配置文件，采用的是 tun 模式
 
 sing-box模板文件:
 
@@ -14,7 +14,7 @@ sing-box 脚本链接：
 
 https://raw.githubusercontent.com/xishang0128/sub-store-template/main/sing-box.js#type=2&name=bywave
 
-其中type 2 表示单条订阅 name表示订阅名称 替换为你想要的
+其中type 2 表示单条订阅 name表示订阅名称 替换为你的sub-store上的订阅信息
 
 安装sing-box:
 ```bash
