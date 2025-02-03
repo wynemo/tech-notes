@@ -34,4 +34,4 @@
 - 网上国网 [https://raw.githubusercontent.com/anker1209/Scriptable/refs/heads/main/scripts/sgcc.js](https://raw.githubusercontent.com/anker1209/Scriptable/refs/heads/main/scripts/sgcc.js)
     
 
-20241215: 反馈说这样boxjs 会卡死，这是小火箭的bug，在获取到流量信息后，可以关掉联通模块，这样就不会卡死了，但就是这样cookie不会刷新，15天后应该会失效，到时候再打开联通app重新走一下流程，然后再关闭联通模块
+20241215: 反馈说这样boxjs 会卡死，这是小火箭的bug(javascript 引擎旧)，在获取到流量信息后，可以关掉联通模块，这样就不会卡死了，但就是这样cookie不会刷新，15天后应该会失效，到时候再打开联通app重新走一下流程，然后再关闭联通模块
