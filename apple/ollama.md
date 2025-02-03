@@ -8,7 +8,7 @@
 
 去官网下载 <https://ollama.com/>
 
-安装完后 启动app会跑在托盘 在一台m2 16G的机器上  `ollama run zephyr`，然后看效果还凑合可以用
+安装完后 启动app会跑在托盘 安装命令行程序 在一台m2 16G的机器上  `ollama run zephyr`，然后看效果还凑合可以用
 
 如果想给局域网使用 而且用macapp在托盘启动 先命令行(不能ssh过去)里敲 `launchctl setenv OLLAMA_HOST "0.0.0.0"`  再重启app
 
