@@ -46,6 +46,7 @@ rag settings这里选刚才下载的nomic-embed-text这个模型，然后点击�
 1. 有人问为什么不用 https://www.perplexity.ai/ 做联网查询 , 因为它老是会弹出 cloudflare 的验证，我查个东西，要等半天，不方便
 2. 用 deepseek 官方的联网，太多审查，还是拿来问理工科的问题比较好，我喜欢问历史，经济，政治等问题
 3. chatgpt 的联网查询，用下来还不错
+4. gemini之类的模型，支持联网查询，这种模型并不多
 
 ## 知识库查询
 
