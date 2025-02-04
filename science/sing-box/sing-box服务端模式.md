@@ -1,7 +1,8 @@
 [youtube 讲解](https://www.youtube.com/watch?v=brnxkoetJA4)
 sing-box服务端模式 
 访问家里局域网
-不用怕运营商QoS
+需要有公网IP
+直接用TCP连接而不用UDP，不用怕运营商QoS
 ## shadowsocks2022 例子
 
 + shadowsocks 密码要用 `./sing-box generate rand --base64 32` 来生成
@@ -16,7 +17,7 @@ sing-box服务端模式 
       "sniff": true,
       "sniff_override_destination": true,
       "method": "2022-blake3-aes-256-gcm",
-      "password": "DgrOjcmCMEr9biLy2V89BUelOI2b08vApCrR+osYsJs=", 
+      "password": "DgrOjcmCMEr9biLy2V89BUelOI2b08vApCrR+osYsJs=",
       "multiplex": {
         "enabled": true,
         "padding": true
