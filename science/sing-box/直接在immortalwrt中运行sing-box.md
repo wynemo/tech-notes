@@ -1,6 +1,6 @@
 youtube视频讲解: https://youtu.be/6AdNPM7Gqxo
 
-视频演示所用的 immortalwrt qcow2 下载链接： https://downloads.immortalwrt.org/releases/23.05.3/targets/armsr/armv8/immortalwrt-23.05.3-armsr-armv8-generic-ext4-combined-efi.qcow2.gz
+视频演示所用的 immortalwrt qcow2 下载链接（arm64的）： https://downloads.immortalwrt.org/releases/23.05.3/targets/armsr/armv8/immortalwrt-23.05.3-armsr-armv8-generic-ext4-combined-efi.qcow2.gz
 
 https://downloads.immortalwrt.org 你可以根据你的设备选择对应的版本
 
@@ -16,7 +16,9 @@ https://raw.githubusercontent.com/xishang0128/sub-store-template/main/sing-box.j
 
 其中type 2 表示单条订阅 name表示订阅名称 替换为你的sub-store上的订阅信息
 
-安装sing-box:
+注意模板文件与脚本是配套的
+
+ssh 进入immortalwrt后台 安装sing-box:
 ```bash
 opkg update
 opkg install kmod-inet-diag kmod-netlink-diag kmod-tun iptables-nft
