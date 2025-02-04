@@ -27,6 +27,7 @@ opkg install sing-box
 
 编辑/etc/config/firewall 增加防火墙规则
 ```
+# 这里的nat规则主要是让其他设备通过immortalwrt上网
 config nat
         option name 'MASQUERADE'
         option src 'lan'

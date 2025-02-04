@@ -23,6 +23,13 @@
 
 或者 `OLLAMA_ORIGINS="*" OLLAMA_HOST=0.0.0.0 ollama serve` 直接在命令行里跑
 
+总之想在局域网用的话 一定要设置 `OLLAMA_HOST` 和 `OLLAMA_ORIGINS`：
+
+```
+launchctl setenv OLLAMA_HOST "0.0.0.0"
+launchctl setenv OLLAMA_ORIGINS "*"
+```
+
 ***Ollama*** binds 0.0.0.0 ***port*** 11434
 
 #### 相关的一些应用
