@@ -11,7 +11,7 @@ youtube视频讲解：
 先顺便讲下 docker的http代理 这样国内的机器也能拉docker镜像
 
 以debian系统为例 找到 `/usr/lib/systemd/system/docker.service`
-
+这个是systemd的docker服务配置文件，然后我们添加环境变量，http代理和https代理
 ```bash
 [Service]
 Environment="HTTP_PROXY=http://192.168.0.100:10333"
