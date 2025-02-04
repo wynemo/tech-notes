@@ -28,22 +28,22 @@ opkg install sing-box
 config nat
         option name 'MASQUERADE'
         option src 'lan'
-        option target 'MASQUERADE'
-        option proto 'all'
+        option target 'MASQUERADE'  # 启用源地址转换（NAT）
+        option proto 'all'          # 适用于所有协议
 
 config zone
-        option name 'proxy'
-        option forward 'REJECT'
-        option output 'ACCEPT'
-        option input 'ACCEPT'
-        option mtu_fix '1'
-        option device 'tun0'
-        list network 'proxy'
+        option name 'proxy'         # 新建名为 proxy 的防火墙区域
+        option forward 'REJECT'     # 默认拒绝转发到其他区域的流量
+        option output 'ACCEPT'      # 允许本区域发起的出站流量
+        option input 'ACCEPT'      # 允许进入本区域的入站流量
+        option mtu_fix '1'         # 启用 MTU 修复
+        option device 'tun0'       # 关联 tun0 虚拟网卡
+        list network 'proxy'       # 关联 proxy 网络接口
 
 config forwarding
-        option name 'lan-proxy'
-        option dest 'proxy'
-        option src 'lan'
+        option name 'lan-proxy'     # 转发规则名称
+        option dest 'proxy'         # 目标区域
+        option src 'lan'           # 源区域
 ```
 
 编辑网络配置 /etc/config/network
