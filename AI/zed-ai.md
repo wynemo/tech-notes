@@ -2,7 +2,7 @@
 
 视频讲解：
 
-[https://youtu.be/yZROVsoyKZE](https://youtu.be/yZROVsoyKZE)
+[![视频讲解](https://img.youtube.com/vi/yZROVsoyKZE/0.jpg)](https://www.youtube.com/watch?v=yZROVsoyKZE)
 
 考虑到看这个视频的朋友都是程序员，我会讲的很粗略
 
@@ -26,7 +26,7 @@ zed对deepseek支持的不够好，出现超时的情况， deepseek-r1几乎没
 
 代码生成：
 
-也推荐用 claude 3.5 sonnet 模型 / deepseek-v2.5模型 
+也推荐用 claude 3.5 sonnet 模型 / deepseek-v2.5模型
 
 
 终端里使用：
@@ -69,5 +69,3 @@ Terminal Use:
  • Automatically generate Git commit messages for submission.
 
  • Zed - Terminal - Git diff - Sidebar - /terminal, generate Git commit message - go back to the terminal - open inline assistant - git add modified file & commit.
-
-
