@@ -56,6 +56,7 @@ services:
 
 填入你的域名 监听端口
 
+docker compose 配置
 ```bash
 version: '3'
 
@@ -108,6 +109,7 @@ ssl_prefer_server_ciphers on;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection upgrade;
         }
+}
 ```
 
 
