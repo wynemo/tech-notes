@@ -5,9 +5,9 @@ sub-store是一个很好用的工具 但 sub-store你需要在服务器搭建，
 ## 生成 sing-box 配置
 
 其他方法就不一一列举了:
-https://github.com/Toperlock/sing-box-subscribe 安全问题 要么自己部署 它提供的vercel ,下载机场的内容到公共服务器上，生成配置，其他人都能看到 不太安全
-https://github.com/xmdhs/clash2singbox 要下载程序，不太方便
-https://github.com/xmdhs/clash2sfa 要部署到服务器，不太方便，它提供的公共服务器，也是要下载机场订阅到服务器上，一定的安全隐患，估计和sing-box-subscribe差不多
++ https://github.com/Toperlock/sing-box-subscribe 安全问题 要么自己部署 它提供的vercel ,下载机场的内容到公共服务器上，生成配置，其他人都能看到 不太安全
++ https://github.com/xmdhs/clash2singbox 要下载程序，不太方便
++ https://github.com/xmdhs/clash2sfa 要部署到服务器，不太方便，它提供的公共服务器，也是要下载机场订阅到服务器上，一定的安全隐患，估计和sing-box-subscribe差不多
 
 总结都太技术化了，对一般的用户来说，不太友好
 
