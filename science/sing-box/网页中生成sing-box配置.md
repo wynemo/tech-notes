@@ -25,4 +25,6 @@ sub-store是一个很好用的工具 但 sub-store你需要在服务器搭建，
 
 全过程都在浏览器里，直接生成 sing-box 配置了
 
+视频讲解：
+
 [![视频讲解](https://img.youtube.com/vi/9CnqlpCn4pw/0.jpg)](https://www.youtube.com/watch?v=9CnqlpCn4pw)
