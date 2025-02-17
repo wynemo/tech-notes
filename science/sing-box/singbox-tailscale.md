@@ -47,3 +47,5 @@ tailscale是有一个功能的，某个节点可以设置让其他节点通过�
 但未来可期 sing-box功能变得越来越成熟了
 
 好 谢谢大家观看
+
+[![视频讲解](https://img.youtube.com/vi/YzV3Ni8PNco/0.jpg)](https://www.youtube.com/watch?v=YzV3Ni8PNco)
