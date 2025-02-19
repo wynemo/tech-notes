@@ -2,6 +2,8 @@
 
 参考 https://t.me/zhetengsha/1070
 
+现在sing-box几个版本配置有变化，模板文件，链接的路径自己改改，找下仓库里 https://github.com/xishang0128/sub-store-template
+
 文件管理 来源选 远程，输入 （这是sing-box模板文件）
 `https://raw.githubusercontent.com/xishang0128/sub-store-template/main/sing-box.json`
 
