@@ -1,4 +1,11 @@
+# macos 代理 工具 surge介绍
+
+### 模版
+直接从 小火箭 shadowrocket 那边取来的，稍微修改了下 [surge_template.conf](surge_template.conf)
+
 ![](surge.png)
+
+
 ### 增强模式
 
 用surge增强模式 记得把chrome的doh关掉 因为surge会设置dns为1.0.0.1 chrome就会用在这个 chrome.clouflare-dns.com
@@ -27,7 +34,7 @@ IP-CIDR6 这和小火箭不一样
 https://github.com/Loyalsoldier/surge-rules
 https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Surge
 
-### 策略（Proxy Policy） 策略组（POLICY GROUP）
+### 策略（Proxy Policy） 策略组（Policy Group）
 
 underlying-proxy：Use a proxy to connect another proxy, aka proxy chain. It can be another proxy policy's or policy group's name.
 
