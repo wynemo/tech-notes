@@ -1,4 +1,4 @@
-![[surge.png]]
+![](surge.png)
 ### 增强模式
 
 用surge增强模式 记得把chrome的doh关掉 因为surge会设置dns为1.0.0.1 chrome就会用在这个 chrome.clouflare-dns.com
