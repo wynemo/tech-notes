@@ -15,11 +15,6 @@
     <text x="800" y="550" font-family="Arial Black, sans-serif" font-size="100" font-weight="900" fill="#333333" text-anchor="middle">Surge介绍</text>
   </g>
   
-  <!-- 装饰性曲线 -->
-  <path d="M400 650 Q 800 450 1200 650" stroke="#FFFFFF" stroke-width="2" fill="none" opacity="0.6"/>
-  
-  <!-- 星形装饰 -->
-  <path d="M850 500 L 860 480 L 870 500 L 890 505 L 870 520 L 875 540 L 860 530 L 845 540 L 850 520 L 830 505 Z" fill="#FFFFFF"/>
 </g>
 
 <defs>
