@@ -101,9 +101,9 @@ CF Trojan = select, policy-path=https://sub.store/download/cf-trojan, hidden=1
 
 应该说mitm 配合模块/脚本用的 ，给某些域名配置好mitm，控制台打开mitm， 控制台界面上只能看相应的域名的request/response header;
 
-然后http 抓包，默认是一个通配符, 解密所有流量（这样会有问题，有些应用比如python就会报错，应该是没用这个信任的证书），但也可以让它不覆盖mitm的配置（关掉 Turn on MITM Automatically），就只解密mitm那边配置的域名。
+然后http 抓包，默认配置匹配所有域名（会忽略上面mitm配置的域名）, 解密所有流量（这样会有问题，有些应用比如python就会报错，应该是没用这个信任的证书），但也可以让它不覆盖mitm的配置（关掉 Turn on MITM Automatically），就只解密mitm那边配置的域名。
 
-所以懒的话，用默认配置，直接打开 http capture 就解密了，一个通配符搞定
+所以懒的话，用默认配置，直接打开 http capture 就解密了，但不推荐这样做
 
 ### surge 与其他软件对比
 
