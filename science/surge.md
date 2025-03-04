@@ -71,7 +71,7 @@ IP-CIDR6 这和小火箭不一样， 表示ipv6
 
 增强模式会接管系统所有流量，不光是浏览器
 
-用surge增强模式 记得把chrome的doh关掉 因为surge会设置dns为1.0.0.1 chrome就会用在这个 chrome.clouflare-dns.com
+用surge增强模式 记得把chrome的doh关掉 因为surge会设置dns为1.0.0.1 chrome就会用在这个 chrome.clouflare-dns.com 这个是cloudflare的dns
 
 这样chrome这边自己把有些域名解析为IP
 
@@ -110,6 +110,6 @@ CF Trojan = select, policy-path=https://sub.store/download/cf-trojan, hidden=1
 surge 确实好用 工程质量很高
 
 + 小火箭、，分组那块。。。。 分组里偶尔出现奇怪的不存在的代理，界面交互有些地方不方便，比如链式代理时没有测过的速了; 选分组没那么便捷，毕竟是一款手机软件
-+ stash  分组有时候有bug 没有正确分组          - sub store 忠实玩家，因为我界面上不能加节点啊
-+ mihomo party又感觉太重  加节点也不方便       - sub store 忠实玩家,  同上
++ stash  分组有时候有bug 没有正确分组              - sub store 忠实玩家，因为我界面上不能加节点啊
++ mihomo party又感觉太重 非原生应用  加节点也不方便  - sub store 忠实玩家,  同上
 + karing太卡 切换一个节点 界面卡几秒。。。
