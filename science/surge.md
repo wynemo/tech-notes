@@ -1,10 +1,14 @@
 # macos 代理 工具 surge介绍
 
+大家好
+surge 是macos上的老牌代理软件了 有很久的历史了，今天从这几个方面讲下它：
+
 ![](surge.png)
 
 ### 添加机场配置
 
-主界面 - more - profile（配置）- Install from URL... - 填入机场url
+首先是导入机场配置，
+打开主界面 - more - profile（配置）- Install from URL... - 填入机场订阅
 
 ### surge 规则
 
@@ -22,6 +26,8 @@ RULE-SET 规则集
 
 主界面 - more - profile（配置）- new profile（新建一个空配置）
 
+把我写好的一个最小配置粘贴进来
+
 ```
 [Proxy]
 # 这里填写节点
@@ -31,12 +37,14 @@ RULE-SET 规则集
 your_proxy_provider = select, policy-path=http://192.168.0.105:3001/yanshiyong/download/bywave?target=Surge, update-interval=0, hidden=1
 PROXY = select, include-other-group="your_proxy_provider"
 
+[Rule]
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/proxy.txt,PROXY
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/direct.txt,DIRECT
 GEOIP,CN,DIRECT,no-resolve
 FINAL,PROXY
 ```
 打开界面就可以看到节点信息了
+主界面上也能看到相应的信息
 
 我们这使用surge-rules https://github.com/Loyalsoldier/surge-rules 这个仓库
 添加一个代理的，一个直连的 domain-set
