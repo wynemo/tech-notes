@@ -3,7 +3,8 @@
 大家好
 surge 是macos上的老牌代理软件了 有很久的历史了，今天从这几个方面讲下它：
 
-[![视频讲解](surge.png)](https://www.youtube.com/watch?v=JGh4qW%5FbWsA)
+视频讲解：
+[![视频讲解](surge.jpg)](https://www.youtube.com/watch?v=JGh4qW%5FbWsA)
 
 ### 添加机场配置
 
