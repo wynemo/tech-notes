@@ -18,3 +18,8 @@
 
 
 https://macos-defaults.com/
+
+
+### 输入法相关
++ macos 镜像  capslock 切换输入法
++ 中文 ` 输入 ·
