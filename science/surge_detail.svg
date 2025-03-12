@@ -1,0 +1,43 @@
+<svg width="1600" height="960" viewBox="0 0 1600 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_115_5)">
+  <!-- 渐变背景 - 从左上角的绿色到右下角的蓝色 -->
+  <rect width="1600" height="960" fill="url(#paint0_linear_115_5)"/>
+  
+  <!-- 右上角到左下角的白色分界线 -->
+  <path d="M1600 0 L 0 960" stroke="white" stroke-width="3" stroke-opacity="0.7"/>
+  
+  <!-- 主标题效果 - 轮廓 -->
+  <text x="800" y="420" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="none" stroke="#FFFFFF" stroke-width="2" text-anchor="middle" opacity="0.3">SURGE</text>
+  
+  <!-- 主标题 - 实体 -->
+  <g filter="url(#shadow_filter)">
+    <text x="800" y="300" font-family="Arial Black, sans-serif" font-size="40" font-weight="900" fill="#333333" text-anchor="middle">添加机场配置</text>
+    <text x="800" y="350" font-family="Arial Black, sans-serif" font-size="40" font-weight="900" fill="#333333" text-anchor="middle">surge 规则</text>
+    <text x="800" y="400" font-family="Arial Black, sans-serif" font-size="40" font-weight="900" fill="#333333" text-anchor="middle">手搓配置</text>
+    <text x="800" y="450" font-family="Arial Black, sans-serif" font-size="40" font-weight="900" fill="#333333" text-anchor="middle">界面添加配置/手动添加节点</text>
+    <text x="800" y="500" font-family="Arial Black, sans-serif" font-size="40" font-weight="900" fill="#333333" text-anchor="middle">使用模版</text>
+    <text x="800" y="550" font-family="Arial Black, sans-serif" font-size="40" font-weight="900" fill="#333333" text-anchor="middle">增强模式</text>
+    <text x="800" y="600" font-family="Arial Black, sans-serif" font-size="40" font-weight="900" fill="#333333" text-anchor="middle">代理链</text>
+    <text x="800" y="650" font-family="Arial Black, sans-serif" font-size="40" font-weight="900" fill="#333333" text-anchor="middle">抓包</text>
+    <text x="800" y="700" font-family="Arial Black, sans-serif" font-size="40" font-weight="900" fill="#333333" text-anchor="middle">surge 与其他软件对比</text>
+  </g>
+  
+</g>
+
+<defs>
+  <!-- 背景渐变 -->
+  <linearGradient id="paint0_linear_115_5" x1="0" y1="0" x2="1600" y2="960" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#DAFFDA"/>
+    <stop offset="1" stop-color="#C4F0FF"/>
+  </linearGradient>
+  
+  <!-- 文字阴影效果 -->
+  <filter id="shadow_filter" x="-10" y="-10" width="1620" height="980" filterUnits="userSpaceOnUse">
+    <feDropShadow dx="4" dy="4" stdDeviation="3" flood-opacity="0.3" flood-color="#000000"/>
+  </filter>
+  
+  <clipPath id="clip0_115_5">
+    <rect width="1600" height="960" fill="white"/>
+  </clipPath>
+</defs>
+</svg>
