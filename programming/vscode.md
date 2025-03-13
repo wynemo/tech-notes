@@ -60,3 +60,15 @@ macism 好像没有效果：
 重启下macos
 还是不行
 空了找别的机器试试
+
+原来抄配置弄错了 是 com.apple.keylayout.ABC 不是 com.apple.keylayout.US
+估计好了
+```
+    "vim.autoSwitchInputMethod.enable": true,
+    "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
+    "vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/macism",
+    "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/macism {im}"
+```
+确实好了
+😁
+以后可以在cursor里愉快的写中文了
