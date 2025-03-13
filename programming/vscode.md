@@ -1,5 +1,9 @@
 # vscode 插件
 
+## 配置
+1. 字体
+可以用：'Zed Mono', 'LXGW Neo XiHei'
+
 ## 插件
 
 ### Gitlens
@@ -31,16 +35,15 @@ pycharm的git功能都有
 ![Screenshot 2025-03-13 at 00.06.42.png](<Screenshot 2025-03-13 at 00.06.42.png>)
 
 
-4. 字体
-可以用：'Zed Mono', 'LXGW Neo XiHei'
 
-5. vim 插件 输入法切换
+### vscodevim
+ vim 插件 输入法切换
 macism 好像没有效果：
 ```
-    "vim.autoSwitchInputMethod.enable": true,
-    "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.US",
-    "vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/macism",
-    "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/macism {im}"
+"vim.autoSwitchInputMethod.enable": true,
+"vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.US",
+"vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/macism",
+"vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/macism {im}"
 ```
 
 难道还是要用im-select, 或者cursor里不支持？
@@ -62,12 +65,18 @@ macism 好像没有效果：
 空了找别的机器试试
 
 原来抄配置弄错了 是 com.apple.keylayout.ABC 不是 com.apple.keylayout.US
-估计好了
+抄代码前，注意自己跑一下macism获得英文输入法的名字
 ```
-    "vim.autoSwitchInputMethod.enable": true,
-    "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
-    "vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/macism",
-    "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/macism {im}"
+❯ macism
+com.apple.keylayout.ABC
+```
+
+新的配置：
+```
+"vim.autoSwitchInputMethod.enable": true,
+"vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
+"vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/macism",
+"vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/macism {im}"
 ```
 确实好了
 😁
