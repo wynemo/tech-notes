@@ -29,3 +29,7 @@ pycharm的git功能都有
 选中一个commit，右键点 compare working tree to here 可以本地文件和历史版本比较
 
 ![Screenshot 2025-03-13 at 00.06.42.png](<Screenshot 2025-03-13 at 00.06.42.png>)
+
+
+4. 字体
+可以用：'Zed Mono', 'LXGW Neo XiHei'
