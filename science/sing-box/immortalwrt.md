@@ -7,6 +7,6 @@
 然后更新软件包，它使用的是国内的源
 直接ssh不要密码登陆到后台
 
-注：utm桥接，dhcp就可以和宿主机一个局域网
+注：utm虚拟机网络选桥接，dhcp就可以和宿主机一个局域网
 
 youtube 介绍视频：https://www.youtube.com/watch?v=rvDz65cbyqo
