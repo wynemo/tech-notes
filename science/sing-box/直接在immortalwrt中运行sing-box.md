@@ -18,11 +18,32 @@ https://raw.githubusercontent.com/xishang0128/sub-store-template/main/sing-box.j
 
 注意模板文件与脚本是配套的
 
+如果是tproxy模式，sing-box入站配置要改为:
+```json
+"inbounds": [
+  {
+    "type": "tproxy",
+    "tag": "tproxy-in",
+    "listen": "::",
+    "listen_port": 9898,
+    "tcp_fast_open": true,
+    "udp_fragment": true,
+    "sniff_override_destination": true,
+    "sniff": true
+  }
+ ]
+```
+
 ssh 进入immortalwrt后台 安装sing-box:
 ```bash
 opkg update
 opkg install kmod-inet-diag kmod-netlink-diag kmod-tun iptables-nft
 opkg install sing-box
+```
+
+如果是tproxy模式，需要安装
+```bash
+opkg install kmod-nft-tproxy kmod-nft-socket
 ```
 
 编辑/etc/config/firewall 增加防火墙规则
@@ -49,7 +70,18 @@ config forwarding
         option src 'lan'           # 源区域
 ```
 
-编辑网络配置 /etc/config/network
+如果是 tproxy 模式，/etc/config/firewall  规则简单很多
+
+```
+# 这里的nat规则主要是让其他设备通过immortalwrt上网
+config nat
+        option name 'MASQUERADE'
+        option src 'lan'
+        option target 'MASQUERADE'  # 启用源地址转换（NAT）
+        option proto 'all'          # 适用于所有协议
+```
+
+编辑网络配置 /etc/config/network (如果是 tproxy 模式，就不需要了)
 ```
 config interface 'proxy'
         option proto 'none'
@@ -124,6 +156,77 @@ reload_service() {
 }
 ```
 
+如果是tproxy模式, /etc/init.d/sing-box 替换为如下内容:
+```bash
+#!/bin/sh /etc/rc.common
+
+START=99
+USE_PROCD=1
+
+#####  ONLY CHANGE THIS BLOCK  ######
+PROG=/usr/bin/sing-box
+RES_DIR=/etc/sing-box/
+CONF=./config.json
+#####  ONLY CHANGE THIS BLOCK  ######
+
+start_service() {
+    procd_open_instance
+    procd_set_param command $PROG run -D $RES_DIR -c $CONF
+    procd_set_param user root
+    procd_set_param limits core="unlimited"
+    procd_set_param limits nofile="1000000 1000000"
+    procd_set_param stdout 1
+    procd_set_param stderr 1
+    procd_set_param respawn "${respawn_threshold:-3600}" "${respawn_timeout:-5}" "${respawn_retry:-5}"
+    procd_close_instance
+    ## 以下七行是nftables相关，使用iptables自行替换##
+    ip rule add fwmark 1 table 100
+    ip route add local 0.0.0.0/0 dev lo table 100
+    ip -6 rule add fwmark 1 table 106
+    ip -6 route add local ::/0 dev lo table 106
+    nft -f /etc/sing-box/nftables-ip46.conf
+    nft add chain inet sing-box docker { type nat hook prerouting priority -100 \; }
+    nft add rule inet sing-box docker ip saddr != {172.17.0.0/16} return
+    echo "sing-box is started!"
+}
+
+stop_service() {
+    service_stop $PROG
+    ## 以下五行是nftables相关，使用iptables自行替换##
+    ip rule del fwmark 1 table 100
+    ip route del local 0.0.0.0/0 dev lo table 100
+    ip -6 rule del fwmark 1 table 106
+    ip -6 route del local ::/0 dev lo table 106
+    nft delete table inet sing-box
+    echo "sing-box is stopped!"
+}
+
+reload_service() {
+    stop
+    sleep 2s
+    echo "sing-box is restarted!"
+    start
+}
+```
+
+如果是tproxy模式，还需要创建一个文件 [nftables-ip46.conf](nftables-ip46.conf)
+
+放到 `/etc/sing-box/nftables-ip46.conf`
+
 最后使用 `/etc/init.d/sing-box start` 启动sing-box
+
+一些命令：
+```
+设置开机启动：
+/etc/init.d/sing-box enable
+关闭开机启动：
+/etc/init.d/sing-box disable
+启动：
+/etc/init.d/sing-box start
+重启：
+/etc/init.d/sing-box reload
+停止：
+/etc/init.d/sing-box stop
+```
 
 日志在状态 - 系统日志里
