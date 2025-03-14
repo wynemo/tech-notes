@@ -23,7 +23,9 @@ vscode说真的，git这一块不怎么样
 
 在仓库历史上移动，大概率会弹出一个很大的窗口，遮挡了其他commit的文字，你就不好选择
 
-就比如仓库历史，选中一个commit，里面那个文件和本地比较，点最右边的"open changes with working file"(地球图标旁边)
+所以就选一下后 赶紧得把鼠标挪开
+
+比较提交历史里的文件与本地文件的区别：选中一个commit，文件和本地比较，点最右边的"open changes with working file"(地球图标旁边)
 
 3. 单个文件历史
 
