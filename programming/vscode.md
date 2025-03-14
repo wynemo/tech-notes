@@ -21,13 +21,9 @@
 
 vscode说真的，git这一块不怎么样
 
-pycharm的git功能vscode gitlens都有
+在仓库历史上移动，大概率会弹出一个很大的窗口，遮挡了其他commit的文字，你就不好选择
 
-但这个插件毕竟不是ide 很多地方操作不简便 大概是受限于vscode的架构
-
-就比如仓库历史，选中一个commit，里面那个文件和本地比较，要点最右边的more action(三个点)
-再把鼠标移动到上方那个跳出来命令窗口里选一下 "Compare working tree"，才跳出来
-![Gitlens Screenshot](<Screenshot 2025-03-12 at 23.54.05.png>)
+就比如仓库历史，选中一个commit，里面那个文件和本地比较，点最右边的"open changes with working file"(地球图标旁边)
 
 3. 单个文件历史
 
