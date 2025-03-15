@@ -30,7 +30,7 @@
   </radialGradient>
   
   <!-- 右下角椭圆形渐变 -->
-  <radialGradient id="paint1_radial_115_5" cx="1500" cy="900" r="1000" gradientUnits="userSpaceOnUse">
+  <radialGradient id="paint1_radial_115_5" cx="1500" cy="900" r="1300" gradientUnits="userSpaceOnUse">
     <stop offset="0" stop-color="#B2EBF2" stop-opacity="0.8"/>
     <stop offset="0.4" stop-color="#E0F7FA" stop-opacity="0.5"/>
     <stop offset="0.7" stop-color="#E8F5E9" stop-opacity="0.3"/>
