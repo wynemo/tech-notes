@@ -27,8 +27,9 @@ passkey是一种无需密码的登录方法
 比如这里github就支持passkey登录
 
 可以看到非常方便 一下就登录了
+</details>
 
-接下来是叫 authenticator 的应用
+### 接下来是叫 authenticator 的应用
 
 它是用来保存网站的totp
 
@@ -43,7 +44,6 @@ passkey是一种无需密码的登录方法
 不过国内好多网站两步认证都是用的短信
 
 演示一下 oracle 网站的两步认证填入
-</details>
 
 ### 再接下来是叫沉浸式翻译的插件
 
