@@ -23,3 +23,6 @@ https://macos-defaults.com/
 ### 输入法相关
 + macos 镜像  capslock 切换输入法
 + 中文 ` 输入 ·
+
+### Screen Sharing 剪切板
+Screen Sharing - Edit >Use Shared Clipboard. Using the shared clipboard 不能复制粘贴文件，但图片 文字可以
