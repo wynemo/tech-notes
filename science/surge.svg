@@ -1,10 +1,13 @@
 <svg width="1600" height="960" viewBox="0 0 1600 960" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_115_5)">
-  <!-- 渐变背景 - 从左上角的绿色到右下角的蓝色 -->
-  <rect width="1600" height="960" fill="url(#paint0_linear_115_5)"/>
+  <!-- 基础背景色 -->
+  <rect width="1600" height="960" fill="#f5f5f5"/>
   
-  <!-- 右上角到左下角的白色分界线 -->
-  <path d="M1600 0 L 0 960" stroke="white" stroke-width="3" stroke-opacity="0.7"/>
+  <!-- 左上角半圆形绿色 -->
+  <circle cx="0" cy="0" r="800" fill="url(#paint0_radial_115_5)"/>
+  
+  <!-- 右下角椭圆形浅绿色 -->
+  <ellipse cx="1500" cy="900" rx="800" ry="600" fill="url(#paint1_radial_115_5)"/>
   
   <!-- 主标题效果 - 轮廓 -->
   <text x="800" y="420" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="none" stroke="#FFFFFF" stroke-width="2" text-anchor="middle" opacity="0.3">SURGE</text>
@@ -18,11 +21,21 @@
 </g>
 
 <defs>
-  <!-- 背景渐变 -->
-  <linearGradient id="paint0_linear_115_5" x1="0" y1="0" x2="1600" y2="960" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stop-color="#DAFFDA"/>
-    <stop offset="1" stop-color="#C4F0FF"/>
-  </linearGradient>
+  <!-- 左上角半圆形渐变 -->
+  <radialGradient id="paint0_radial_115_5" cx="0" cy="0" r="800" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#4CAF50" stop-opacity="0.9"/>
+    <stop offset="0.4" stop-color="#8BC34A" stop-opacity="0.6"/>
+    <stop offset="0.7" stop-color="#DCEDC8" stop-opacity="0.3"/>
+    <stop offset="1" stop-color="#f5f5f5" stop-opacity="0.1"/>
+  </radialGradient>
+  
+  <!-- 右下角椭圆形渐变 -->
+  <radialGradient id="paint1_radial_115_5" cx="1500" cy="900" r="800" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#B2EBF2" stop-opacity="0.8"/>
+    <stop offset="0.4" stop-color="#E0F7FA" stop-opacity="0.5"/>
+    <stop offset="0.7" stop-color="#E8F5E9" stop-opacity="0.3"/>
+    <stop offset="1" stop-color="#f5f5f5" stop-opacity="0.1"/>
+  </radialGradient>
   
   <!-- 文字阴影效果 -->
   <filter id="shadow_filter" x="-10" y="-10" width="1620" height="980" filterUnits="userSpaceOnUse">
