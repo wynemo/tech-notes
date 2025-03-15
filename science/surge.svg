@@ -23,9 +23,9 @@
 <defs>
   <!-- 左上角半圆形渐变 -->
   <radialGradient id="paint0_radial_115_5" cx="0" cy="0" r="800" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stop-color="#4CAF50" stop-opacity="0.9"/>
-    <stop offset="0.4" stop-color="#8BC34A" stop-opacity="0.6"/>
-    <stop offset="0.7" stop-color="#DCEDC8" stop-opacity="0.3"/>
+    <stop offset="0" stop-color="#4CAF50" stop-opacity="0.4"/>
+    <stop offset="0.4" stop-color="#8BC34A" stop-opacity="0.4"/>
+    <stop offset="0.7" stop-color="#DCEDC8" stop-opacity="0.2"/>
     <stop offset="1" stop-color="#f5f5f5" stop-opacity="0.1"/>
   </radialGradient>
   
