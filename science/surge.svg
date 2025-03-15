@@ -6,8 +6,28 @@
   <!-- 左上角半圆形绿色 -->
   <circle cx="0" cy="0" r="800" fill="url(#paint0_radial_115_5)"/>
   
-  <!-- 右下角椭圆形浅绿色 -->
-  <ellipse cx="1500" cy="900" rx="1000" ry="800" fill="url(#paint1_radial_115_5)"/>
+  <!-- 右下角不规则形状 -->
+  <g filter="url(#turbulence_filter)">
+    <!-- 主要形状 -->
+    <path d="M900 300 
+             Q950 280, 1000 320 
+             Q1050 360, 1100 330 
+             Q1150 300, 1200 340 
+             Q1300 380, 1400 320 
+             Q1500 260, 1600 300
+             L1700 1000
+             L700 1000
+             Q650 950, 600 900
+             Q550 850, 500 900
+             Q450 950, 400 900
+             L400 650
+             Q450 600, 500 550
+             Q550 500, 600 550
+             Q650 600, 700 550
+             Q750 500, 800 450
+             Q850 400, 900 300 Z" 
+          fill="url(#paint1_radial_115_5)"/>
+  </g>
   
   <!-- 主标题效果 - 轮廓 -->
   <text x="800" y="420" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="none" stroke="#FFFFFF" stroke-width="2" text-anchor="middle" opacity="0.3">SURGE</text>
@@ -29,13 +49,23 @@
     <stop offset="1" stop-color="#f5f5f5" stop-opacity="0.1"/>
   </radialGradient>
   
-  <!-- 右下角椭圆形渐变 -->
-  <radialGradient id="paint1_radial_115_5" cx="1500" cy="900" r="1300" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stop-color="#B2EBF2" stop-opacity="0.8"/>
-    <stop offset="0.4" stop-color="#E0F7FA" stop-opacity="0.5"/>
-    <stop offset="0.7" stop-color="#E8F5E9" stop-opacity="0.3"/>
+  <!-- 右下角不规则形状渐变 -->
+  <radialGradient id="paint1_radial_115_5" cx="1300" cy="700" r="1600" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#B2EBF2" stop-opacity="0.9"/>
+    <stop offset="0.3" stop-color="#E0F7FA" stop-opacity="0.6"/>
+    <stop offset="0.6" stop-color="#E8F5E9" stop-opacity="0.3"/>
     <stop offset="1" stop-color="#f5f5f5" stop-opacity="0.1"/>
   </radialGradient>
+  
+  <!-- 湍流滤镜 - 创建随机边缘效果 -->
+  <filter id="turbulence_filter" x="-50" y="-50" width="1700" height="1100" filterUnits="userSpaceOnUse">
+    <!-- 湍流噪声 -->
+    <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="4" seed="10" result="noise"/>
+    <!-- 位移映射 -->
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="100" xChannelSelector="R" yChannelSelector="G"/>
+    <!-- 高斯模糊 - 使边缘更柔和 -->
+    <feGaussianBlur stdDeviation="15"/>
+  </filter>
   
   <!-- 文字阴影效果 -->
   <filter id="shadow_filter" x="-10" y="-10" width="1620" height="980" filterUnits="userSpaceOnUse">
