@@ -112,3 +112,8 @@ passkey是一种无需密码的登录方法
 
 它又再次打开之前的标签页
 </details>
+
+### 轻松找到有关您正在浏览的页面的 Hacker News 讨论
+
+[地址](https://chromewebstore.google.com/detail/what-hacker-news-says/khgegkjchclhgpglloficdmdannlpmoi)
+
