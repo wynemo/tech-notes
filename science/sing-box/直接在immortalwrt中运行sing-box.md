@@ -209,7 +209,7 @@ reload_service() {
 }
 ```
 
-如果是tproxy模式，还需要创建一个文件 [nftables-ip46.conf](nftables-ip46.conf)
+如果是tproxy模式，还需要创建一个文件 [nftables-ip46.conf](nftables-ip46.conf) 注意下，里面的局域网网段需要改成自己的
 
 放到 `/etc/sing-box/nftables-ip46.conf`
 
