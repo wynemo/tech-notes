@@ -1,3 +1,5 @@
+[![视频讲解](apple_tv.svg)](https://www.youtube.com/watch?v=13MIs5wHJds)
+
 “目前支持旁路由的就两款 Apple TV 机型：2021 Apple TV 4K 和 2022 Apple TV 4K 128GB 版本。
 而 2022 Apple TV 64GB 版本以及其他型号没有 Thread 网络，并不支持旁路由”
 
