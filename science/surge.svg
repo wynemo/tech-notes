@@ -6,27 +6,17 @@
   <!-- 左上角半圆形绿色 -->
   <circle cx="0" cy="0" r="800" fill="url(#paint0_radial_115_5)"/>
   
-  <!-- 右下角不规则形状 -->
-  <g filter="url(#turbulence_filter)">
-    <!-- 主要形状 -->
-    <path d="M900 300 
-             Q950 280, 1000 320 
-             Q1050 360, 1100 330 
-             Q1150 300, 1200 340 
-             Q1300 380, 1400 320 
-             Q1500 260, 1600 300
-             L1700 1000
-             L700 1000
-             Q650 950, 600 900
-             Q550 850, 500 900
-             Q450 950, 400 900
-             L400 650
-             Q450 600, 500 550
-             Q550 500, 600 550
-             Q650 600, 700 550
-             Q750 500, 800 450
-             Q850 400, 900 300 Z" 
-          fill="url(#paint1_radial_115_5)"/>
+  <!-- 右下角椭圆形 - 使用滤镜使边缘模糊和随机 -->
+  <g filter="url(#blur_random_filter)">
+    <!-- 主椭圆 -->
+    <ellipse cx="1300" cy="700" rx="1000" ry="800" fill="url(#paint1_radial_115_5)"/>
+    
+    <!-- 辅助随机形状 - 增加随机性 -->
+    <g opacity="0.6" filter="url(#turbulence_filter)">
+      <ellipse cx="1200" cy="600" rx="300" ry="250" fill="url(#paint2_radial_115_5)"/>
+      <ellipse cx="1400" cy="500" rx="250" ry="200" fill="url(#paint2_radial_115_5)"/>
+      <ellipse cx="1000" cy="700" rx="280" ry="230" fill="url(#paint2_radial_115_5)"/>
+    </g>
   </g>
   
   <!-- 主标题效果 - 轮廓 -->
@@ -49,7 +39,7 @@
     <stop offset="1" stop-color="#f5f5f5" stop-opacity="0.1"/>
   </radialGradient>
   
-  <!-- 右下角不规则形状渐变 -->
+  <!-- 右下角椭圆形渐变 -->
   <radialGradient id="paint1_radial_115_5" cx="1300" cy="700" r="1600" gradientUnits="userSpaceOnUse">
     <stop offset="0" stop-color="#B2EBF2" stop-opacity="0.9"/>
     <stop offset="0.3" stop-color="#E0F7FA" stop-opacity="0.6"/>
@@ -57,14 +47,30 @@
     <stop offset="1" stop-color="#f5f5f5" stop-opacity="0.1"/>
   </radialGradient>
   
+  <!-- 辅助随机形状渐变 -->
+  <radialGradient id="paint2_radial_115_5" cx="0" cy="0" r="1" spreadMethod="pad" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#B2EBF2" stop-opacity="0.7"/>
+    <stop offset="1" stop-color="#E0F7FA" stop-opacity="0.1"/>
+  </radialGradient>
+  
+  <!-- 强高斯模糊滤镜 - 使边缘极度模糊 -->
+  <filter id="blur_random_filter" x="-100" y="-100" width="1800" height="1200" filterUnits="userSpaceOnUse">
+    <!-- 高斯模糊 - 大半径 -->
+    <feGaussianBlur stdDeviation="80" result="blur"/>
+    <!-- 对比度调整 - 增强边缘 -->
+    <feComponentTransfer in="blur" result="contrast">
+      <feFuncA type="linear" slope="1.5" intercept="-0.1"/>
+    </feComponentTransfer>
+    <!-- 合并原始图像和模糊图像 -->
+    <feComposite in="SourceGraphic" in2="contrast" operator="atop"/>
+  </filter>
+  
   <!-- 湍流滤镜 - 创建随机边缘效果 -->
   <filter id="turbulence_filter" x="-50" y="-50" width="1700" height="1100" filterUnits="userSpaceOnUse">
     <!-- 湍流噪声 -->
-    <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="4" seed="10" result="noise"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="5" seed="15" result="noise"/>
     <!-- 位移映射 -->
-    <feDisplacementMap in="SourceGraphic" in2="noise" scale="100" xChannelSelector="R" yChannelSelector="G"/>
-    <!-- 高斯模糊 - 使边缘更柔和 -->
-    <feGaussianBlur stdDeviation="15"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="120" xChannelSelector="R" yChannelSelector="G"/>
   </filter>
   
   <!-- 文字阴影效果 -->
