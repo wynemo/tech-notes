@@ -1,6 +1,6 @@
 今天给大家介绍几款chrome插件
 
-1. 首先是bitwarden 一个密码管理器 
+### 首先是bitwarden 一个密码管理器 
 
 有了它再也不用记每个网站的密码了
 
@@ -45,7 +45,7 @@ passkey是一种无需密码的登录方法
 演示一下 oracle 网站的两步认证填入
 </details>
 
-2. 再接下来是叫沉浸式翻译的插件
+### 再接下来是叫沉浸式翻译的插件
 
 它能把网页上的英文翻译
 
@@ -71,9 +71,11 @@ passkey是一种无需密码的登录方法
 他默认用的谷歌翻译 你可以设置为其他的
 </details>
 
-3. 接下来是close duplicate tab 
+### 接下来是close duplicate tab 
 
 关闭重复标签页的
+
+[地址](https://chromewebstore.google.com/detail/close-duplicate-tabs/egeikhkjmnnmaihaaoiapbiboahaogcj)
 
 <details>
 <summary> 比如这里我打开另外一个b站的页面</summary>
@@ -85,7 +87,9 @@ passkey是一种无需密码的登录方法
 就会关掉之前的打开的的重复页面
 </details>
 
-4. 最后是叫做 onetab 的插件
+### 最后是叫做 onetab 的插件
+
+[地址](https://chromewebstore.google.com/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall)
 
 它是可以把当前窗口所有标签关闭
 
