@@ -27,6 +27,13 @@ passkey是一种无需密码的登录方法
 比如这里github就支持passkey登录
 
 可以看到非常方便 一下就登录了
+
+When a domain is in the Excluded Domains list, Bitwarden browser extensions also won't issue passkey prompts.
+当域名位于排除域列表中时，Bitwarden 浏览器扩展也不会发出密码提示。
+
+To configure excluded domains, open the  Settings tab, then Notifications and select the Excluded Domains option:
+要配置排除域，请打开设置选项卡，然后打开通知并选择排除域选项
+
 </details>
 
 ### 接下来是叫 authenticator 的应用
