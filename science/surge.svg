@@ -7,7 +7,7 @@
   <circle cx="0" cy="0" r="800" fill="url(#paint0_radial_115_5)"/>
   
   <!-- 右下角椭圆形浅绿色 -->
-  <ellipse cx="1500" cy="900" rx="800" ry="600" fill="url(#paint1_radial_115_5)"/>
+  <ellipse cx="1500" cy="900" rx="1000" ry="800" fill="url(#paint1_radial_115_5)"/>
   
   <!-- 主标题效果 - 轮廓 -->
   <text x="800" y="420" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="none" stroke="#FFFFFF" stroke-width="2" text-anchor="middle" opacity="0.3">SURGE</text>
@@ -30,7 +30,7 @@
   </radialGradient>
   
   <!-- 右下角椭圆形渐变 -->
-  <radialGradient id="paint1_radial_115_5" cx="1500" cy="900" r="800" gradientUnits="userSpaceOnUse">
+  <radialGradient id="paint1_radial_115_5" cx="1500" cy="900" r="1000" gradientUnits="userSpaceOnUse">
     <stop offset="0" stop-color="#B2EBF2" stop-opacity="0.8"/>
     <stop offset="0.4" stop-color="#E0F7FA" stop-opacity="0.5"/>
     <stop offset="0.7" stop-color="#E8F5E9" stop-opacity="0.3"/>
