@@ -35,18 +35,34 @@ outline 它给的教程 __<https://docs.getoutline.com/s/hosting/doc/docker-7pfe
 
 1. 启动outline 以及 oidc-server
 
-   docker.env 配置要注意 用这个模板文件 __<https://github.com/outline/outline/blob/main/.env.sample>__
+   你可以把这个仓库clone下来，进入 [outline-server](outline-server/) 这个目录， 使用docker compose来启动
 
+   docker.env 这个配置 我从这个模板文件 __<https://github.com/outline/outline/blob/main/.env.sample>__ 修改得来的
+
+   如果你不想使用 你可以自行修改
+
+   注意下这个两个配置比较重要：
    ```bash
    NODE_ENV=production
    PGSSLMODE=disable
    ```
 
-   docker.env 里 `to change` 的地方都需要改 （两处密钥）
+   docker.env 里 `to change` 的地方都需要改 （两处密钥）下面会说到
 
    进入outline-server目录 运行 `docker compose up -d`
 
    outline 监听在 127.0.0.1:3002，oidc-server 监听在127.0.0.1:8888
+
+你可以用docker ps确认下：
+```
+4ab332de6fa3   docker.getoutline.com/outlinewiki/outline:latest   "docker-entrypoint.s…"   3 months ago    Up 3 months             127.0.0.1:3002->3000/tcp                    outline-outline-1
+7e26181b6cc1   postgres                                           "docker-entrypoint.s…"   3 months ago    Up 3 months (healthy)   5432/tcp                                    outline-postgres-1
+5dcaefab0abf   redis                                              "docker-entrypoint.s…"   3 months ago    Up 3 months (healthy)   6379/tcp                                    outline-redis-1
+a27dfb333acc   vicalloy/oidc-server                               "make run"               3 months ago    Up 3 months             8000/tcp                                    outline-oidc-server-1
+f4bc46290260   nginx                                              "/docker-entrypoint.…"   3 months ago    Up 3 months             80/tcp, 127.0.0.1:8888->8888/tcp            outline-nginx-1
+```
+
+确认浏览器都能打开 127.0.0.1:3002 与 127.0.0.1:8888 两个地址
 
 2. 配置本地oidc
 
