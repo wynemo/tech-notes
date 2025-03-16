@@ -35,3 +35,11 @@
     
 
 20241215: 反馈说这样boxjs 会卡死，这是小火箭的bug(javascript 引擎旧)，在获取到流量信息后，可以关掉联通模块，这样就不会卡死了，但就是这样cookie不会刷新，15天后应该会失效，到时候再打开联通app重新走一下流程，然后再关闭联通模块
+
+20250316: https://github.com/anker1209/Scriptable 因为我小火箭用之前那个模块不稳定 所以用这个 就是麻烦点 两周打开联通app查询下流量
+引入模块 https://github.com/anker1209/Scriptable/tree/main/module/10010.sgmodule?raw=true
+Boxjs添加YaYa美女订阅链接（感谢YaYa辛苦付出~）： https://raw.githubusercontent.com/dompling/Script/master/dompling.boxjs.json
+
+打开中国联通app --> 首页的流量查询获取Cookie；
+
+运行脚本，点击基础设置-->BoxJS域名，设置为你自己的BoxJS域名，再次运行脚本，选择代理缓存，获取缓存cookie；
