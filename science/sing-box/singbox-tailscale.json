@@ -35,9 +35,7 @@
       "advertise_routes": ["192.168.0.0/24"],
       "advertise_exit_node": false,
       "udp_timeout": "5m",
-      "domain_resolver": "Local-DNS-Resolver",
-      "domain_strategy": "ipv4_only",
-      "detour": "🚀 节点选择"
+      "domain_resolver": "Local-DNS-Resolver"
     }
   ],
   "inbounds": [
