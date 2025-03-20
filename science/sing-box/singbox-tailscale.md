@@ -1,3 +1,5 @@
+版本：sing-box 1.12.0-alpha.7
+
 大家好 今天我们来讲sing-box使用tailscale
 
 最近sing-box的alpha版本加入了tailscale的支持
@@ -33,6 +35,8 @@
 tailscale是有一个功能的，某个节点可以设置让其他节点通过它访问前者所在的局域网网段
 
 但我试了通过这个节点访问局域网是不行的
+报错：ERROR[0149] connection: open outbound connection: connect tcp 192.168.0.200:10022: connection timed out
+（我加了一个vless入站，测试了下是可以通过vless访问局域网的，所以是它的bug）
 
 应该是现在程序的bug
 
