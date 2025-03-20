@@ -8,5 +8,6 @@
 直接ssh不要密码登陆到后台
 
 注：utm虚拟机网络选桥接，dhcp就可以和宿主机一个局域网
+但是要注意网络接口要选对，苹果可能有多个接口
 
 youtube 介绍视频：https://www.youtube.com/watch?v=rvDz65cbyqo
