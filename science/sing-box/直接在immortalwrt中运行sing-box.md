@@ -18,6 +18,8 @@ https://raw.githubusercontent.com/xishang0128/sub-store-template/main/sing-box.j
 
 注意模板文件与脚本是配套的
 
+如果是tun模式，tun的入站加入 `"auto_redirect": true`
+
 如果是tproxy模式，sing-box入站配置要改为:
 ```json
 "inbounds": [
@@ -54,39 +56,8 @@ config nat
         option src 'lan'
         option target 'MASQUERADE'  # 启用源地址转换（NAT）
         option proto 'all'          # 适用于所有协议
-
-config zone
-        option name 'proxy'         # 新建名为 proxy 的防火墙区域
-        option forward 'REJECT'     # 默认拒绝转发到其他区域的流量
-        option output 'ACCEPT'      # 允许本区域发起的出站流量
-        option input 'ACCEPT'      # 允许进入本区域的入站流量
-        option mtu_fix '1'         # 启用 MTU 修复
-        option device 'tun0'       # 关联 tun0 虚拟网卡
-        list network 'proxy'       # 关联 proxy 网络接口
-
-config forwarding
-        option name 'lan-proxy'     # 转发规则名称
-        option dest 'proxy'         # 目标区域
-        option src 'lan'           # 源区域
 ```
 
-如果是 tproxy 模式，/etc/config/firewall  规则简单很多
-
-```
-# 这里的nat规则主要是让其他设备通过immortalwrt上网
-config nat
-        option name 'MASQUERADE'
-        option src 'lan'
-        option target 'MASQUERADE'  # 启用源地址转换（NAT）
-        option proto 'all'          # 适用于所有协议
-```
-
-编辑网络配置 /etc/config/network (如果是 tproxy 模式，就不需要了)
-```
-config interface 'proxy'
-        option proto 'none'
-        option device 'tun0'
-```
 
 重启下网络 防火墙
 ```
@@ -97,64 +68,19 @@ config interface 'proxy'
 
 写好sing-box 配置 /etc/sing-box/config.json
 
-把sing-box启动文件 /etc/init.d/sing-box 替换为如下内容：
-```bash
-#!/bin/sh /etc/rc.common
-#
-# Copyright (C) 2022 by nekohasekai <contact-sagernet@sekai.icu>
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program. If not, see <http://www.gnu.org/licenses/>.
-#
-
-START=99
-USE_PROCD=1
-
-#####  ONLY CHANGE THIS BLOCK  ######
-PROG=/usr/bin/sing-box
-RES_DIR=/etc/sing-box/ # resource dir / working dir / the dir where you store ip/domain lists
-CONF=./config.json   # where is the config file, it can be a relative path to $RES_DIR
-#####  ONLY CHANGE THIS BLOCK  ######
-
-start_service() {
-  sleep 10
-  procd_open_instance
-  procd_set_param command $PROG run -D $RES_DIR -c $CONF
-
-  procd_set_param user root
-  procd_set_param limits core="unlimited"
-  procd_set_param limits nofile="1000000 1000000"
-  procd_set_param stdout 1
-  procd_set_param stderr 1
-  procd_set_param respawn "${respawn_threshold:-3600}" "${respawn_timeout:-5}" "${respawn_retry:-5}"
-  procd_close_instance
-  iptables -I FORWARD -o tun+ -j ACCEPT
-  echo "sing-box is started!"
-}
-
-stop_service() {
-  service_stop $PROG
-  iptables -D FORWARD -o tun+ -j ACCEPT
-  echo "sing-box is stopped!"
-}
-
-reload_service() {
-  stop
-  sleep 5s
-  echo "sing-box is restarted!"
-  start
-}
+如果是tun模式 修改一下 sing-box 启动配置：
 ```
+config sing-box 'main'
+        option enabled '1'
+        option user 'root'
+        option conffile '/etc/sing-box/config.json'
+        option workdir '/usr/share/sing-box'
+#       list ifaces 'wan'
+#       list ifaces 'wan6'
+        option log_stderr '1'
+        option log_stdout '1'
+```
+修改了enabled为1，user为root
 
 如果是tproxy模式, /etc/init.d/sing-box 替换为如下内容:
 ```bash
