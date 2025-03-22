@@ -68,7 +68,7 @@ config nat
 
 写好sing-box 配置 /etc/sing-box/config.json
 
-如果是tun模式 修改一下 sing-box 启动配置：
+如果是tun模式 修改一下 sing-box 启动配置文件 /etc/config/sing-box：
 ```
 config sing-box 'main'
         option enabled '1'
