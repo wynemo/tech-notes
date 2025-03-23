@@ -1,9 +1,14 @@
+大家好，今天来给大家讲sing-box使用wireguard
+
+我们会用一台服务器，一台iphone来做演示
+
 sing-box 这里我们使用1.11.4版本
 ```
 pi@raspberrypi:~$ ./sing-box version
 sing-box version 1.11.4
 ```
-iphone上也有一个版本
+iphone上也是这个版本
+
 自从1.11版本，wireguard在sing-box里作为了endpoint存在
 之前是作为出站存在
 就是说既可以做入站，也可以做出站
