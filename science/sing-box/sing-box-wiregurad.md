@@ -1,6 +1,6 @@
 大家好，今天来给大家讲sing-box使用wireguard
 
-我们会用一台服务器，一台iphone来做演示
+我们会用一台debian服务器，一台iphone来做演示
 
 sing-box 这里我们使用1.11.4版本
 ```
