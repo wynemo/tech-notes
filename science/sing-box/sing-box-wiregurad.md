@@ -1,3 +1,5 @@
+[![视频讲解](sing-box-wiregurad.svg)](https://youtu.be/Dv5jrp8shRg)
+
 大家好，今天来给大家讲sing-box使用wireguard
 
 我们会用一台debian服务器，一台iphone来做演示
