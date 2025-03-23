@@ -8,7 +8,13 @@ iphone上也有一个版本
 之前是作为出站存在
 就是说既可以做入站，也可以做出站
 
-wiregurad
+我们在服务器上，安装wireguard
+
+安装wireguard
+`sudo apt update && sudo apt install wireguard`
+
+这样用可以用它提供的wg命令生成公私钥
+
 
 首先生成两对公私钥：
 ```bash
