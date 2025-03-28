@@ -48,7 +48,7 @@ AllowedIPs = 10.18.0.2/32  # 客户端的VPN IP地址
 ```
 [Interface]
 PrivateKey = <客户端私钥>
-Address = 10.0.0.2/24
+Address = 10.18.0.2/24
 DNS = 8.8.8.8
 
 [Peer]
