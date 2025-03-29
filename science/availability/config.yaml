@@ -1,0 +1,57 @@
+# Whether to print progress
+print-progress: true
+
+log-level: "debug"
+
+rename:
+  # Renaming method: api, regex, or mix
+  method: api
+  # Whether to show flag information
+  flag: true
+
+check:
+  # Concurrency
+  concurrent: 100
+  # Check interval, in minutes
+  interval: 300
+  # Alive test URL
+  alive-test-url: "https://gstatic.com/generate_204"
+  # Alive test expect code
+  alive-test-expect-code: 204
+  # Timeout, in milliseconds
+  timeout: 2000
+  # Minimum speed, in KB/s
+  min-speed: 2048
+  # Download test timeout, in seconds
+  download-timeout: 10
+  # Speed test download size, in MB
+  download-size: 50
+  # Speed test URL
+  speed-test-url:
+    - https://speed.cloudflare.com/__down?bytes=1073741824
+    - https://github.com/VSCodium/vscodium/releases/download/1.98.0.25067/codium-1.98.0.25067-el9.aarch64.rpm
+  # Skip speed test for names matching this regex
+  speed-skip-name: 倍率|x\d+
+  # Speed test concurrent
+  speed-check-concurrent: 1
+  # Speed test count
+  speed-count: 3
+  # Speed save 设置为 false 时 会保存所有的结果包括速度不达标的
+  speed-save: false
+  # Items to check
+  items:
+    - speed
+
+sub-urls-retry: 3
+#proxy:
+#  type: "http" # 可选值: http, socks
+#  address: "http://127.0.0.1:6152" # 代理地址
+
+save:
+  # Save method: webdav, http, gist, or r2
+  method:
+    - http
+  port: 8080
+
+sub-urls:
+  - https://your_subscription_url

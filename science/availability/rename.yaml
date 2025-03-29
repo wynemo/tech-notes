@@ -1,0 +1,54 @@
+- name: CA
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇨🇦|加拿大|(?:CA|Canada))(?=$|[^a-zA-Z])
+- name: US
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇺🇸|美国|(?:US|United States))(?=$|[^a-zA-Z])
+- name: JP
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇯🇵|日本|(?:JP|Japan))(?=$|[^a-zA-Z])
+- name: GB
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇬🇧|英国|(?:GB|United Kingdom))(?=$|[^a-zA-Z])
+- name: DE
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇩🇪|德国|(?:DE|Germany))(?=$|[^a-zA-Z])
+- name: FR
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇫🇷|法国|(?:FR|France))(?=$|[^a-zA-Z])
+- name: CN
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇨🇳|中国|(?:CN|China))(?=$|[^a-zA-Z])
+- name: IN
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇮🇳|印度|(?:IN|India))(?=$|[^a-zA-Z])
+- name: BR
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇧🇷|巴西|(?:BR|Brazil))(?=$|[^a-zA-Z])
+- name: IT
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇮🇹|意大利|(?:IT|Italy))(?=$|[^a-zA-Z])
+- name: RU
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇷🇺|俄罗斯|(?:RU|Russia))(?=$|[^a-zA-Z])
+- name: SA
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇸🇦|沙特阿拉伯|(?:SA|Saudi Arabia))(?=$|[^a-zA-Z])
+- name: TW
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇹🇼|台湾|(?:TW|Taiwan))(?=$|[^a-zA-Z])
+- name: HK
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇭🇰|香港|(?:HK|Hong Kong))(?=$|[^a-zA-Z])
+- name: PK
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇵🇰|巴基斯坦|(?:PK|Pakistan))(?=$|[^a-zA-Z])
+- name: IR
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇮🇷|伊朗|(?:IR|Iran))(?=$|[^a-zA-Z])
+- name: SG
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇸🇬|新加坡|(?:SG|Singapore))(?=$|[^a-zA-Z])
+- name: NL
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇳🇱|荷兰|(?:NL|Netherlands))(?=$|[^a-zA-Z])
+- name: KR
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇰🇷|韩国|(?:KR|Korea))(?=$|[^a-zA-Z])
+- name: AT
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇦🇹|奥地利|(?:AT|Austria))(?=$|[^a-zA-Z])
+- name: CH
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇨🇭|瑞士|(?:CH|Switzerland))(?=$|[^a-zA-Z])
+- name: BE
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇧🇪|比利时|(?:BE|Belgium))(?=$|[^a-zA-Z])
+- name: SC
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇸🇨|塞舌尔|(?:SC|Seychelles))(?=$|[^a-zA-Z])
+- name: UA
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇺🇦|乌克兰|(?:UA|Ukraine))(?=$|[^a-zA-Z])
+- name: PT
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇵🇹|葡萄牙|(?:PT|Portugal))(?=$|[^a-zA-Z])
+- name: RO
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇷🇴|罗马尼亚|(?:RO|Romania))(?=$|[^a-zA-Z])
+- name: IE
+  recognition: (?i)(?<=^|[^a-zA-Z])(?:🇮🇪|爱尔兰|(?:IE|Ireland))(?=$|[^a-zA-Z])
