@@ -34,7 +34,7 @@ zed对deepseek支持的不够好，出现超时的情况， deepseek-r1几乎没
 自动生成git commit信息用于提交
 
 
-zed - 终端 - git diff -  侧边栏 - /terminal , 生成git commit信息 - 回到终端 - 打开inline assiant - git add modified file & commit
+zed - 终端 - git diff -  侧边栏 - /terminal , 生成git commit信息 - 回到终端 - 打开inline assiant - git add modified file & commit - 这现在已经没有用了，官方直接就可以在git面板生成git信息了
 
 
 Zed Editor AI Assistance Features: Chat, Code Generation, Assistance in Terminal
