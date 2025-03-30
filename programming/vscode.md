@@ -96,3 +96,8 @@ com.apple.keylayout.ABC
         }
     ]
 ```
+
+### cline 插件
+
+有copilot可以用 有 claude 3.5 可以用
+然后也可以 cline 插件 + gemini2.5 pro
