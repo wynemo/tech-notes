@@ -82,3 +82,17 @@ com.apple.keylayout.ABC
 确实好了
 😁
 以后可以在cursor里愉快的写中文了
+
+### copilot
+
+自动生成 commit 信息 [设置一下prompt](https://code.visualstudio.com/docs/copilot/copilot-customization#_define-commit-message-generation-custom-instructions)
+
+我这就让它使用中文
+
+```json
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        {
+            "text": "使用中文"
+        }
+    ]
+```
