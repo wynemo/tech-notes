@@ -3,6 +3,8 @@
 ## 配置
 1. 字体
 可以用：'Zed Mono', 'LXGW Neo XiHei'
+2. vscode如何设置编辑器失焦就保存
+修改 VS Code 的设置文件 (settings.json) 在 JSON 文件的顶层添加 "files.autoSave": "onFocusChange"
 
 ## 插件
 
