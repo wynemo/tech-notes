@@ -69,3 +69,26 @@ Terminal Use:
  • Automatically generate Git commit messages for submission.
 
  • Zed - Terminal - Git diff - Sidebar - /terminal, generate Git commit message - go back to the terminal - open inline assistant - git add modified file & commit.
+
+## 编辑默认提示词
+
+但这个默认的提示词 不会影响 commit 信息生成
+
+To edit prompts, select "Prompt Library" from the menu icon (three horizontal lines) in the upper right hand corner or using the cmd-k l keyboard shortcut.
+要编辑提示，请从右上角的菜单图标（三条水平线）中选择“提示库”或使用 cmd-k l 键盘快捷键。
+
+A default prompt might look something like:
+默认提示可能看起来像这样：
+
+[-] Default
+  [+] Today's date
+  [+] You are an expert
+  [+] Don't add comments
+Each of the above prompts can be individually expanded, and since Zed's assistant is all text, they can also be edited directly. Edits here will not propagate to the saved prompts.
+上述每个提示都可以单独展开，而且由于 Zed 的助手都是文本，因此也可以直接编辑它们。此处的编辑不会传播到已保存的提示。
+
+You can add prompts to the default prompt by clicking the icon in the top right (the "sparkle" icon) of the prompt editor. This will add the prompt to the default prompt.
+您可以通过点击提示编辑器右上角的图标（“闪烁”图标）将提示添加到默认提示中。这会将提示添加到默认提示中。
+
+Default prompts will show at the top of the prompt list, and will be included with every new chat.
+默认提示将显示在提示列表的顶部，并且包含在每次新的聊天中。
