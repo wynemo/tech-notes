@@ -107,3 +107,11 @@ com.apple.keylayout.ABC
 可以在[这里](https://aistudio.google.com/app/apikey)拿到 gemini 的 key
 
 **注意** ：访问google 要美国的节点
+
+#### cline 插件配置
+
+在设置里搜索 cline，找到 "cline.preferredLanguage" 选项，设置为中文
+
+```
+    "cline.preferredLanguage": "Simplified Chinese - 简体中文"
+```
