@@ -103,3 +103,7 @@ com.apple.keylayout.ABC
 
 有copilot可以用 有 claude 3.5 可以用
 然后也可以 cline 插件 + gemini2.5 pro
+
+可以在[这里](https://aistudio.google.com/app/apikey)拿到 gemini 的 key
+
+**注意** ：访问google 要美国的节点
