@@ -106,7 +106,7 @@ com.apple.keylayout.ABC
 
 可以在[这里](https://aistudio.google.com/app/apikey)拿到 gemini 的 key
 
-**注意** ：访问google 要美国的节点
+**注意** ：访问google 要美国的节点, 而且额度太少了，每天25次
 
 #### cline 插件配置
 
