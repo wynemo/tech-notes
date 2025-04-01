@@ -5,6 +5,8 @@
 可以用：'Zed Mono', 'Maple Mono NF CN'
 2. vscode如何设置编辑器失焦就保存
 修改 VS Code 的设置文件 (settings.json) 在 JSON 文件的顶层添加 "files.autoSave": "onFocusChange"
+3. 在一个新标签打开文件
+    "workbench.editor.enablePreview": false
 
 ## 插件
 
@@ -103,3 +105,15 @@ com.apple.keylayout.ABC
 
 有copilot可以用 有 claude 3.5 可以用
 然后也可以 cline 插件 + gemini2.5 pro
+
+可以在[这里](https://aistudio.google.com/app/apikey)拿到 gemini 的 key
+
+**注意** ：访问google 要美国的节点, 而且额度太少了，每天25次
+
+#### cline 插件配置
+
+在设置里搜索 cline，找到 "cline.preferredLanguage" 选项，设置为中文
+
+```
+    "cline.preferredLanguage": "Simplified Chinese - 简体中文"
+```
