@@ -1,5 +1,18 @@
 # cherry studio + deepseek v3 + filesystem mcp 也能写代码
 
+
+## mcp 介绍
+
+[可以看官网介绍](https://modelcontextprotocol.io/introduction)
+
+MCP 是一种开放协议，它标准化了应用向 AI 应用提供上下文的方式。
+您可以将 MCP 视为 AI 应用的 USB-C 端口。
+正如 USB-C 提供了一种将设备连接到各种外围设备和配件的标准化方式一样，MCP 提供了一种将 AI 模型连接到不同数据源和工具的标准化方式。
+
+## filesystem mcp
+
+它具有读写文件，读取/创建目录等功能，这样让大模型就可以帮我们写代码了
+
 可以用这个具有文件访问权限的mcp，指定一个（或多个）目录
 https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem
 
