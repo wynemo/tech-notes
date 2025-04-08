@@ -1,3 +1,5 @@
+# cherry studio + deepseek v3 + filesystem mcp 也能写代码
+
 可以用这个具有文件访问权限的mcp，指定一个（或多个）目录
 https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem
 
