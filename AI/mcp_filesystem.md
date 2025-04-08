@@ -38,6 +38,9 @@ vi ~/Library/Application\ Support/Claude/claude_desktop_config.json
 
 它就会调用mcp工具，会问你要权限，你点接受
 
+你在进程监控器里可以看到claude desktop启动了一个nodejs进程
+`node /Users/tommygreen/.npm/_npx/a3241bba59c344f5/node_modules/.bin/mcp-server-filesystem /Users/tommygreen/Documents/work`
+
 注意是macos系统的话，有系统的询问访问权限 这个可以在privacy & security - folders里可以看到授权
 
 然后 Claude Desktop + MCP 就可以做和 Cursor 一样编辑代码了
