@@ -1,6 +1,6 @@
 # cherry studio + deepseek v3 + filesystem mcp 也能写代码
 
-[![视频讲解](mcp_filesystem.svg)](https://youtu.be/Dv5jrp8shRg)
+[![视频讲解](mcp_filesystem.svg)](https://youtu.be/PwhCAuDF4qM)
 
 
 ## mcp 介绍
