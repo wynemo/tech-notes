@@ -41,6 +41,8 @@ vi ~/Library/Application\ Support/Claude/claude_desktop_config.json
 }
 ```
 
+如果是用cherry studio 注意把command里的npx换为绝对路径
+
 注意这个mcp只能访问 /Users/tommygreen/Documents/work 这个目录
 
 然后重启下claude desktop
