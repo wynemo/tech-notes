@@ -3,6 +3,10 @@ sing-box服务端模式 
 访问家里局域网
 需要有公网IP
 直接用TCP连接而不用UDP，不用怕运营商QoS
+
+2025.04.10 补充，有时候用ss协议，连不上局域网，看日志也没有任何错误，但是就是连接超时，大概就是sing-box的bug。。。。
+用vless会好一点
+
 ## shadowsocks2022 例子
 
 + shadowsocks 密码要用 `./sing-box generate rand --base64 32` 来生成
