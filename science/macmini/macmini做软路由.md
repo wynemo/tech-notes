@@ -46,6 +46,12 @@ nat-anchor "com.apple.internet-sharing" all
 rdr-anchor "com.apple/*" all
 rdr-anchor "com.apple.internet-sharing" all
 
+rdr pass on utun4 from bridge100:network to any -> (utun4)
+
+# ai 大聪明写的 确保后续流量遵循相同路径
+#pass out on utun4 inet from 192.168.2.0/24 to any flags S/SA keep state
+pass out on utun4 inet from bridge100:network to any flags S/SA keep state
+
 tommygreen@tommys-Mac-mini-4 nebula-darwin % cat proxy.sh
 # Enable packet forwarding
 
