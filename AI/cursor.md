@@ -10,10 +10,6 @@ keybindings.json:
 ```json
 [
     {
-        "key": "cmd+i",
-        "command": "composerMode.agent"
-    },
-    {
         "command":"runCommands",
         "key": "cmd+g cmd+g",
         "args":{
