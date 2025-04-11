@@ -5,3 +5,25 @@ command + L 呼出聊天窗口，然后输入 @Web 就可以联网查询
 
 cursor 在生成 commit message 后自动将焦点切换到 Source Control，
 然后根据需要进行修改，再决定是否提交
+keybindings.json:
+
+```json
+[
+    {
+        "key": "cmd+i",
+        "command": "composerMode.agent"
+    },
+    {
+        "command":"runCommands",
+        "key": "cmd+g cmd+g",
+        "args":{
+            "commands" :[
+            "workbench.action.files.save",
+            "git.stageAll",
+            "cursor.generateGitCommitMessage", // vscode github.copilot.git.generateCommitMessage
+            "workbench.scm.focus"
+            ]
+        }
+    }
+]
+```
