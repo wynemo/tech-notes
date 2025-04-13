@@ -7,3 +7,7 @@
 ## 代理链
 [Proxy Chain]
 speed_chain = 中转,落地, udp=true
+
+## macos
+
+无法做软路由
