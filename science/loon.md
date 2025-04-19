@@ -11,3 +11,11 @@ speed_chain = 中转,落地, udp=true
 ## macos
 
 无法做软路由
+
+## vless + relality
+
+版本3.3.0(853) for iOS & tvOS正式版已在Apple Store更新。
+
+主要更新内容。
+
+VLESS 协议支持新增 Reality + Vision
