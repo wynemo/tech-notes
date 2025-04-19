@@ -11,6 +11,9 @@ https://chromewebstore.google.com/detail/cloud-document-converter/ehkomhhcinhikf
 
 下载飞书文档为markdown
 
+实在无语 求求字节的做个人吧 提供markdown下载
+下个pdf/word 要几十秒
+
 Convert lark cloud documents to markdown
 
 Features:
