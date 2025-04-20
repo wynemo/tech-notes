@@ -19,3 +19,6 @@ speed_chain = 中转,落地, udp=true
 主要更新内容。
 
 VLESS 协议支持新增 Reality + Vision
+
+## 同步
+profile - settings - icloud drive
