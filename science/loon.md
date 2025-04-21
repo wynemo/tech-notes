@@ -27,7 +27,7 @@ remote filter - 过滤节点集合
 
 ```
 [Remote Rule]
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Surge/OpenAI/OpenAI.list, policy=openai, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/OpenAI/OpenAI.list, policy=openai, enabled=true
 https://raw.githubusercontent.com/Loon0x00/LoonLiteRules/main/proxy/YouTube.list, policy=YouTube, tag=YouTube, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Google/Google.list, policy=Google, tag=Google, enabled=true
 https://raw.githubusercontent.com/Loon0x00/LoonLiteRules/main/proxy/Telegram.list, policy=Telegram, tag=Telegram, enabled=true
