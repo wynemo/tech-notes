@@ -31,6 +31,10 @@ speed_chain = 中转,落地, udp=true
 ## 同步
 profile - settings - icloud drive
 
+这里如果有冲突，可以选择本地覆盖icloud，或者让icloud覆盖本地
+
+然后如果是新设备，从icloud获得的配置，里面的证书，需要手动安装证书，让系统信任
+
 ## 插件
 
 sub-store
