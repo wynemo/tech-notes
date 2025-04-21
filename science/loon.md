@@ -30,3 +30,9 @@ speed_chain = 中转,落地, udp=true
 
 ## 同步
 profile - settings - icloud drive
+
+## 插件
+
+sub-store
+boxjs
+youtube
