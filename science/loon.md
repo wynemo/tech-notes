@@ -19,6 +19,24 @@ remote filter - 过滤节点集合
 
 所有操作都支持界面，不用写配置文件，比如支持在界面上添加节点，策略组，代理链
 
+## 分流
+
+我们依然可以使用 `blackmatrix7/ios_rule_script` 的规则
+
+示例:
+
+```
+[Remote Rule]
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Surge/OpenAI/OpenAI.list, policy=openai, enabled=true
+https://raw.githubusercontent.com/Loon0x00/LoonLiteRules/main/proxy/YouTube.list, policy=YouTube, tag=YouTube, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Google/Google.list, policy=Google, tag=Google, enabled=true
+https://raw.githubusercontent.com/Loon0x00/LoonLiteRules/main/proxy/Telegram.list, policy=Telegram, tag=Telegram, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Proxy/Proxy.list, policy=Available, tag=Global, enabled=true
+https://raw.githubusercontent.com/Loon0x00/LoonLiteRules/main/direct/cn.list, policy=DIRECT, tag=GEOIP_CN, enabled=true
+```
+
+注意下 policy 字段即可，表示用哪个策略组
+
 ## 测速
 测速后没有排序，也不会显示绿色/黄色/红色，
 
@@ -61,7 +79,7 @@ loon的插件很丰富，很多去广告的插件
 
 再比如：sub-store boxjs 这两个功能插件，这里就不详细介绍
 
-记得把mitm打开，安装证书， script、、rewrite这些开关都打开
+记得把mitm打开，安装证书， 脚本（script）、复写（rewrite）这些开关都打开
 
 ## 同步
 profile - settings - icloud drive
@@ -69,4 +87,7 @@ profile - settings - icloud drive
 这里如果有冲突，可以选择本地覆盖icloud，或者让icloud覆盖本地
 
 然后如果是新设备，从icloud获得的配置，里面的证书，需要手动安装证书，让系统信任
+
+## 日志
+设置 - 调试 - 日志 这里可以查看日志
 
