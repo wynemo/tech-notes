@@ -81,7 +81,7 @@ loon的插件很丰富，很多去广告的插件
 
 再比如：sub-store boxjs 这两个功能插件，这里就不详细介绍
 
-boxjs之前讲小火箭 + boxjs + 小组件时讲过
+boxjs之前讲 [小火箭 + boxjs + 小组件]('shadowrocket/iphone 用scripttable小组件显示网上国网、联通余量 - 使用小火箭（shadowrocket）.md')时讲过
 
 记得把mitm打开，安装证书， 脚本（script）、复写（rewrite）这些开关都打开
 
