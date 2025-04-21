@@ -43,6 +43,8 @@ speed_chain = 中转,落地, udp=true
 
 loon的插件很丰富，很多去广告的插件
 
+这算是它的特色吧
+
 可以看
 
 [可莉的Loon资源库 | 插件 | 脚本 | 规则](https://github.com/luestr/ProxyResource)
