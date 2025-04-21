@@ -50,6 +50,8 @@ speed_chain = 中转,落地, udp=true
 
 顾名思义，落地节点通过中转节点代理
 
+还可以添加多个中转节点，比如：A，B，C，这样就形成一个代理链，依次通过A，B，最后C落地
+
 不能选择订阅节点集合(remote proxy)、过滤节点集合(remote filter)，只能选择本地节点(proxy)或者策略组(proxy group)
 
 ## macos
