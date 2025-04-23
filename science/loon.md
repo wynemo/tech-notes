@@ -94,3 +94,6 @@ profile - settings - icloud drive
 
 ## 日志
 设置 - 调试 - 日志 这里可以查看日志
+
+## apple tv
+这里可以把配置共享给apple tv上的loon
