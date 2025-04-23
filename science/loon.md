@@ -56,7 +56,7 @@ speed_chain = 中转,落地, udp=true
 
 ## macos
 
-无法做软路由
+可以一样像小火箭、surge那样做软路由，但注意要用网线，比如macmini拿来做软路由
 
 ## 支持的协议
 
