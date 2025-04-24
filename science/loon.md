@@ -1,5 +1,7 @@
 今天来给大家讲一个代理软件loon
 
+[![视频讲解](loon.svg)](https://www.youtube.com/watch?v=SUEnZ9LnpW4)
+
 ## 购买
 
 loon是付费软件，国区没有
