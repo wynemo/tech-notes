@@ -39,9 +39,9 @@ Reply from yetone (@yetone):
 
 agent 模式不要安排太多任务 最好拆分一下 一个是生成代码太多你还得审核 看不过来
 
-### tab 或者 command e 生成代码
+### tab 或者 command k 生成代码
 
-然后善用cursor tab/以及command e，command e可以用40 mini这种小模型 一行变更之类的 
+然后善用cursor tab/以及command k，command e可以用o4 mini这种小模型 一行变更之类的 
 
 小模型不要钱 所以这样用下来比较节省
 
