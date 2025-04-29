@@ -31,3 +31,16 @@ keybindings.json:
 
 Reply from yetone (@yetone):
 "其实 cursor 的原理并不简单，真正实施起来那就更难了，而且它所有的工程难度恰恰就只是为了解决一个问题 ——「不要让用户手动复制粘贴代码」，所以它在用户体验上下了苦功夫，不仅在工程上要在传统代码编辑器上发明新的代码编辑的范式和工作流，还自己训练和部署了快速 edit 模型 FastApply，自己训练和部署了 cursor tab prediction 模型 Fusion，为了更好地解决 context 携带问题，在本地和服务端做了两层 RAG，这一切都不是一时半会儿能够超越的，这还没说它一路走来做的那些 shadow workspace 等等类似的实验了"
+
+### agent 模式
+
+1. 写好思路给代码上下文 先让cursor agent弄一个功能点 (这种一定要审核 有可能乱删代码) 
+2. 或者弄一个原形 
+
+### tab 或者 command e 生成代码
+
+然后善用cursor tab/以及command e，command e可以用40 mini这种小模型 一行变更之类的 
+
+小模型不要钱 所以这样用下来比较节省
+
+语法不熟 帮你写个ts的filter map；css帮你写样式、颜色
