@@ -37,6 +37,8 @@ Reply from yetone (@yetone):
 1. 写好思路给代码上下文 先让cursor agent弄一个功能点 (这种一定要审核 有可能乱删代码) 
 2. 或者弄一个原形 
 
+agent 模式不要安排太多任务 最好拆分一下 一个是生成代码太多你还得审核 看不过来
+
 ### tab 或者 command e 生成代码
 
 然后善用cursor tab/以及command e，command e可以用40 mini这种小模型 一行变更之类的 
