@@ -78,6 +78,8 @@ speed_chain = 中转,落地, udp=true
 
 2025 4月支持了 vless + relality
 
+2025 5月为止 还是没有支持grpc
+
 ## 抓包
 
 在首页那里 点击编辑 把“抓包记录”弄出来
