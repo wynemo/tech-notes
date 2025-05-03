@@ -1,0 +1,190 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns_proxy",
+        "address": "https://1.1.1.1/dns-query",
+        "address_resolver": "dns_resolver",
+        "strategy": "ipv4_only",
+        "detour": "proxy"
+      },
+      {
+        "tag": "dns_direct",
+        "address": "https://dns.alidns.com/dns-query",
+        "address_resolver": "dns_resolver",
+        "strategy": "ipv4_only",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns_resolver",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "dns_resolver"
+      },
+      {
+        "rule_set": "geosite-geolocation-!cn",
+        "server": "dns_proxy"
+      }
+    ],
+    "final": "dns_direct"
+  },
+  "route": {
+    "rule_set": [
+      {
+        "tag": "geosite-geolocation-!cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "proxy"
+      }
+    ],
+    "rules": [
+      {
+        "network": "udp",
+        "outbound": "direct",
+        "port": [4433]
+      },
+      {
+        "action": "route",
+        "ip_cidr": "10.18.0.0/24",
+        "outbound": "wg-ep"
+      },
+      {
+        "action": "route",
+        "ip_cidr": "192.168.0.0/24",
+        "outbound": "wg-ep"
+      },
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "port": 853,
+        "network": "tcp",
+        "outbound": "block"
+      },
+      {
+        "port": [443, 853],
+        "network": "udp",
+        "outbound": "block"
+      },
+      {
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "rule_set": "geoip-cn",
+            "invert": true
+          },
+          {
+            "rule_set": "geosite-geolocation-!cn"
+          }
+        ],
+        "outbound": "proxy"
+      },
+      {
+        "rule_set": "geoip-cn",
+        "outbound": "direct"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "final": "proxy",
+    "auto_detect_interface": true
+  },
+  "endpoints": [
+    {
+      "type": "wireguard",
+      "tag": "wg-ep",
+      "system": false,
+      "mtu": 1408,
+      "address": ["10.18.0.2/24"],
+      "private_key": "uGEr5DAjfyoVg57/XsRx6Vy05CCctX+fNRs0i2GVWms=",
+      "peers": [
+        {
+          "address": "foo.your_address.info",
+          "port": 51820,
+          "public_key": "Gi8qcDsHGhndINjk23wa89GG690JXv5bf46toUCpgzo=",
+          "allowed_ips": ["0.0.0.0/0"],
+          "persistent_keepalive_interval": 25
+        }
+      ]
+    }
+  ],
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": ["172.18.0.1/30", "fdfe:dcba:9876::1/126"],
+      "mtu": 1492,
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "system",
+      "sniff": true,
+      "sniff_override_destination": false
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct",
+      "routing_mark": 100
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "urltest",
+      "tag": "自动选择",
+      "outbounds": []
+    },
+    {
+      "type": "selector",
+      "tag": "proxy",
+      "outbounds": ["direct", "block", "自动选择", "local-hy2"],
+      "default": "自动选择"
+    },
+    {
+      "type": "selector",
+      "tag": "GLOBAL",
+      "outbounds": ["direct", "proxy"],
+      "default": "proxy"
+    },
+    {
+      "type": "socks",
+      "tag": "local-hy2",
+      "server": "127.0.0.1",
+      "server_port": 7890,
+      "version": "5"
+    }
+  ],
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db"
+    }
+  }
+}

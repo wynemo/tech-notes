@@ -1,0 +1,224 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns_proxy",
+        "address": "https://1.1.1.1/dns-query",
+        "address_resolver": "dns_resolver",
+        "strategy": "ipv4_only",
+        "detour": "proxy"
+      },
+      {
+        "tag": "dns_direct",
+        "address": "https://dns.alidns.com/dns-query",
+        "address_resolver": "dns_resolver",
+        "strategy": "ipv4_only",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns_resolver",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "dns_resolver"
+      },
+      {
+        "rule_set": "geosite-geolocation-!cn",
+        "server": "dns_proxy"
+      }
+    ],
+    "final": "dns_direct"
+  },
+  "route": {
+    "rule_set": [
+      {
+        "tag": "geosite-geolocation-!cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "proxy"
+      }
+    ],
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "port": 853,
+        "network": "tcp",
+        "outbound": "block"
+      },
+      {
+        "port": [443, 853],
+        "network": "udp",
+        "outbound": "block"
+      },
+      {
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "rule_set": "geoip-cn",
+            "invert": true
+          },
+          {
+            "rule_set": "geosite-geolocation-!cn"
+          }
+        ],
+        "outbound": "proxy"
+      },
+      {
+        "rule_set": "geoip-cn",
+        "outbound": "direct"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "final": "proxy",
+    "auto_detect_interface": true
+  },
+
+  "endpoints": [
+    {
+      "type": "wireguard",
+      "tag": "wg-ep",
+
+      "system": true,
+
+      "mtu": 1408,
+      "address": ["10.18.0.1/24"],
+      "private_key": "QFnR4J5KPnvHSTsDef6RkleJeunIKbL8eUIizH8eaV4=",
+      "listen_port": 51820,
+      "peers": [
+        {
+          "public_key": "mBDwmBFjS1/mpHZFSHhXrdwzVOUgLsSClGx7ROU+wQo=",
+          "allowed_ips": ["10.18.0.2/32"]
+        }
+      ]
+    }
+  ],
+
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": ["172.18.0.1/30", "fdfe:dcba:9876::1/126"],
+      "mtu": 1492,
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "system",
+      "sniff": true,
+      "sniff_override_destination": false
+    },
+    {
+      "type": "vless",
+      "tag": "vless-sb-in",
+      "listen": "::",
+      "listen_port": 7443,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "users": [
+        {
+          "uuid": "f131ddb4-f69e-48a0-91ec-f7fede7050ce",
+          "flow": "xtls-rprx-vision"
+        }
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "icloud.cdn-apple.com",
+        "reality": {
+          "enabled": true,
+          "handshake": {
+            "server": "icloud.cdn-apple.com",
+            "server_port": 443
+          },
+          "private_key": "WEMo7QC_fowt_i78v3_cuiY4H7TWDmGUhawCv9qKrXc",
+          "short_id": ["a81fba46b2c38bc7"]
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ss-sb-in",
+      "listen": "::",
+      "listen_port": 5443,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "DgrOjcmCMEr9biLy2V89BUelOI2b08vApCrR+osYsJs=",
+      "multiplex": {
+        "enabled": true,
+        "padding": true
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct",
+      "routing_mark": 100
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "urltest",
+      "tag": "自动选择",
+      "outbounds": []
+    },
+    {
+      "type": "selector",
+      "tag": "proxy",
+      "outbounds": ["direct", "block", "自动选择", "local-hy2"],
+      "default": "自动选择"
+    },
+    {
+      "type": "selector",
+      "tag": "GLOBAL",
+      "outbounds": ["direct", "proxy"],
+      "default": "proxy"
+    },
+    {
+      "type": "socks",
+      "tag": "local-hy2",
+      "server": "127.0.0.1",
+      "server_port": 7890,
+      "version": "5"
+    }
+  ],
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db"
+    },
+    "clash_api": {
+      "external_controller": "0.0.0.0:9090",
+      "external_ui": "ui",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_detour": "proxy"
+    }
+  }
+}
