@@ -96,6 +96,10 @@ iphone 手机上 sing-box 的配置：
 }
 ```
 
+服务器 singbox 配置： [sing-box-wiregurad_server.json](sing-box-wiregurad_server.json)
+
+iphone singbox 配置： [sing-box-wiregurad_ios.json](sing-box-wiregurad_ios.json)
+
 25年5月4日edit：
 
 有群友问，通过singbox的wireguard连接到路由器例如OpenWRT的wireguard从而实现科学上网
@@ -121,6 +125,6 @@ iphone 手机上 sing-box 的配置：
 }
 ```
 
-手机mtu 改小一点 1384
+wireguard 手机mtu 改小一点 1384
 
 不然会出现报错，message too long
