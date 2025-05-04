@@ -95,3 +95,32 @@ iphone 手机上 sing-box 的配置：
    ]
 }
 ```
+
+25年5月4日edit：
+
+有群友问，通过singbox的wireguard连接到路由器例如OpenWRT的wireguard从而实现科学上网
+
+可以弄，iphone里outbounds配置wg-ep
+
+```json
+{
+  "type": "selector",
+  "tag": "proxy",
+  "outbounds": [
+    "direct",
+    "block",
+    "自动选择",
+    "local-hy2",
+    "US-cloudflare-RNCustom-群友4",
+    "KR,群友1",
+    "KR,群友2",
+    "KR,群友3",
+    "wg-ep"
+  ],
+  "default": "自动选择"
+}
+```
+
+手机mtu 改小一点 1384
+
+不然会出现报错，message too long
