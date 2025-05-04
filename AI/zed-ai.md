@@ -92,3 +92,5 @@ You can add prompts to the default prompt by clicking the icon in the top right 
 
 Default prompts will show at the top of the prompt list, and will be included with every new chat.
 默认提示将显示在提示列表的顶部，并且包含在每次新的聊天中。
+
+2025 年 5月4日 很多东西都变了呀，zed现在只能试用一个月，然后就收费了
