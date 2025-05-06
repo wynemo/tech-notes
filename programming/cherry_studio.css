@@ -18,15 +18,16 @@ div {
         Verdana,
         Lucida Grande;
     font-weight: unset;
-    -webkit-font-smoothing: unset;
+    -webkit-font-smoothing: antialiased;
 }
 
 .ant-collapse p {
     text-decoration-color: rgb(119, 128, 135);
-    color: rgb(119, 128, 135);
+    color: rgb(119, 128, 135) !important;
 }
 
 p {
+    color: rgb(36, 44, 49);
     font-size: 14px;
     line-height: 1.6;
     font-family:
@@ -35,7 +36,7 @@ p {
         LXGW WenKai,
         LXGW Neo Xihei !important;
     font-weight: unset;
-    -webkit-font-smoothing: unset;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
