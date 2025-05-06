@@ -1,0 +1,46 @@
+pre span {
+    font-family: Zed Mono !important;
+}
+body,
+button,
+input,
+select,
+textarea,
+span:not(.immersive-translate-target-inner *),
+div {
+    font-size: 14px;
+    line-height: 1.6;
+    font-family:
+        Zed Mono,
+        Maple Mono NF CN,
+        LXGW WenKai,
+        LXGW Neo XiHei,
+        Verdana,
+        Lucida Grande;
+    font-weight: unset;
+    -webkit-font-smoothing: unset;
+}
+
+.ant-collapse p {
+    text-decoration-color: rgb(119, 128, 135);
+    color: rgb(119, 128, 135);
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+    font-family:
+        Zed Mono,
+        Maple Mono NF CN,
+        LXGW WenKai,
+        LXGW Neo Xihei !important;
+    font-weight: unset;
+    -webkit-font-smoothing: unset;
+}
+
+a {
+    font-family:
+        Verdana,
+        Maple Mono NF CN,
+        LXGW Neo XiHei;
+}
