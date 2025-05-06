@@ -7,3 +7,11 @@
 ## 付费工具
 
 1. cursor 每个月20刀 claude sonnet 3.5/gemini 2.5 pro/gpt 4.1之类的模型写代码都不错
+
+## mcp
+1. mastergo/figma 设计师弄好 粘贴链接的话 扔给cursor之类的的就可以帮你写前端代码了 还原度还行 自己再调整下
+2. context7 提供最新编程的文档 喂给AI 避免幻觉
+3. [Browser MCP - Automate your browser using VS Code, Cursor, Claude, and more](https://chromewebstore.google.com/detail/bjfgambnhccakkhmkepdoekmckoijdlc) 这个chrome插件 可以直接让AI调用浏览器，这样AI就可以直接访问网页，获取信息，进行自动化操作。
+- 网页导航和表单填充
+- 从结构化内容中提取数据
+- 由大型语言模型驱动的自动化测试
