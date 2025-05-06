@@ -1,5 +1,7 @@
 ## 替换zed的pyright为pylsp
 
+默认带的 pyright 不喜欢用
+
 我试了下，在项目下装了pylsp,  同时 `uv pip install python-lsp-ruff python-lsp-black python-lsp-isort`
 
 或者 `uv add --dev python-lsp-ruff python-lsp-black python-lsp-isort`
