@@ -55,6 +55,10 @@ https://tailscale.com/kb/1311/tailscale-funnel#use-a-tcp-forwarder
 
 不过可能需要代理访问，不然质量不佳，我用香港节点访问的，速度还不错
 
+如果你还觉得慢 可以用阿里云香港搭建一个 ip derper https://github.com/yangchuansheng/ip_derper
+
+用香港的中继服务器 这样要快点
+
 同类工具对比：
 
 |               | Tailscale Funnel | ngrok    | Cloudflare Tunnel|
