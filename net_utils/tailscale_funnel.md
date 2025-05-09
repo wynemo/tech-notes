@@ -54,3 +54,11 @@ tcp 也可以
 https://tailscale.com/kb/1311/tailscale-funnel#use-a-tcp-forwarder
 
 不过可能需要代理访问，不然质量不佳，我用香港节点访问的，速度还不错
+
+同类工具对比：
+
+|               | Tailscale Funnel | ngrok    | Cloudflare Tunnel|
+|---------------|------------------|----------|-------------------|
+|域名类型       | 固定ts.net子域   | 随机域名 | 需自有域名|
+|认证方式       | Tailscale账号    | API密钥  | Cloudflare账号|
+|免费额度       | 免费             | 免费     | 免费|
