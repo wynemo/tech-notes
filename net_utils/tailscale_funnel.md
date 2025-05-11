@@ -2,11 +2,9 @@
 
 ## 概述
 
-tailscale是个内网穿透工具
+tailscale是个内网穿透工具 将你的设备组网
 
 之前讲sing-box时有提到过tailscale [science/sing-box/singbox-tailscale.md](../science/sing-box/singbox-tailscale.md)
-
-tailscale 是一个将你的机器组网的工具
 
 不过它的功能不止这个
 
