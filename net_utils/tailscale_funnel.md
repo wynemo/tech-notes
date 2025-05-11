@@ -1,5 +1,7 @@
 # tailscale funnel 介绍
 
+[![视频讲解](tailscale_funnel.svg)](https://youtu.be/aehP4MEROVU)
+
 ## 概述
 
 tailscale是个基于wiregurad内网穿透工具 将你的设备组网
