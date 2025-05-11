@@ -26,7 +26,7 @@ ngrok和这个功能一样，不过电脑上如果有tailscale了就没必要再
 
 在终端中，运行以下命令，打开Tailscale funnel，这里9000表示代理本地9000端口的网站服务:
 
-`/Applications/Tailscale.app/Contents/MacOS/Tailscale funnel 9000`
+    /Applications/Tailscale.app/Contents/MacOS/Tailscale funnel 9000
 
 
 这里初次使用会让你去[网页管理后台](https://login.tailscale.com/f/funnel)上打开 funnel：
@@ -52,6 +52,14 @@ https://<Node>.tail<ID>.ts.net/
 tcp 也可以
 
 https://tailscale.com/kb/1311/tailscale-funnel#use-a-tcp-forwarder
+
+用funnel代理本地的22端口，也就是ssh协议，监听在10000端口（注意必须是10000 8443 443这三个端口之一）：
+
+    /Applications/Tailscale.app/Contents/MacOS/Tailscale funnel --tcp 10000 tcp://localhost:22
+
+然后客户端这边通过10000访问：
+
+    ssh -p 10000 <Node>.tail<ID>.ts.net
 
 不过可能需要代理访问，不然质量不佳，我用香港节点访问的，速度还不错
 
