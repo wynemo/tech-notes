@@ -2,7 +2,7 @@
 
 ## 概述
 
-tailscale是个内网穿透工具 将你的设备组网
+tailscale是个基于wiregurad内网穿透工具 将你的设备组网
 
 之前讲sing-box时有提到过tailscale [science/sing-box/singbox-tailscale.md](../science/sing-box/singbox-tailscale.md)
 
