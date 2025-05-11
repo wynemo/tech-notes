@@ -1,4 +1,6 @@
-装个这个 tailscale
+# tailscale funnel 介绍
+
+## 概述
 
 tailscale是个内网穿透工具
 
@@ -18,6 +20,8 @@ ngrok和这个功能一样，不过电脑上如果有tailscale了就没必要再
 
 而且ngrok免费用户域名是随机的，tailscale是固定的
 
+## 安装tailcale，打开funnel
+
 我们来到它的[官网](https://tailscale.com/download)
 
 以macos为例子 安装这个pkg
@@ -31,7 +35,7 @@ ngrok和这个功能一样，不过电脑上如果有tailscale了就没必要再
 
 这里初次使用会让你去[网页管理后台](https://login.tailscale.com/f/funnel)上打开 funnel：
 
-Funnel is not enabled on your tailnet.
+    Funnel is not enabled on your tailnet.
 
 这里打开以后，会生成一个ts.net的子域名，随机生成的
 
@@ -49,6 +53,8 @@ https://<Node>.tail<ID>.ts.net/
 
 然后你访问这个 https://<Node>.tail<ID>.ts.net/ 就可以访问你的内网服务了
 
+## tcp转发
+
 tcp 也可以
 
 https://tailscale.com/kb/1311/tailscale-funnel#use-a-tcp-forwarder
@@ -61,11 +67,15 @@ https://tailscale.com/kb/1311/tailscale-funnel#use-a-tcp-forwarder
 
     ssh -p 10000 <Node>.tail<ID>.ts.net
 
+## 代理
+
 不过可能需要代理访问，不然质量不佳，我用香港节点访问的，速度还不错
 
 如果你还觉得慢 可以用阿里云香港搭建一个 ip derper https://github.com/yangchuansheng/ip_derper
 
 用香港的中继服务器 这样要快点
+
+## 与 Cloudflare Tunnel/ngrok 比较
 
 同类工具对比：
 
