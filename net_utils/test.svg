@@ -9,4 +9,7 @@
   <!-- 应用网格背景 -->
   <rect width="100%" height="100%" fill="black"/>
   <rect width="100%" height="100%" fill="url(#grid)"/>
+
+  <!-- 添加蓝紫色圆形 -->
+  <circle cx="1500" cy="100" r="50" fill="#8A2BE2" stroke="#4B0082" stroke-width="3"/>
 </svg>
