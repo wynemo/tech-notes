@@ -64,6 +64,7 @@
     }
 
     a {
+        color: #000000;
         font-family:
             Verdana,
             Maple Mono NF CN,
