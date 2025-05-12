@@ -4,12 +4,19 @@
     <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
       <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255, 255, 255, 0.3)" stroke-width="1"/>
     </pattern>
+
+    <!-- 定义线性渐变 -->
+    <linearGradient id="circleGradient" x1="0%" y1="100%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C71585"/>   <!-- 左下紫红色 (MediumVioletRed) -->
+      <stop offset="50%" stop-color="#8A2BE2"/> <!-- 中间蓝紫色 (BlueViolet) -->
+      <stop offset="100%" stop-color="#0000FF"/> <!-- 右上蓝色 (Blue) -->
+    </linearGradient>
   </defs>
 
   <!-- 应用网格背景 -->
   <rect width="100%" height="100%" fill="black"/>
   <rect width="100%" height="100%" fill="url(#grid)"/>
 
-  <!-- 添加蓝紫色圆形 -->
-  <circle cx="1500" cy="100" r="50" fill="#8A2BE2" stroke="#4B0082" stroke-width="3"/>
+  <!-- 添加渐变圆形 -->
+  <circle cx="1200" cy="240" r="400" fill="url(#circleGradient)" opacity="1"/>
 </svg>
