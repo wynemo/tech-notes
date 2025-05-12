@@ -6,7 +6,7 @@
     </pattern>
 
     <!-- 定义线性渐变 -->
-    <linearGradient id="circleGradient" x1="0%" y1="100%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+    <linearGradient id="circleGradient" x1="0" y1="1" x2="1" y2="0" gradientUnits="objectBoundingBox">
       <stop offset="0%" stop-color="#C71585"/>   <!-- 左下紫红色 (MediumVioletRed) -->
       <stop offset="50%" stop-color="#8A2BE2"/> <!-- 中间蓝紫色 (BlueViolet) -->
       <stop offset="100%" stop-color="#0000FF"/> <!-- 右上蓝色 (Blue) -->
