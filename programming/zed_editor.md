@@ -28,6 +28,8 @@
           },
           "isort": {
             "enabled": true,
+            "lineLength": 120,
+            "args": ["--profile", "black"]
           },
           "black": {
             "enabled": true,
