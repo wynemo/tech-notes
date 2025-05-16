@@ -75,7 +75,9 @@ command k - 生成代码 - 可以用o4 mini/cursor fast这种小模型（后者�
 + 语法不熟 帮你写个ts的filter map
 + css帮你写样式、颜色
 
-### 用什么模型
+### agent 用什么模型
+
+懒人可以让它自动选模型
 
 通常情况下简单场景最优的：claude 3.5
 通常情况下有一定难度的场景最优的：claude 3.7 + 思考模式
