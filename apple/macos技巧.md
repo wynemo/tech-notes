@@ -21,7 +21,7 @@ https://macos-defaults.com/
 
 
 ### 输入法相关
-+ macos 镜像  capslock 切换输入法
++ macos iphone 镜像 - capslock 切换输入法 - 见帖子 [macOS 15.5 的 iPhone Mirroring 又有 bug 了，打字无法输入中文，无法切换输入法](https://v2ex.com/t/1132155)
 + 中文 ` 输入 ·
 
 ### Screen Sharing 剪切板
