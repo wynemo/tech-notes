@@ -25,3 +25,5 @@ $ sendme send ~/great_photos
 $ sendme receive blobQmFoo...
 
 例子：
+
+这个在国内似乎不这么行 经常连接不上
