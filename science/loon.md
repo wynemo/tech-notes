@@ -116,3 +116,7 @@ profile - settings - icloud drive
 
 ## apple tv
 这里可以把配置共享给apple tv上的loon
+
+## 银行app以及国网app检测 vpn
+
+loon 设置--高级设置--代理模式--tun only，银行 app 就不提示了
