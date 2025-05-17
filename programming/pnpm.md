@@ -12,3 +12,8 @@ On macOS: ~/Library/pnpm/store
 ### How to clear/clean .pnpm-store cache
 
 Deleting all node_modules folder and running pnpm store prune worked for me. Thanks.
+
+### 管理缓存
+
+pnpm 提供了一些命令来管理其存储，例如：
+`pnpm store prune`: 用于删除存储中未被任何项目引用的包。
