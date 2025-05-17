@@ -117,3 +117,23 @@ com.apple.keylayout.ABC
 ```
     "cline.preferredLanguage": "Simplified Chinese - 简体中文"
 ```
+
+### python lint/formatter
+使用ruff
+
+本来想像[zed那样](zed_editor.md)，配置一个lsp，但是发现vscode并不能随意指定lsp
+
+vscode自己带的pylance配置我是看不懂，看文档头晕，所以就用了ruff
+
+在vscode市场插件里装了ruff，然后配置了vscode的settings.json
+
+```json
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll": "explicit",
+          "source.organizeImports": "explicit"
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    }
+```
