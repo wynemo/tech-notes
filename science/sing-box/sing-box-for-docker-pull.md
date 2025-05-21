@@ -1,4 +1,5 @@
 # 在服务器上 使用singb-box tun模式 做 docker 镜像拉取  解决 docker.io 无法访问
+[![视频讲解](sing-box-for-docker-pull.svg)](https://youtu.be/pDKO5_y_6PA)
 
 在v2ex上看到有人问，docker.io无法访问，
 + https://v2ex.com/t/1119371 docker 现在正确拉镜像的姿势是什么
