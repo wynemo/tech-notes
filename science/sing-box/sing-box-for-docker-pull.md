@@ -1,4 +1,4 @@
-# docker.io无法访问 在服务器上 docker镜像拉取 使用singb-box tun模式
+# 在服务器上 使用singb-box tun模式 做 docker 镜像拉取  解决 docker.io 无法访问
 
 在v2ex上看到有人问，docker.io无法访问，
 + https://v2ex.com/t/1119371 docker 现在正确拉镜像的姿势是什么
@@ -8,7 +8,9 @@
 
 最好还是自己在服务器上装一个sing-box之类的代理
 
-这推荐下载singb-box 1.11.11 版本的
+这样拉取镜像比较方便sin
+
+这推荐下载sing-box 1.11.11 版本的
 
 然后服务器以ubuntu 22.04为例，它带有nft
 
