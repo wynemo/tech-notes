@@ -4,13 +4,18 @@
 
 我试了下，在项目下装了pylsp,  同时 `uv pip install python-lsp-ruff python-lsp-black python-lsp-isort`
 
+
+facebook 的 pyrefly 也不错，也可以做一些检查
+
+`uv tool install pyrefly`
+
 或者 `uv add --dev python-lsp-ruff python-lsp-black python-lsp-isort`
 
 ```json
 {
   "languages": {
     "Python": {
-      "language_servers": ["pylsp", "!pyright", "..."],
+      "language_servers": ["pylsp", "pyrefly", "!pyright", "..."],
       "preferred_line_length": 120
     }
   },
@@ -37,7 +42,24 @@
           }
         }
       }
+    },
+    "pyrefly": {
+      "binary": {
+        "path": "/Users/tommygreen/.local/share/uv/tools/pyrefly/bin/pyrefly",
+        "arguments": ["lsp"]
+      },
+      "settings": {
+        "python": {
+          "pythonPath": ".venv/bin/python"
+        },
+        "pyrefly": {
+          "project_includes": ["src/**/*.py", "tests/**/*.py"],
+          "project_excludes": ["**/.[!/.]*", "**/*venv/**"],
+          "ignore_errors_in_generated_code": true
+        }
+      }
     }
   }
 }
+
 ```
