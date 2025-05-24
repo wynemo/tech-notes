@@ -123,17 +123,27 @@ com.apple.keylayout.ABC
 
 本来想像[zed那样](zed_editor.md)，配置一个lsp，但是发现vscode并不能随意指定lsp
 
-vscode自己带的pylance配置我是看不懂，看文档头晕，所以就用了ruff
+折腾了一下 装了 vscode的ruff插件，black插件， ty插件
 
-在vscode市场插件里装了ruff，然后配置了vscode的settings.json
+然后装相应的python工具
+black：我就装在了.venv里面
+ty用uv装的 `uv tool install ty` 这是一个检查python类型的工具
+ruff也是用uv装的 `uv tool install ruff`, 它是一个linter，给你检查各种代码风格
+
+
+然后配置了vscode的settings.json
 
 ```json
-    "[python]": {
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-          "source.fixAll": "explicit",
-          "source.organizeImports": "explicit"
-        },
-        "editor.defaultFormatter": "charliermarsh.ruff"
-    }
+//python & ruff
+"[python]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit", // explicit表示command + s 时，手动保存，才触发
+        "source.fixAll.ruff": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    "editor.defaultFormatter": "ms-python.black-formatter"
+},
+"python.languageServer": "Default",
+"python.venvPath": ".venv",
 ```
