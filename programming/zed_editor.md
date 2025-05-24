@@ -31,11 +31,6 @@ zed配置如下
       },
       "settings": {
         "plugins": {
-          "ruff": {
-            "enabled": true,
-            "formatEnabled": true,
-            "lineLength": 120
-          },
           "isort": {
             "enabled": true,
             "lineLength": 120,
@@ -67,4 +62,51 @@ zed配置如下
   }
 }
 
+```
+
+pyproject.toml配置如下：
+```toml
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "isort>=6.0.1",
+    "python-lsp-black>=2.0.0",
+    "python-lsp-isort>=0.2.1",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    # Pyflakes
+    "F", # Pyflakes rules (F821 checks undefined names)
+
+    # Pycodestyle
+    "E", # Error-level PEP 8 rules
+    "W", # Warning-level PEP 8 rules
+
+    # flake8 plugins
+    "G",   # flake8-logging-format rules
+    "B",   # flake8-bugbear rules
+    "C4",  # flake8-comprehensions rules
+    "N",   # pep8-naming rules
+    "SIM", # flake8-simplify rules
+    "ARG", # flake8-unused-arguments
+    "ERA", # eradicate (commented out code)
+    "PL",  # pylint rules
+    "RUF", # Ruff-specific rules
+
+    # Security
+    "S", # flake8-bandit (security)
+]
+
+# Logger objects that should be checked
+logger-objects = ["app.logger", "logger"]
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 120
 ```
