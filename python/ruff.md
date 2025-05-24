@@ -95,7 +95,7 @@ logger-objects = ["app.logger", "logger"]
 
 你也可以在诊断中看到工程里所有的问题，进行修复
 
-有一些问题可以直接用command + space让它自动修复
+有一些问题可以直接用 `command + .` 让它自动修复
 
 但有些问题需要你自己修正
 
