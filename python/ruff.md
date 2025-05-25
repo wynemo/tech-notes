@@ -1,6 +1,6 @@
 # python 新项目linter标配 ruff
 
-[![视频讲解](ruff.svg)](https://youtu.be/wH2X27dRpqE)
+[![视频讲解](ruff.png)](https://youtu.be/RywvGhuPLqo)
 
 上次讲了uv，我推荐新项目用uv来做包管理器
 
