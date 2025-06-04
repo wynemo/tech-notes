@@ -67,6 +67,15 @@
   <rect x="0" y="0" width="1600" height="20" fill="url(#topShadow)"/>
   <rect x="0" y="940" width="1600" height="20" fill="url(#bottomShadow)"/>
   
+  <!-- 主标题效果 - 轮廓 -->
+  <text x="800" y="420" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="none" stroke="#FFFFFF" stroke-width="2" text-anchor="middle" opacity="0.3">Apple TV</text>
+  
+  <!-- 主标题 - 实体 -->
+  <g filter="url(#shadow_filter)">
+    <text x="800" y="420" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="#333333" text-anchor="middle">Apple TV</text>
+    <text x="800" y="630" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="#333333" text-anchor="middle">做软路由介绍</text>
+  </g>
+  
   <defs>
     <linearGradient id="topShadow" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" style="stop-color:rgba(0,0,0,0.05);stop-opacity:1" />
