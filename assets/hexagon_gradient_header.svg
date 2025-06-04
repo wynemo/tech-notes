@@ -1,0 +1,80 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 定义左白右蓝紫的渐变 -->
+    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#f8faff;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#e6f0ff;stop-opacity:1" />
+      <stop offset="85%" style="stop-color:#c8d9ff;stop-opacity:1" />
+      <stop offset="95%" style="stop-color:#a8c6ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8fb4ff;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 定义六边形图案 -->
+    <pattern id="hexagonPattern" x="0" y="0" width="30" height="26" patternUnits="userSpaceOnUse">
+      <!-- 六边形路径 -->
+      <path d="M15,2 L26,8 L26,18 L15,24 L4,18 L4,8 Z" 
+            fill="none" 
+            stroke="rgba(100,150,255,0.15)" 
+            stroke-width="1"/>
+      <path d="M0,13 L11,19 L11,29 L0,35 L-11,29 L-11,19 Z" 
+            fill="none" 
+            stroke="rgba(100,150,255,0.15)" 
+            stroke-width="1"/>
+      <path d="M30,13 L41,19 L41,29 L30,35 L19,29 L19,19 Z" 
+            fill="none" 
+            stroke="rgba(100,150,255,0.15)" 
+            stroke-width="1"/>
+    </pattern>
+    
+    <!-- 叠加更密集的六边形层 -->
+    <pattern id="hexagonPatternDense" x="0" y="0" width="20" height="17.3" patternUnits="userSpaceOnUse">
+      <path d="M10,1.5 L17.3,5.5 L17.3,12.5 L10,16.5 L2.7,12.5 L2.7,5.5 Z" 
+            fill="none" 
+            stroke="rgba(120,180,255,0.08)" 
+            stroke-width="0.8"/>
+      <path d="M0,9 L7.3,13 L7.3,20 L0,24 L-7.3,20 L-7.3,13 Z" 
+            fill="none" 
+            stroke="rgba(120,180,255,0.08)" 
+            stroke-width="0.8"/>
+      <path d="M20,9 L27.3,13 L27.3,20 L20,24 L12.7,20 L12.7,13 Z" 
+            fill="none" 
+            stroke="rgba(120,180,255,0.08)" 
+            stroke-width="0.8"/>
+    </pattern>
+    
+    <!-- 微妙的光效渐变 -->
+    <radialGradient id="lightEffect" cx="85%" cy="30%" r="40%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0.3);stop-opacity:1" />
+      <stop offset="50%" style="stop-color:rgba(200,220,255,0.15);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(150,200,255,0.05);stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- 背景渐变 -->
+  <rect width="800" height="400" fill="url(#backgroundGradient)"/>
+  
+  <!-- 六边形图案层1 -->
+  <rect width="800" height="400" fill="url(#hexagonPattern)" opacity="0.6"/>
+  
+  <!-- 六边形图案层2（更密集） -->
+  <rect width="800" height="400" fill="url(#hexagonPatternDense)" opacity="0.8"/>
+  
+  <!-- 光效叠加 -->
+  <rect width="800" height="400" fill="url(#lightEffect)"/>
+  
+  <!-- 微妙的边缘阴影 -->
+  <rect x="0" y="0" width="800" height="20" fill="url(#topShadow)"/>
+  <rect x="0" y="380" width="800" height="20" fill="url(#bottomShadow)"/>
+  
+  <defs>
+    <linearGradient id="topShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(0,0,0,0.05);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(0,0,0,0);stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bottomShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(0,0,0,0);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(0,0,0,0.05);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
