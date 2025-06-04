@@ -1,4 +1,4 @@
-<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <!-- 定义左白右蓝紫的渐变 -->
     <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -52,20 +52,20 @@
   </defs>
   
   <!-- 背景渐变 -->
-  <rect width="800" height="400" fill="url(#backgroundGradient)"/>
+  <rect width="1200" height="630" fill="url(#backgroundGradient)"/>
   
   <!-- 六边形图案层1 -->
-  <rect width="800" height="400" fill="url(#hexagonPattern)" opacity="0.6"/>
+  <rect width="1200" height="630" fill="url(#hexagonPattern)" opacity="0.6"/>
   
   <!-- 六边形图案层2（更密集） -->
-  <rect width="800" height="400" fill="url(#hexagonPatternDense)" opacity="0.8"/>
+  <rect width="1200" height="630" fill="url(#hexagonPatternDense)" opacity="0.8"/>
   
   <!-- 光效叠加 -->
-  <rect width="800" height="400" fill="url(#lightEffect)"/>
+  <rect width="1200" height="630" fill="url(#lightEffect)"/>
   
   <!-- 微妙的边缘阴影 -->
-  <rect x="0" y="0" width="800" height="20" fill="url(#topShadow)"/>
-  <rect x="0" y="380" width="800" height="20" fill="url(#bottomShadow)"/>
+  <rect x="0" y="0" width="1200" height="20" fill="url(#topShadow)"/>
+  <rect x="0" y="610" width="1200" height="20" fill="url(#bottomShadow)"/>
   
   <defs>
     <linearGradient id="topShadow" x1="0%" y1="0%" x2="0%" y2="100%">
