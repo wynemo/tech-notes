@@ -72,12 +72,12 @@
   </g>
   
   <!-- 主标题效果 - 轮廓 -->
-  <text x="800" y="420" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="none" stroke="#FFFFFF" stroke-width="2" text-anchor="middle" opacity="0.3">Apple TV</text>
+  <text x="800" y="420" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="none" stroke="#FFFFFF" stroke-width="2" text-anchor="middle" opacity="0.3">Easytier</text>
   
   <!-- 主标题 - 实体 -->
   <g filter="url(#shadow_filter)">
-    <text x="800" y="420" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="#333333" text-anchor="middle">Apple TV</text>
-    <text x="800" y="630" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="#333333" text-anchor="middle">做软路由介绍</text>
+    <text x="800" y="420" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="#1A1A1A" text-anchor="middle">Easytier</text>
+    <text x="800" y="630" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="#1A1A1A" text-anchor="middle">介绍</text>
   </g>
   
   <!-- 添加一些光点效果 -->
