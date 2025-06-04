@@ -71,6 +71,15 @@
              stroke-width="1"/>
   </g>
   
+  <!-- 主标题效果 - 轮廓 -->
+  <text x="800" y="420" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="none" stroke="#FFFFFF" stroke-width="2" text-anchor="middle" opacity="0.3">Apple TV</text>
+  
+  <!-- 主标题 - 实体 -->
+  <g filter="url(#shadow_filter)">
+    <text x="800" y="420" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="#333333" text-anchor="middle">Apple TV</text>
+    <text x="800" y="630" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="#333333" text-anchor="middle">做软路由介绍</text>
+  </g>
+  
   <!-- 添加一些光点效果 -->
   <g opacity="0.6">
     <circle cx="1300" cy="300" r="2" fill="rgba(150, 180, 255, 0.8)"/>
