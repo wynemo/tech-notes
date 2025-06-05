@@ -106,6 +106,8 @@ CF Trojan = select, policy-path=https://sub.store/download/cf-trojan, hidden=1
 
 所以懒的话，用默认配置，直接打开 http capture 就解密了，但不推荐这样做
 
+观众答疑：视频 13:21 有说抓包后，直接界面可以看response body, response header等信息 ；然后存到硬盘的目录的抓的包， 比如这个文件夹/var/folders/89/d29rn0113c7f4v6dsr8rs9kr0000gn/T/Surge Catpure/2025-06-05-235412，里面有抓的站点子目录，里面会有个model.json 与response.dump，注意看下model.json,  看是否有压缩，比如 Content-Encoding: br 就是表示 response.dump是br 格式，你要用相应工具解压
+
 ### surge 与其他软件对比
 
 surge 确实好用 工程质量很高
