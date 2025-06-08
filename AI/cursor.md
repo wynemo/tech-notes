@@ -1,8 +1,8 @@
-Cursor不仅擅长编程，还内置智能聊天功能，聊天时可直接使用联网查询。
+Cursor 不仅擅长编程，还内置智能聊天功能，聊天时可直接使用联网查询。
 
 command + L 呼出聊天窗口，然后输入 @Web 就可以联网查询
 
-也可以 @一个网络连接，比如 @https://www.baidu.com， 然后问大模型
+也可以 @一个网络连接，比如 @https://www.baidu.com，然后问大模型
 
 ~~也可以使用 @Codebase 来检索本地文件，然后再问大模型~~
 
@@ -56,34 +56,37 @@ Reply from yetone (@yetone):
 
 属于是轮椅模式
 
-1. 写好思路给代码上下文 先让cursor agent弄一个功能点 (这种一定要审核 有可能乱删代码) 
+1. 写好思路给代码上下文 先让 cursor agent 弄一个功能点 (这种一定要审核 有可能乱删代码) 
 2. 或者弄一个原形 
 
 agent 模式不要安排太多任务 最好拆分一下 一个是生成代码太多你还得审核 看不过来
 
 ### tab 或者 command k 生成代码
 
-然后善用cursor tab/以及command k
+然后善用 cursor tab/以及command k
 
 cursor tab - 非常好用，快速生成一堆代码，不用自己敲键盘了 属于是荒野大镖客里的辅助射击，自动锁定爆头的感觉
 
-command k - 生成代码 - 可以用o4 mini/cursor fast这种小模型（后者更快） 一行变更之类的 
+command k - 生成代码 - 可以用 o4 mini/cursor fast 这种小模型（后者更快）一行变更之类的 
 
 小模型不要钱 所以这样用下来比较节省
 
 比如这些场景：
-+ 语法不熟 帮你写个ts的filter map
-+ css帮你写样式、颜色
++ 语法不熟 帮你写个 ts 的 filter map
++ css 帮你写样式、颜色
 
 ### agent 用什么模型
 
 懒人可以让它自动选模型
 
-通常情况下简单场景最优的：claude 3.5
-通常情况下有一定难度的场景最优的：claude 3.7 + 思考模式
-上下文少，只需要短输出的：gpt o4-mini
-上下文长度中等，可能需要较长输出，且有一定难度的：claude 3.7 + 思考模式
-上下文长度长，可能需要较长输出，但不怎么难的：gemini 2.5 pro + 思考模式
-上下文长度长，需要较长输出，还有难度的：要么拆分处理，要么 gpt o3 ，其他的犯病概率较高
+claude sonnet 4/gpt 4.1/gemini 2.5 pro 都可以 编程都不错
 
 总之哪个模型用的爽，你可以对比下效果，你就用哪个
+
+### 提交代码
+
+你可以使用 Conventional Commits 规范，然后使用 cursor 的 commit message 生成器
+
+然后根据需要进行修改，再决定是否提交
+
+cursor 也是会学习你的代码提交习惯的，你用什么风格，它后续会根据你的习惯生成 commit message
