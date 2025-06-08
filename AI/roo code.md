@@ -1,10 +1,10 @@
-# vibe programming（气氛编程）之 roo code
+# vibe coding（气氛编程）之 roo code
 
 ## roo code 是什么
 
 它是一个 vscode 插件 免费 vibe coding 的好帮手
 
-## 主流顶尖模型都支持
+## 主流的模型都支持
 
 比如 claude sonnet 4/gpt 4.1/gemini 2.5 pro 都支持
 
