@@ -1,9 +1,9 @@
 今天讲下 singbox 通过 tailscale 访问局域网
 
-顺带 sing-box 1.12 配置的变动
+顺带 说下 sing-box 1.12 配置的变动
 
 
-上次讲了 sing-box tailscale 使用
+上次其实已经讲了 sing-box tailscale 使用
 
 通过一个端点访问其所在的局域网是不行的，有 bug
 
