@@ -1,0 +1,151 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns_proxy",
+        "address": "https://1.1.1.1/dns-query",
+        "address_resolver": "dns_resolver",
+        "strategy": "ipv4_only",
+        "detour": "proxy"
+      },
+      {
+        "tag": "dns_direct",
+        "address": "https://dns.alidns.com/dns-query",
+        "address_resolver": "dns_resolver",
+        "strategy": "ipv4_only",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns_resolver",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "dns_resolver"
+      },
+      {
+        "rule_set": "geosite-geolocation-!cn",
+        "server": "dns_proxy"
+      }
+    ],
+    "final": "dns_direct"
+  },
+  "route": {
+    "rule_set": [
+      {
+        "tag": "geosite-geolocation-!cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "proxy"
+      }
+    ],
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "rule_set": "geoip-cn",
+            "invert": true
+          },
+          {
+            "rule_set": "geosite-geolocation-!cn"
+          }
+        ],
+        "outbound": "proxy"
+      },
+      {
+        "rule_set": "geoip-cn",
+        "outbound": "direct"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
+        "port": 853,
+        "network": "tcp",
+        "action": "reject"
+      },
+      {
+        "port": [443, 853],
+        "network": "udp",
+        "action": "reject"
+      },
+      {
+        "action": "route",
+        "ip_cidr": "192.168.0.0/24",
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "action": "route",
+        "ip_cidr": "100.0.0.0/8",
+        "outbound": "ts-ep"
+      }
+    ],
+    "final": "proxy",
+    "auto_detect_interface": true
+  },
+
+  "endpoints": [
+    {
+      "type": "tailscale",
+      "tag": "ts-ep",
+      "auth_key": "tskey-auth-yourkey",
+      "ephemeral": false,
+      "hostname": "sing-box",
+      "advertise_routes": ["192.168.0.0/24"],
+      "accept_routes": false,
+      "advertise_exit_node": false,
+      "udp_timeout": "5m",
+      "domain_resolver": "dns_resolver"
+    }
+  ],
+
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": ["172.18.0.1/30", "fdfe:dcba:9876::1/126"],
+      "mtu": 1492,
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "system"
+    }
+  ],
+  "outbounds": [],
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db"
+    },
+    "clash_api": {
+      "external_controller": "0.0.0.0:9090",
+      "external_ui": "ui",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_detour": "proxy"
+    }
+  }
+}
