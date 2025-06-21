@@ -72,12 +72,13 @@
   </g>
   
   <!-- 主标题效果 - 轮廓 -->
-  <text x="800" y="420" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="none" stroke="#FFFFFF" stroke-width="2" text-anchor="middle" opacity="0.3">Easytier</text>
+  <text x="800" y="420" font-family="Arial Black, sans-serif" font-size="100" font-weight="900" fill="none" stroke="#FFFFFF" stroke-width="2" text-anchor="middle" opacity="0.3">singbox 1.12.beta26</text>
   
   <!-- 主标题 - 实体 -->
   <g filter="url(#shadow_filter)">
-    <text x="800" y="420" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="#1A1A1A" text-anchor="middle">Easytier</text>
-    <text x="800" y="630" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="#1A1A1A" text-anchor="middle">介绍</text>
+    <text x="800" y="420" font-family="Arial Black, sans-serif" font-size="100" font-weight="900" fill="#1A1A1A" text-anchor="middle">singbox 1.12.beta26</text>
+    <text x="800" y="630" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="#1A1A1A" text-anchor="middle">使用tailscale</text>
+    <text x="800" y="840" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="#1A1A1A" text-anchor="middle">访问局域网</text>
   </g>
   
   <!-- 添加一些光点效果 -->
