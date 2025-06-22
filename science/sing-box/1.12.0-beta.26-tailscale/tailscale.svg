@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="960" viewBox="0 0 1600 960" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 左到右的渐变：白色到淡蓝紫色 -->
+    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#f8f9ff;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#e6f0ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4e6ff;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 六边形图案定义 -->
+    <pattern id="hexagonPattern" x="0" y="0" width="40" height="35" patternUnits="userSpaceOnUse">
+      <!-- 六边形路径 -->
+      <polygon points="20,2 32,10 32,25 20,33 8,25 8,10" 
+               fill="none" 
+               stroke="rgba(100, 150, 255, 0.15)" 
+               stroke-width="0.8"/>
+      <polygon points="40,19 52,27 52,42 40,50 28,42 28,27" 
+               fill="none" 
+               stroke="rgba(100, 150, 255, 0.12)" 
+               stroke-width="0.6"/>
+    </pattern>
+    
+    <!-- 更密集的六边形图案用于右侧 -->
+    <pattern id="hexagonPatternDense" x="0" y="0" width="30" height="26" patternUnits="userSpaceOnUse">
+      <polygon points="15,2 24,7 24,18 15,23 6,18 6,7" 
+               fill="none" 
+               stroke="rgba(120, 160, 255, 0.2)" 
+               stroke-width="0.7"/>
+      <polygon points="30,15 39,20 39,31 30,36 21,31 21,20" 
+               fill="none" 
+               stroke="rgba(120, 160, 255, 0.15)" 
+               stroke-width="0.5"/>
+    </pattern>
+    
+    <!-- 遮罩，让六边形图案从左到右逐渐显现 -->
+    <linearGradient id="patternMask" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:0" />
+      <stop offset="30%" style="stop-color:#000000;stop-opacity:0.1" />
+      <stop offset="60%" style="stop-color:#000000;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景渐变 -->
+  <rect width="1600" height="960" fill="url(#backgroundGradient)"/>
+  
+  <!-- 六边形图案层 -->
+  <rect width="1600" height="960" fill="url(#hexagonPattern)" opacity="0.8"/>
+  
+  <!-- 右侧更密集的六边形图案 -->
+  <rect x="800" width="800" height="960" fill="url(#hexagonPatternDense)" opacity="0.6"/>
+  
+  <!-- 渐变遮罩让图案从左到右逐渐显现 -->
+  <rect width="1600" height="960" fill="url(#patternMask)" mix-blend-mode="multiply"/>
+  
+  <!-- 添加一些装饰性的大六边形 -->
+  <g opacity="0.08">
+    <polygon points="1200,200 1280,240 1280,320 1200,360 1120,320 1120,240" 
+             fill="none" 
+             stroke="rgba(100, 150, 255, 0.3)" 
+             stroke-width="2"/>
+    <polygon points="1400,500 1480,540 1480,620 1400,660 1320,620 1320,540" 
+             fill="none" 
+             stroke="rgba(100, 150, 255, 0.25)" 
+             stroke-width="1.5"/>
+    <polygon points="1100,700 1160,730 1160,790 1100,820 1040,790 1040,730" 
+             fill="none" 
+             stroke="rgba(100, 150, 255, 0.2)" 
+             stroke-width="1"/>
+  </g>
+  
+  <!-- 主标题效果 - 轮廓 -->
+  <text x="800" y="420" font-family="Arial Black, sans-serif" font-size="100" font-weight="900" fill="none" stroke="#FFFFFF" stroke-width="2" text-anchor="middle" opacity="0.3">singbox 1.12.beta26</text>
+  
+  <!-- 主标题 - 实体 -->
+  <g filter="url(#shadow_filter)">
+    <text x="800" y="420" font-family="Arial Black, sans-serif" font-size="100" font-weight="900" fill="#1A1A1A" text-anchor="middle">singbox 1.12.beta26</text>
+    <text x="800" y="630" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="#1A1A1A" text-anchor="middle">使用tailscale</text>
+    <text x="800" y="840" font-family="Arial Black, sans-serif" font-size="150" font-weight="900" fill="#1A1A1A" text-anchor="middle">访问局域网</text>
+  </g>
+  
+  <!-- 添加一些光点效果 -->
+  <g opacity="0.6">
+    <circle cx="1300" cy="300" r="2" fill="rgba(150, 180, 255, 0.8)"/>
+    <circle cx="1450" cy="450" r="1.5" fill="rgba(150, 180, 255, 0.6)"/>
+    <circle cx="1200" cy="600" r="1" fill="rgba(150, 180, 255, 0.4)"/>
+    <circle cx="1350" cy="750" r="1.5" fill="rgba(150, 180, 255, 0.5)"/>
+  </g>
+</svg> 

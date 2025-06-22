@@ -1,3 +1,5 @@
+[![视频讲解](tailscale.svg)](https://www.youtube.com/watch?v=v4QzPy10Pio)
+
 今天讲下 singbox 通过 tailscale 访问局域网
 
 顺带 说下 sing-box 1.12 配置的变动
