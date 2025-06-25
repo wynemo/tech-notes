@@ -1,6 +1,25 @@
 ## 规则
 
-创建一个 claude.md
+创建一个 CLAUDE.md
+
+## vps
+
+我也没有用家宽，就用的一台洛杉矶的 vps 然后用野卡充钱，月付，目前用了几天，没有翻车，账号是注册了好几年的
+
+## 分流规则
+
+```
+# claude
+DOMAIN-SUFFIX,servd-anthropic-website.b-cdn.net
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN-SUFFIX,cdn.usefathom.com
+# stripe
+DOMAIN-SUFFIX,stripe.com
+DOMAIN-KEYWORD,stripe
+```
 
 ## claude 计划模式
 
