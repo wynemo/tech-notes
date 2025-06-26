@@ -156,6 +156,7 @@
   <ellipse cx="1480" cy="200" rx="180" ry="220" fill="url(#topRight2)" opacity="0.5" filter="url(#neonGlow)" transform="rotate(-42 1480 200)"/>
   
   <!-- 中间区域的霓虹装饰 -->
+  <text x="800" y="450" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">easytier介绍</text>
   <ellipse cx="520" cy="380" rx="140" ry="180" fill="url(#neon1)" opacity="0.6" filter="url(#glowBlur3)" transform="rotate(78 520 380)"/>
   <ellipse cx="820" cy="220" rx="160" ry="120" fill="url(#neon2)" opacity="0.5" filter="url(#glowBlur2)" transform="rotate(-52 820 220)"/>
   <ellipse cx="1120" cy="520" rx="180" ry="140" fill="url(#neon3)" opacity="0.7" filter="url(#glowBlur1)" transform="rotate(38 1120 520)"/>
