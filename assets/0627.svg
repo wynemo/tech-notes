@@ -1,124 +1,173 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- 背景渐变 -->
+    <!-- 鲜艳背景渐变 -->
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#2E4BC6;stop-opacity:1" />
-      <stop offset="25%" style="stop-color:#4A5FCF;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#6B73D9;stop-opacity:1" />
-      <stop offset="75%" style="stop-color:#8B5CF6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#A855F7;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#000011;stop-opacity:1" />
+      <stop offset="15%" style="stop-color:#1a0033;stop-opacity:1" />
+      <stop offset="35%" style="stop-color:#4a0080;stop-opacity:1" />
+      <stop offset="55%" style="stop-color:#8000ff;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#ff00ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff0080;stop-opacity:1" />
     </linearGradient>
     
-    <!-- 左上角多层渐变 -->
-    <radialGradient id="topLeft1" cx="30%" cy="40%" r="80%">
-      <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:0.9" />
-      <stop offset="15%" style="stop-color:#6366F1;stop-opacity:0.7" />
-      <stop offset="35%" style="stop-color:#4F46E5;stop-opacity:0.5" />
-      <stop offset="55%" style="stop-color:#3730A3;stop-opacity:0.3" />
-      <stop offset="75%" style="stop-color:#1E1B4B;stop-opacity:0.1" />
+    <!-- 左上角鲜艳青蓝色 -->
+    <radialGradient id="topLeft1" cx="30%" cy="40%" r="90%">
+      <stop offset="0%" style="stop-color:#00ffff;stop-opacity:1" />
+      <stop offset="10%" style="stop-color:#00e6ff;stop-opacity:0.95" />
+      <stop offset="20%" style="stop-color:#0099ff;stop-opacity:0.9" />
+      <stop offset="35%" style="stop-color:#0066ff;stop-opacity:0.7" />
+      <stop offset="50%" style="stop-color:#3333ff;stop-opacity:0.5" />
+      <stop offset="70%" style="stop-color:#6600cc;stop-opacity:0.3" />
+      <stop offset="90%" style="stop-color:#330066;stop-opacity:0.1" />
       <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
     </radialGradient>
     
-    <radialGradient id="topLeft2" cx="70%" cy="60%" r="60%">
-      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.6" />
-      <stop offset="20%" style="stop-color:#7C3AED;stop-opacity:0.4" />
-      <stop offset="45%" style="stop-color:#5B21B6;stop-opacity:0.2" />
+    <radialGradient id="topLeft2" cx="70%" cy="60%" r="70%">
+      <stop offset="0%" style="stop-color:#66ffff;stop-opacity:0.9" />
+      <stop offset="15%" style="stop-color:#33ccff;stop-opacity:0.8" />
+      <stop offset="30%" style="stop-color:#0099ff;stop-opacity:0.6" />
+      <stop offset="50%" style="stop-color:#0066cc;stop-opacity:0.4" />
+      <stop offset="75%" style="stop-color:#003366;stop-opacity:0.2" />
       <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
     </radialGradient>
     
-    <!-- 左下角多层渐变 -->
-    <radialGradient id="bottomLeft1" cx="60%" cy="30%" r="90%">
-      <stop offset="0%" style="stop-color:#A855F7;stop-opacity:0.8" />
-      <stop offset="18%" style="stop-color:#9333EA;stop-opacity:0.6" />
-      <stop offset="38%" style="stop-color:#7C2D92;stop-opacity:0.4" />
-      <stop offset="60%" style="stop-color:#581C87;stop-opacity:0.2" />
-      <stop offset="85%" style="stop-color:#312E81;stop-opacity:0.05" />
+    <!-- 左下角鲜艳粉红橙色 -->
+    <radialGradient id="bottomLeft1" cx="50%" cy="30%" r="95%">
+      <stop offset="0%" style="stop-color:#ff0066;stop-opacity:1" />
+      <stop offset="12%" style="stop-color:#ff3399;stop-opacity:0.9" />
+      <stop offset="25%" style="stop-color:#ff6600;stop-opacity:0.8" />
+      <stop offset="40%" style="stop-color:#ff9900;stop-opacity:0.6" />
+      <stop offset="60%" style="stop-color:#cc6600;stop-opacity:0.4" />
+      <stop offset="80%" style="stop-color:#993300;stop-opacity:0.2" />
       <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
     </radialGradient>
     
-    <radialGradient id="bottomLeft2" cx="25%" cy="80%" r="70%">
-      <stop offset="0%" style="stop-color:#C084FC;stop-opacity:0.5" />
-      <stop offset="25%" style="stop-color:#A855F7;stop-opacity:0.3" />
-      <stop offset="55%" style="stop-color:#7C3AED;stop-opacity:0.1" />
+    <radialGradient id="bottomLeft2" cx="25%" cy="80%" r="75%">
+      <stop offset="0%" style="stop-color:#ff3300;stop-opacity:0.8" />
+      <stop offset="20%" style="stop-color:#ff6633;stop-opacity:0.6" />
+      <stop offset="40%" style="stop-color:#ff9933;stop-opacity:0.4" />
+      <stop offset="65%" style="stop-color:#ffcc33;stop-opacity:0.2" />
       <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
     </radialGradient>
     
-    <!-- 右上角大圆多层渐变 -->
-    <radialGradient id="topRight1" cx="40%" cy="60%" r="85%">
-      <stop offset="0%" style="stop-color:#F3E8FF;stop-opacity:0.6" />
-      <stop offset="12%" style="stop-color:#E9D5FF;stop-opacity:0.5" />
-      <stop offset="28%" style="stop-color:#DDD6FE;stop-opacity:0.4" />
-      <stop offset="48%" style="stop-color:#C4B5FD;stop-opacity:0.3" />
-      <stop offset="68%" style="stop-color:#A78BFA;stop-opacity:0.2" />
-      <stop offset="85%" style="stop-color:#8B5CF6;stop-opacity:0.1" />
+    <!-- 右上角极鲜艳多彩 -->
+    <radialGradient id="topRight1" cx="40%" cy="60%" r="88%">
+      <stop offset="0%" style="stop-color:#ffff00;stop-opacity:1" />
+      <stop offset="8%" style="stop-color:#ccff00;stop-opacity:0.95" />
+      <stop offset="16%" style="stop-color:#66ff00;stop-opacity:0.9" />
+      <stop offset="24%" style="stop-color:#00ff66;stop-opacity:0.85" />
+      <stop offset="32%" style="stop-color:#00ffcc;stop-opacity:0.8" />
+      <stop offset="40%" style="stop-color:#00ccff;stop-opacity:0.7" />
+      <stop offset="48%" style="stop-color:#0066ff;stop-opacity:0.6" />
+      <stop offset="56%" style="stop-color:#6600ff;stop-opacity:0.5" />
+      <stop offset="64%" style="stop-color:#cc00ff;stop-opacity:0.4" />
+      <stop offset="72%" style="stop-color:#ff00cc;stop-opacity:0.3" />
+      <stop offset="80%" style="stop-color:#ff0066;stop-opacity:0.2" />
+      <stop offset="90%" style="stop-color:#ff3300;stop-opacity:0.1" />
       <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
     </radialGradient>
     
-    <radialGradient id="topRight2" cx="65%" cy="35%" r="65%">
-      <stop offset="0%" style="stop-color:#E9D5FF;stop-opacity:0.4" />
-      <stop offset="20%" style="stop-color:#C4B5FD;stop-opacity:0.3" />
-      <stop offset="45%" style="stop-color:#A78BFA;stop-opacity:0.2" />
-      <stop offset="70%" style="stop-color:#8B5CF6;stop-opacity:0.1" />
+    <radialGradient id="topRight2" cx="65%" cy="35%" r="68%">
+      <stop offset="0%" style="stop-color:#ff66ff;stop-opacity:0.8" />
+      <stop offset="15%" style="stop-color:#cc66ff;stop-opacity:0.7" />
+      <stop offset="30%" style="stop-color:#9966ff;stop-opacity:0.6" />
+      <stop offset="45%" style="stop-color:#6666ff;stop-opacity:0.5" />
+      <stop offset="60%" style="stop-color:#3366ff;stop-opacity:0.3" />
+      <stop offset="80%" style="stop-color:#003399;stop-opacity:0.1" />
       <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
     </radialGradient>
     
-    <!-- 强化渐变模糊滤镜 -->
-    <filter id="gradientBlur1" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="45 35"/>
-      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.7 0"/>
+    <!-- 额外的超鲜艳渐变 -->
+    <radialGradient id="neon1" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" style="stop-color:#00ff99;stop-opacity:0.9" />
+      <stop offset="25%" style="stop-color:#33ff66;stop-opacity:0.7" />
+      <stop offset="50%" style="stop-color:#66ff33;stop-opacity:0.5" />
+      <stop offset="75%" style="stop-color:#99ff00;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
+    </radialGradient>
+    
+    <radialGradient id="neon2" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" style="stop-color:#ffff33;stop-opacity:0.8" />
+      <stop offset="20%" style="stop-color:#ffcc33;stop-opacity:0.6" />
+      <stop offset="40%" style="stop-color:#ff9933;stop-opacity:0.4" />
+      <stop offset="60%" style="stop-color:#ff6633;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
+    </radialGradient>
+    
+    <radialGradient id="neon3" cx="50%" cy="50%" r="85%">
+      <stop offset="0%" style="stop-color:#ff33cc;stop-opacity:0.85" />
+      <stop offset="18%" style="stop-color:#ff3399;stop-opacity:0.7" />
+      <stop offset="36%" style="stop-color:#ff3366;stop-opacity:0.5" />
+      <stop offset="54%" style="stop-color:#ff6633;stop-opacity:0.3" />
+      <stop offset="80%" style="stop-color:#cc3300;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- 强化发光模糊滤镜 -->
+    <filter id="glowBlur1" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="55 42"/>
+      <feColorMatrix type="matrix" values="1.8 0 0 0 0  0 1.8 0 0 0  0 0 1.8 0 0  0 0 0 1.2 0"/>
     </filter>
     
-    <filter id="gradientBlur2" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="55 40"/>
-      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.6 0"/>
+    <filter id="glowBlur2" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="65 50"/>
+      <feColorMatrix type="matrix" values="2.0 0 0 0 0  0 2.0 0 0 0  0 0 2.0 0 0  0 0 0 1.0 0"/>
     </filter>
     
-    <filter id="gradientBlur3" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="38 42"/>
-      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.8 0"/>
+    <filter id="glowBlur3" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="48 60"/>
+      <feColorMatrix type="matrix" values="1.9 0 0 0 0  0 1.9 0 0 0  0 0 1.9 0 0  0 0 0 1.3 0"/>
     </filter>
     
-    <!-- 毛玻璃强化效果 -->
-    <filter id="advancedGlass" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="25 30"/>
-      <feColorMatrix type="matrix" values="1.2 0 0 0 0  0 1.1 0 0 0  0 0 1.3 0 0  0 0 0 0.4 0"/>
-      <feGaussianBlur stdDeviation="10 15"/>
+    <!-- 霓虹发光效果 -->
+    <filter id="neonGlow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="32 40"/>
+      <feColorMatrix type="matrix" values="2.2 0 0 0 0  0 2.2 0 0 0  0 0 2.2 0 0  0 0 0 0.8 0"/>
+      <feGaussianBlur stdDeviation="18 25"/>
     </filter>
     
-    <!-- 随机噪点纹理 -->
-    <filter id="noise">
-      <feTurbulence baseFrequency="0.9" numOctaves="4" seed="7" type="fractalNoise"/>
-      <feColorMatrix type="saturate" values="0"/>
-      <feColorMatrix type="matrix" values="0 0 0 0 0.1  0 0 0 0 0.2  0 0 0 0 0.3  0 0 0 0.05 0"/>
-      <feComposite in2="SourceGraphic" operator="multiply"/>
+    <!-- 鲜艳噪点纹理 -->
+    <filter id="vibrantNoise">
+      <feTurbulence baseFrequency="0.9" numOctaves="2" seed="15" type="fractalNoise"/>
+      <feColorMatrix type="matrix" values="0.4 0.2 0 0 0.1  0.2 0.6 0.2 0 0.15  0 0.3 0.8 0 0.2  0 0 0 0.02 0"/>
+      <feComposite in2="SourceGraphic" operator="screen"/>
     </filter>
   </defs>
   
-  <!-- 背景 -->
+  <!-- 深黑到鲜艳背景 -->
   <rect width="1600" height="900" fill="url(#bgGradient)"/>
   
-  <!-- 左上角多层随机形状 -->
-  <ellipse cx="180" cy="120" rx="160" ry="140" fill="url(#topLeft1)" filter="url(#gradientBlur1)" transform="rotate(-25 180 120)"/>
-  <ellipse cx="220" cy="180" rx="120" ry="200" fill="url(#topLeft2)" filter="url(#gradientBlur2)" transform="rotate(15 220 180)"/>
-  <ellipse cx="140" cy="200" rx="180" ry="90" fill="url(#topLeft1)" opacity="0.6" filter="url(#gradientBlur1)" transform="rotate(45 140 200)"/>
+  <!-- 左上角超亮青蓝色区域 -->
+  <ellipse cx="180" cy="120" rx="200" ry="180" fill="url(#topLeft1)" filter="url(#glowBlur1)" transform="rotate(-30 180 120)"/>
+  <ellipse cx="260" cy="220" rx="160" ry="240" fill="url(#topLeft2)" filter="url(#glowBlur2)" transform="rotate(20 260 220)"/>
+  <ellipse cx="100" cy="200" rx="220" ry="130" fill="url(#topLeft1)" opacity="0.8" filter="url(#glowBlur1)" transform="rotate(55 100 200)"/>
+  <ellipse cx="320" cy="160" rx="140" ry="200" fill="url(#topLeft2)" opacity="0.6" filter="url(#glowBlur3)" transform="rotate(-70 320 160)"/>
   
-  <!-- 左下角多层随机形状 -->
-  <ellipse cx="160" cy="720" rx="170" ry="160" fill="url(#bottomLeft1)" filter="url(#gradientBlur2)" transform="rotate(35 160 720)"/>
-  <ellipse cx="200" cy="780" rx="140" ry="190" fill="url(#bottomLeft2)" filter="url(#gradientBlur3)" transform="rotate(-20 200 780)"/>
-  <ellipse cx="120" cy="680" rx="200" ry="110" fill="url(#bottomLeft1)" opacity="0.5" filter="url(#gradientBlur1)" transform="rotate(60 120 680)"/>
+  <!-- 左下角超亮粉橙色区域 -->
+  <ellipse cx="160" cy="720" rx="210" ry="200" fill="url(#bottomLeft1)" filter="url(#glowBlur2)" transform="rotate(40 160 720)"/>
+  <ellipse cx="240" cy="820" rx="180" ry="230" fill="url(#bottomLeft2)" filter="url(#glowBlur3)" transform="rotate(-28 240 820)"/>
+  <ellipse cx="80" cy="640" rx="240" ry="150" fill="url(#bottomLeft1)" opacity="0.7" filter="url(#glowBlur1)" transform="rotate(72 80 640)"/>
+  <ellipse cx="300" cy="770" rx="160" ry="180" fill="url(#bottomLeft2)" opacity="0.8" filter="url(#glowBlur2)" transform="rotate(-45 300 770)"/>
   
-  <!-- 右上角大型随机形状组合 -->
-  <ellipse cx="1320" cy="180" rx="220" ry="240" fill="url(#topRight1)" filter="url(#advancedGlass)" transform="rotate(-15 1320 180)"/>
-  <ellipse cx="1380" cy="220" rx="180" ry="160" fill="url(#topRight2)" filter="url(#advancedGlass)" transform="rotate(25 1380 220)"/>
-  <ellipse cx="1280" cy="140" rx="160" ry="200" fill="url(#topRight1)" opacity="0.4" filter="url(#advancedGlass)" transform="rotate(50 1280 140)"/>
-  <ellipse cx="1420" cy="160" rx="140" ry="180" fill="url(#topRight2)" opacity="0.3" filter="url(#advancedGlass)" transform="rotate(-35 1420 160)"/>
+  <!-- 右上角超鲜艳彩虹区域 -->
+  <ellipse cx="1320" cy="180" rx="260" ry="280" fill="url(#topRight1)" filter="url(#neonGlow)" transform="rotate(-20 1320 180)"/>
+  <ellipse cx="1420" cy="260" rx="220" ry="200" fill="url(#topRight2)" filter="url(#neonGlow)" transform="rotate(30 1420 260)"/>
+  <ellipse cx="1240" cy="100" rx="200" ry="240" fill="url(#topRight1)" opacity="0.6" filter="url(#neonGlow)" transform="rotate(58 1240 100)"/>
+  <ellipse cx="1480" cy="200" rx="180" ry="220" fill="url(#topRight2)" opacity="0.5" filter="url(#neonGlow)" transform="rotate(-42 1480 200)"/>
   
-  <!-- 额外的随机装饰元素 -->
-  <ellipse cx="400" cy="300" rx="80" ry="120" fill="url(#topLeft2)" opacity="0.3" filter="url(#gradientBlur3)" transform="rotate(70 400 300)"/>
-  <ellipse cx="800" cy="150" rx="90" ry="70" fill="url(#topRight2)" opacity="0.2" filter="url(#gradientBlur2)" transform="rotate(-45 800 150)"/>
-  <ellipse cx="1200" cy="600" rx="110" ry="85" fill="url(#bottomLeft2)" opacity="0.25" filter="url(#gradientBlur1)" transform="rotate(30 1200 600)"/>
-  <ellipse cx="600" cy="750" rx="95" ry="130" fill="url(#topRight1)" opacity="0.2" filter="url(#gradientBlur3)" transform="rotate(-60 600 750)"/>
+  <!-- 中间区域的霓虹装饰 -->
+  <ellipse cx="520" cy="380" rx="140" ry="180" fill="url(#neon1)" opacity="0.6" filter="url(#glowBlur3)" transform="rotate(78 520 380)"/>
+  <ellipse cx="820" cy="220" rx="160" ry="120" fill="url(#neon2)" opacity="0.5" filter="url(#glowBlur2)" transform="rotate(-52 820 220)"/>
+  <ellipse cx="1120" cy="520" rx="180" ry="140" fill="url(#neon3)" opacity="0.7" filter="url(#glowBlur1)" transform="rotate(38 1120 520)"/>
+  <ellipse cx="720" cy="680" rx="150" ry="200" fill="url(#topLeft1)" opacity="0.5" filter="url(#glowBlur3)" transform="rotate(-72 720 680)"/>
+  <ellipse cx="1220" cy="720" rx="130" ry="160" fill="url(#neon1)" opacity="0.4" filter="url(#glowBlur2)" transform="rotate(48 1220 720)"/>
   
-  <!-- 噪点纹理覆盖层 -->
-  <rect width="1600" height="900" fill="white" filter="url(#noise)" opacity="0.8"/>
+  <!-- 额外的霓虹斑点 -->
+  <ellipse cx="420" cy="620" rx="100" ry="140" fill="url(#neon2)" opacity="0.4" filter="url(#glowBlur1)" transform="rotate(-88 420 620)"/>
+  <ellipse cx="920" cy="470" rx="120" ry="110" fill="url(#topRight1)" opacity="0.3" filter="url(#glowBlur3)" transform="rotate(28 920 470)"/>
+  <ellipse cx="620" cy="320" rx="110" ry="130" fill="url(#neon3)" opacity="0.35" filter="url(#glowBlur2)" transform="rotate(65 620 320)"/>
+  <ellipse cx="1000" cy="650" rx="90" ry="120" fill="url(#bottomLeft1)" opacity="0.3" filter="url(#glowBlur1)" transform="rotate(-35 1000 650)"/>
+  
+  <!-- 鲜艳噪点纹理覆盖层 -->
+  <rect width="1600" height="900" fill="white" filter="url(#vibrantNoise)" opacity="0.4"/>
 </svg>
