@@ -23,6 +23,8 @@ DOMAIN-KEYWORD,stripe
 
 ## claude 计划模式
 
+shift + tab 就可以切换过去
+
 你可以给你的需求，先让它自动创建一个计划
 
 你可以审视它的计划，并且决定是否执行
@@ -30,3 +32,7 @@ DOMAIN-KEYWORD,stripe
 觉得不好 可以告诉它调整
 
 它会创建一堆 todos 然后逐渐实现
+
+## 自动接受
+
+shift + tab 就可以切换过去，然后让它自己写代码，不用你确认了
