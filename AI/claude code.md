@@ -75,3 +75,7 @@ claude code 是可以自定义命令的，只需要在.claude/commands 下创建
   Current directory and subdirectories:
   gemini -p "@./ Give me an overview of this entire project"
 ```
+
+这样，我们在 claude code 里就可以调用 gemini 命令了，是的，就是麦当劳里吃肯德基
+
+`/gemini 2025-07-01 00:28:12,239 - ERROR - root - commit_widget.py:382 - 显示文件差异失败；提交时查看删除的文件的差异失败`
