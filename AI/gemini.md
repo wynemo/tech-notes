@@ -25,3 +25,11 @@ export GOOGLE_CLOUD_PROJECT=xxx
 最后你看我让 AI 自己评判同行与自己的代码
 
 ![gemini 与 claude 代码对比](gemini_vs_claude.png)
+
+## 网络搜索
+
+gemini 是带有网络搜索功能的
+
+例子：
+
+`gemini -p "帮我搜索一下 mirrors.tencentyun.com 域名是这个 sing-box 直连 配置如何写"`
