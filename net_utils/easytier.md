@@ -10,38 +10,43 @@ company:
 sudo ./easytier-core -d --network-name lozhang123 --network-secret fuckcdc -p tcp://public.easytier.cn:11010
 
 ```mermaid
-graph TD
-  subgraph 家庭A
-    A1[sing-box]
-    A2[easytier (10.126.126.1)]
-    A3[WireGuard portal]
-  end
-
-  subgraph 公司B
-    B1[Tailscale (100.64.0.0/10)]
-    B2[easytier (10.126.126.2)]
-  end
-
-  subgraph 手机C
-    C1[loon: SS client]
-    C2[loon: WireGuard client]
-  end
-
-  %% 连接关系
-  C1 --> SS1[连接 sing-box (SS)]
-  SS1 --> A1
-  A1 --> TS1[通过 Tailscale]
-  TS1 --> B1
-
-  C2 --> WG1[连接 A 的 WireGuard portal]
-  WG1 --> A3
-  A3 --> A2
-  A2 --> ET1[通过 EasyTier]
-  ET1 --> B2
-
-  %% A 的 sing-box 和 tailscale
-  A1 --> B1
-
-  %% EasyTier 的对等连接
-  A2 --> B2
+graph TB
+    subgraph "家里A"
+        A_SingBox["Sing-box<br/>内嵌Tailscale客户端<br/>SS服务器(TCP)<br/>AutoRedirect<br/>100.64.x.x"]
+        A_EasyTier["EasyTier节点<br/>内嵌WireGuard Portal<br/>10.126.126.x"]
+    end
+    
+    subgraph "公司B"
+        B_Tailscale["Tailscale节点<br/>100.64.x.x"]
+        B_EasyTier["EasyTier节点<br/>10.126.126.x"]
+    end
+    
+    subgraph "手机C - Loon"
+        C_WG["WireGuard协议"]
+        C_SS["SS协议"]
+    end
+    
+    %% Tailscale连接 (基于WireGuard UDP)
+    A_SingBox <===>|Tailscale协议<br/>100.64.0.0/10<br/>基于WireGuard UDP| B_Tailscale
+    
+    %% EasyTier连接 (基于WireGuard UDP)
+    A_EasyTier <===>|EasyTier协议<br/>10.126.126.0/24<br/>基于WireGuard UDP| B_EasyTier
+    
+    %% 手机C的两种连接方式
+    C_WG ==>|WireGuard连接| A_EasyTier
+    C_SS ==>|SS协议 TCP| A_SingBox
+    
+    %% 流量转发路径和最终访问目标
+    A_EasyTier -.->|WireGuard Portal<br/>直接访问10.126.126.0/24网段| B_EasyTier
+    A_SingBox -.->|内嵌Tailscale<br/>转发到100.64.0.0/10网段| B_Tailscale
+    
+    %% 样式
+    classDef homeNode fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef companyNode fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef mobileNode fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef protocol fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    
+    class A_SingBox,A_EasyTier homeNode
+    class B_Tailscale,B_EasyTier companyNode
+    class C_WG,C_SS mobileNode
 ```
