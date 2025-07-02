@@ -9,6 +9,9 @@ sudo ./easytier-core -d --network-name lozhang123 --network-secret fuckcdc -p tc
 company:
 sudo ./easytier-core -d --network-name lozhang123 --network-secret fuckcdc -p tcp://public.easytier.cn:11010
 
+
+下图也可以简化下，可以去掉 loon 与家里的 wiregurad，让 sing-box 转发下 10.126.126.x 的流量
+
 ```mermaid
 graph TB
     subgraph "家里A"
