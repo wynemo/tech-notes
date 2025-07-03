@@ -4,7 +4,13 @@
 
 ## 代理局域网
 
+每个节点都可以代理局域网，这样其他节点可以访问
+
 ## wireguard portal
+
+在 easytier 网络的任意节点，可以创建一个 wireguard portal，当然这个节点需要一个公网 IP
+
+这样手机，比如 ios，就可以通过这个节点直接访问 easytier 的 vpn 网络，也包括前面的说的代理的局域网
 
 oracle:
 sudo ./easytier-core -d --network-name your_networkname --network-secret your_password -p udp://your_peer_ip:11010
