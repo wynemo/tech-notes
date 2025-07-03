@@ -1,3 +1,11 @@
+## 公共服务器组网
+
+## 点对点组网
+
+## 代理局域网
+
+## wireguard portal
+
 oracle:
 sudo ./easytier-core -d --network-name your_networkname --network-secret your_password -p udp://your_peer_ip:11010
 
