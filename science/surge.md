@@ -78,6 +78,13 @@ IP-CIDR6 这和小火箭不一样， 表示ipv6
 
 那样的话 分流极有可能走到final 达不到预期的分流效果
 
+
+不过也可以在规则里用协议嗅探来规避
+
+DOMAIN 、 DOMAIN-SUFFIX 、 DOMAIN-KEYWORD 规则添加了一个名为 extended-matching 的可选参数。启用此参数后，规则将尝试同时匹配 SNI 和 HTTP 主机头（或 :authority）。
+
+即使浏览器发到加密的dns surge也可以协议嗅探，匹配域名
+
 ### 代理链
 
 策略（Proxy Policy） 策略组（Policy Group）
