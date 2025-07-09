@@ -23,7 +23,7 @@ DOMAIN-KEYWORD,stripe
 
 要注意的是需要关闭QUIC，比如在mihomo里需要添加规则，要不然依然可以通过QUIC查询dns的时候知道你的真实IP
 
-  - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT
+`- AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT`
 
 surge 是默认阻止QUIC的
 
