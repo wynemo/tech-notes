@@ -34,7 +34,9 @@ sudo ./easytier-core -d --network-name your_networkname --network-secret your_pa
 
 但其实点对点组网，可以混搭公共服务器组网，这样比较灵活
 
-举个例子，国外的节点有可能连不上公共服务器（因为在国内），这时候就可以让它连其他有公网 IP 节点
+举个例子，国外的节点有可能连不上公共服务器，这时候就可以让它连其他有公网 IP 的节点
+
+sudo ./easytier-core -d --network-name your_networkname --network-secret your_password -p tcp://other_node_public_ip:11010
 
 
 ## wireguard portal
