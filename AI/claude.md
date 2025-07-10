@@ -41,7 +41,7 @@ OpenRouter新政:
 每天免费模型调用次数从200降到50。
 但账户有10美金以上，调用次数反升1000次。
 
-白嫖Deepseek V3、Gemini 2.5 pro等免费模型
+白嫖Deepseek V3、~~Gemini 2.5 pro~~等免费模型
 
 发现支付宝和微信也能买
 
