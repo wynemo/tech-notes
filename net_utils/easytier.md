@@ -1,19 +1,20 @@
 大家可能用过 zerotier、tailscale 等内网穿透的应用，它们都是需要服务供应商的服务器的
 
-今天给大家介绍 easytier，也是一款内网穿透工具
+今天给大家介绍 [easytier](https://easytier.cn/)，也是一款内网穿透工具
 
 完全可以自己搭建，不需依赖其他服务器
 
 同时，就算使用公共服务器组网，也是在国内的，这样但 zerotier、tailscale 无法连上时，easytiter 可以作为一个备份
 
-easytier 组网非常简单，下一个包 里面有 easytier-core，easytier-cli
+easytier 组网非常简单，下一个[包](https://github.com/EasyTier/EasyTier/releases)  里面有 easytier-core，easytier-cli
+
 其中前面一个用于组网，后面一个用于查看连接状态
 
 ## 公共服务器组网
 
 最简单，可以输入网络名称、网络密码，-d 表示使用 dhcp，默认为会分配 10.126.126.x 这个网段，-p 后面跟公共节点
 
-sudo ./easytier-core -d --network-name your_networkname --network-secret your_password -p tcp://public.easytier.cn:11010
+`sudo ./easytier-core -d --network-name your_networkname --network-secret your_password -p tcp://public.easytier.cn:11010`
 
 相应的，其他节点，也运行同样的命令
 
@@ -30,7 +31,7 @@ sudo ./easytier-core -d --network-name your_networkname --network-secret your_pa
 
 easytier 如果想分享节点所在的局域网出去 可以用 -n 参数，后面跟一个子网网段，比如
 
-sudo ./easytier-core -d --network-name your_networkname --network-secret your_password -p tcp://public.easytier.cn:11010 -n 192.168.0.0/24
+`sudo ./easytier-core -d --network-name your_networkname --network-secret your_password -p tcp://public.easytier.cn:11010 -n 192.168.0.0/24`
 
 这样，其他节点就可以访问这个子网了
 
@@ -45,7 +46,7 @@ sudo ./easytier-core -d --network-name your_networkname --network-secret your_pa
 
 举个例子，国外的节点有可能连不上公共服务器，这时候就可以让它连其他有公网 IP 的节点
 
-sudo ./easytier-core -d --network-name your_networkname --network-secret your_password -p tcp://other_node_public_ip:11010
+`sudo ./easytier-core -d --network-name your_networkname --network-secret your_password -p tcp://other_node_public_ip:11010`
 
 当然网络名称、密码还是要用一样的
 
@@ -63,7 +64,7 @@ sudo ./easytier-core -d --network-name your_networkname --network-secret your_pa
 
 wireguard 入口的参数如下：
 
-sudo ./easytier-core -d --network-name your_networkname --network-secret your_password -p tcp://public.easytier.cn:11010 -n 192.168.0.0/24 --vpn-portal wg://0.0.0.0:11013/10.14.14.0/24
+`sudo ./easytier-core -d --network-name your_networkname --network-secret your_password -p tcp://public.easytier.cn:11010 -n 192.168.0.0/24 --vpn-portal wg://0.0.0.0:11013/10.14.14.0/24`
 
 
 ## 实际例子 tailsacle 混搭 easytier 的例子
