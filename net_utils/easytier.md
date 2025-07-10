@@ -55,7 +55,7 @@ wireguard 入口的参数如下：
 sudo ./easytier-core -d --network-name your_networkname --network-secret your_password -p tcp://public.easytier.cn:11010 -n 192.168.0.0/24 --vpn-portal wg://0.0.0.0:11013/10.14.14.0/24
 
 
-## 实际例子
+## 实际例子 tailsacle 混搭 easytier 的例子
 
 我让公司与家里组了一个 easytier 网络，还组了一个 tailscale 网络
 
