@@ -55,8 +55,18 @@ wireguard 入口的参数如下：
 sudo ./easytier-core -d --network-name your_networkname --network-secret your_password -p tcp://public.easytier.cn:11010 -n 192.168.0.0/24 --vpn-portal wg://0.0.0.0:11013/10.14.14.0/24
 
 
+## 实际例子
 
-下图也可以简化下，可以去掉 loon 与家里的 wiregurad，让 sing-box 转发下 10.126.126.x 的流量
+我让公司与家里组了一个 easytier 网络，还组了一个 tailscale 网络
+
+手机可以看情况使用 upd 的 wireguard 协议连接家里，或者用 tcp 的 ss 协议连接家里
+
+如果遇到手机端连接不太上的情况或者出现 qos 的情况
+
+可以考虑不使用 wiregurad，直接使用 ss 协议
+
+让 sing-box 转发下 10.126.126.x 的流量 这样手机也可以直接访问 10.126.126.x easytier 网络
+
 
 ```mermaid
 graph TB
