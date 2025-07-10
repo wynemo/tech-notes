@@ -17,7 +17,11 @@ sudo ./easytier-core -d --network-name your_networkname --network-secret your_pa
 
 然后 可以用 easytier-cli peer 看组网的情况
 
-如果想分享节点所在的局域网出去 可以用 -n 参数，后面跟一个子网网段，比如
+## 分享子网给其他节点
+
+类似 tailscale 的宣告路由功能
+
+easytier 如果想分享节点所在的局域网出去 可以用 -n 参数，后面跟一个子网网段，比如
 
 sudo ./easytier-core -d --network-name your_networkname --network-secret your_password -p tcp://public.easytier.cn:11010 -n 192.168.0.0/24
 
