@@ -13,10 +13,9 @@ easytier 组网非常简单，下一个包 里面有 easytier-core easytier-cli
 
 sudo ./easytier-core -d --network-name your_networkname --network-secret your_password -p tcp://public.easytier.cn:11010
 
-相应的，其他节点，也做同样的事情
+相应的，其他节点，也运行同样的命令
 
-
-easytier-cli
+然后 可以用 easytier-cli peer 看组网的情况
 
 如果想分享节点所在的局域网出去 可以用 -n 参数，后面跟一个子网网段，比如
 
