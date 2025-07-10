@@ -47,7 +47,7 @@ sudo ./easytier-core -d --network-name your_networkname --network-secret your_pa
 
 原因是 easytier 没有手机客户端 这样通过 wireguard，手机就能加入到 easytier 网络
 
-手机上可以用 shadowrocket/loon 等客户端都行
+手机上可以用 shadowrocket/loon 等客户端使用 wireguard 都行
 
 
 wireguard 入口的参数如下：
