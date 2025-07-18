@@ -49,9 +49,10 @@ macos/linux都是支持的
 windows 是最近支持的 原生支持 之前只能在 wsl 里使用
 
 ## 粘贴图片
-
+有时候需要贴一些设计图给大模型
 支持从剪切板粘贴图片的，不过仅限于 macos
-macos 上可以用 contrl + command + shift + 4 截图
+macos 上可以用 contrl + command + shift + 4 截图，不过注意这里贴到 claude code 的快捷键是 ctrl + v，不是 command + v
+反直觉吧
 windows 就只能发送图片文件了，用@文件的方式
 
 
@@ -97,3 +98,10 @@ claude code 是可以自定义命令的，只需要在.claude/commands 下创建
 这样，我们在 claude code 里就可以调用 gemini 命令了，是的，就是麦当劳里吃肯德基
 
 `/gemini 2025-07-01 00:28:12,239 - ERROR - root - commit_widget.py:382 - 显示文件差异失败；提交时查看删除的文件的差异失败`
+
+## hooks
+
+hooks 就是可以在 claude code 完成一些动作以后，做一些事情
+比如跑一个代码检查脚本啊
+
+我是在它写完代码以后播放一个音乐，这样提醒我完成了
