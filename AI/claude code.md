@@ -62,6 +62,15 @@ windows 就只能发送图片文件了，用@文件的方式
 
 
 ## 调用 gemini
+## hooks
+
+比如代码完成一个变化，就可以触发一个hook，然后在这个hook里你可以执行一些动作，比如播放一个音乐
+
+
+## 与 IDE 集成
+比如cursor，可安装扩展，当 claude code 变更代码时，可以在IDE里看代码的变化，然后看是否接受
+
+## 调用 gemini cli
 gemini 自己改总是想太多 不太遵循提示词；它反正暴力发送大量 input tokens 到服务器 用下 google 算力分析下 倒是效果蛮好的
 然后根据结果再让 claude code 改
 

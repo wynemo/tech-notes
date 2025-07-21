@@ -147,3 +147,8 @@ ruff也是用uv装的 `uv tool install ruff`, 它是一个linter，给你检查�
 "python.languageServer": "Default",
 "python.venvPath": ".venv",
 ```
+
+### Dendron Paste Image
+
+paste image from clipboard directly
+直接从剪切板粘贴图片，这下markdown里贴图就方便了，macos上直接command + option + v就可以
