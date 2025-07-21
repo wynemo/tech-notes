@@ -27,6 +27,11 @@ DOMAIN-KEYWORD,stripe
 
 surge 是默认阻止 QUIC 的
 
+loon 也是可以在节点设置阻断 quic 的
+
+quan x 可以 general 里加一条这个
+udp_drop_list=443
+
 ## claude 计划模式
 
 shift + tab 就可以切换过去
