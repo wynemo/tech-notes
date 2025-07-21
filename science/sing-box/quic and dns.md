@@ -1,4 +1,13 @@
+## quic 介绍
 
+QUIC 是 Google 开发的一种基于 UDP 的传输层协议，通常用于 HTTP/3。
+
+什么是 DNS over QUIC (DoQ)？
+
+DNS over QUIC 是一种通过 QUIC 协议 传输的 DNS 查询方式，提供了加密、低延迟、抗阻断的 DNS 解析能力。
+	•	标准编号：RFC 9250（由 IETF 发布）
+	•	类似协议：DNS over HTTPS (DoH)、DNS over TLS (DoT)
+	•	核心目标：让 DNS 查询像 HTTPS 一样具备隐私性、抗篡改能力，同时减少握手延迟。
 
 ## 微信与quic
 
