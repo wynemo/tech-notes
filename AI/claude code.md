@@ -56,7 +56,7 @@ windows 是最近支持的 原生支持 之前只能在 wsl 里使用
 ## 粘贴图片
 有时候需要贴一些设计图给大模型
 支持从剪切板粘贴图片的，不过仅限于 macos
-macos 上可以用 contrl + command + shift + 4 截图，不过注意这里贴到 claude code 的快捷键是 ctrl + v，不是 command + v
+macos 上可以用 contrl + command + shift + 4 截图，这里贴到 claude code 的快捷键是 ctrl/command + v
 反直觉吧
 windows 就只能发送图片文件了，用@文件的方式
 
