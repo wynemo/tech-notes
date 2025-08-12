@@ -9,6 +9,8 @@
 * iterm2 终端模拟器
 * utm 虚拟机 基于qemu，可以模拟除了arm其他架构的（当然模拟跑比较慢，比如m芯片的mac跑windows11 x86的虚拟机非常慢）
 
+注意装windows 11，需要装 utm 提供的 iso 里东西，同时在设置 - 显示里，要打开 Retina Mode
+
 视频讲解：
 
 [![视频讲解](https://img.youtube.com/vi/K-_4okXmX3Q/0.jpg)](https://www.youtube.com/watch?v=K-_4okXmX3Q)
