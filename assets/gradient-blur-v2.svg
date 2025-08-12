@@ -1,0 +1,106 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 主对角线渐变 - 深蓝到青色方案 -->
+    <linearGradient id="diagonalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="35%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="55%" style="stop-color:#0369a1;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#0891b2;stop-opacity:1" />
+      <stop offset="90%" style="stop-color:#67e8f9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cffafe;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 左侧深色区域渐变 -->
+    <radialGradient id="leftGlow" cx="20%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- 右侧亮色区域渐变 -->
+    <radialGradient id="rightGlow" cx="80%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#0891b2;stop-opacity:0.7" />
+      <stop offset="50%" style="stop-color:#67e8f9;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#cffafe;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- 波浪渐变1 -->
+    <linearGradient id="waveGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:0.7" />
+      <stop offset="50%" style="stop-color:#0369a1;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.5" />
+    </linearGradient>
+    
+    <!-- 波浪渐变2 -->
+    <linearGradient id="waveGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:0.6" />
+      <stop offset="50%" style="stop-color:#0891b2;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#67e8f9;stop-opacity:0.4" />
+    </linearGradient>
+    
+    <!-- 波浪渐变3 -->
+    <linearGradient id="waveGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:0.5" />
+      <stop offset="40%" style="stop-color:#0369a1;stop-opacity:0.4" />
+      <stop offset="80%" style="stop-color:#67e8f9;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#cffafe;stop-opacity:0.2" />
+    </linearGradient>
+    
+    <!-- 模糊滤镜 -->
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景渐变 -->
+  <rect width="1600" height="900" fill="url(#diagonalGradient)"/>
+  
+  <!-- 左侧深色区域 -->
+  <rect width="800" height="900" fill="url(#leftGlow)"/>
+  
+  <!-- 右侧亮色区域 -->
+  <rect x="800" width="800" height="900" fill="url(#rightGlow)"/>
+  
+  <!-- 波浪形状 - 底层 -->
+  <path d="M 0,900 
+           C 200,900 300,750 500,720
+           C 700,690 900,650 1100,630
+           C 1300,610 1400,620 1500,650
+           C 1550,665 1580,670 1600,675
+           L 1600,900 Z" 
+        fill="url(#waveGradient1)"
+        opacity="0.7"
+        filter="url(#blur)"/>
+
+  <!-- 波浪形状 - 中层 -->
+  <path d="M 0,900
+           C 250,900 350,780 550,750
+           C 750,720 950,690 1150,680
+           C 1350,670 1450,680 1550,700
+           L 1600,700
+           L 1600,900 Z" 
+        fill="url(#waveGradient2)"
+        opacity="0.6"
+        filter="url(#blur)"/>
+
+  <!-- 波浪形状 - 顶层 -->
+  <path d="M 0,900
+           C 300,900 400,820 600,800
+           C 800,780 1000,760 1200,750
+           C 1400,740 1500,750 1600,770
+           L 1600,900 Z" 
+        fill="url(#waveGradient3)"
+        opacity="0.5"
+        filter="url(#blur)"/>
+
+  <!-- 顶部波浪 - 从右往左 -->
+  <path d="M 1600,0
+           C 1400,0 1300,100 1100,120
+           C 900,140 700,160 500,180
+           C 300,200 200,190 100,170
+           C 50,160 20,155 0,150
+           L 0,0 Z" 
+        fill="url(#waveGradient2)"
+        opacity="0.4"
+        filter="url(#blur)"/>
+</svg>
