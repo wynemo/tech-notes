@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## 语言
+
+请使用中文
+
 ## Repository Overview
 
 This is a personal tech notes repository containing documentation in Chinese and English covering various technical topics including:
