@@ -129,10 +129,6 @@ hooks 就是可以在 claude code 完成一些动作以后，做一些事情
 
 ## vibe tunnel
 
-vibe coding 更方便了
-在电脑上安装配置好 vibe tunnel
-然后手机远程连接电脑的网络
-就可以在浏览器中访问电脑的终端了
-你可以打开 gemini 或者 claude code 等程序
-在手机上也可以 vibe coding
-手机上可以通过 easytier 等途径连接电脑
+https://vibetunnel.sh/
+
+通过 vibe tunnel，可以实现更便捷的远程编程体验。在电脑上安装并配置 vibe tunnel 后，手机可以通过网络连接访问电脑终端。这样就能够在浏览器中使用 Gemini 或 Claude Code 等程序，实现移动端的 vibe coding 体验。手机端可通过 EasyTier 等穿透工具建立与电脑的网络连接。
