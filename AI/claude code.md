@@ -64,11 +64,11 @@ windows 就只能发送图片文件了，用@文件的方式
 ## 调用 gemini
 ## hooks
 
-比如代码完成一个变化，就可以触发一个hook，然后在这个hook里你可以执行一些动作，比如播放一个音乐
+比如代码完成一个变化，就可以触发一个 hook，然后在这个 hook 里你可以执行一些动作，比如播放一个音乐
 
 
 ## 与 IDE 集成
-比如cursor，可安装扩展，当 claude code 变更代码时，可以在IDE里看代码的变化，然后看是否接受
+比如 cursor，可安装扩展，当 claude code 变更代码时，可以在 IDE 里看代码的变化，然后看是否接受
 
 ## 调用 gemini cli
 gemini 自己改总是想太多 不太遵循提示词；它反正暴力发送大量 input tokens 到服务器 用下 google 算力分析下 倒是效果蛮好的
@@ -122,4 +122,15 @@ hooks 就是可以在 claude code 完成一些动作以后，做一些事情
 
 ## 压缩上下文
 
-虽然说现在claude code可以自动压缩上下文，但你可以使用 `/compact` 手动压缩上下文，这样省一点token
+虽然说现在 claude code 可以自动压缩上下文，但你可以使用 `/compact` 手动压缩上下文，这样省一点 token
+
+
+## vibe tunnel
+
+vibe coding 更方便了
+在电脑上安装配置好 vibe tunnel
+然后手机远程连接电脑的网络
+就可以在浏览器中访问电脑的终端了
+你可以打开 gemini 或者 claude code 等程序
+在手机上也可以 vibe coding
+手机上可以通过 easytier 等途径连接电脑
