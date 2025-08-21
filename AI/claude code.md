@@ -68,9 +68,13 @@ windows 就只能发送图片文件了，用@文件的方式
 
 
 ## 与 IDE 集成
-比如 cursor，可安装扩展，当 claude code 变更代码时，可以在 IDE 里看代码的变化，然后看是否接受
+Claude Code 支持与主流集成开发环境（如 Cursor、VSCode）进行深度集成。通过在 IDE 内置终端中运行 Claude Code，并安装相应的扩展程序，可实现无缝的开发体验。
 
-用 command + option + k 可以选中文件，或者文件的一部分，作为上下文
+使用 `/ide` 命令可查看当前的集成状态信息。
+
+当 Claude Code 对代码进行修改时，IDE 将实时显示代码变更，开发者可以通过差异对比视图审查并决定是否接受这些更改。
+
+通过快捷键 `Command + Option + K` 可以选择文件或代码片段作为上下文，为 Claude Code 提供更精准的代码环境信息。
 
 ## 调用 gemini cli
 gemini 自己改总是想太多 不太遵循提示词；它反正暴力发送大量 input tokens 到服务器 用下 google 算力分析下 倒是效果蛮好的
