@@ -139,7 +139,7 @@ https://vibetunnel.sh/
 
 ## status line
 
-
+命令行里，会有PS1展示信息，比如用户名，当前目录等，claude code也可以做到
 
 告诉claude code你用的什么shell（zsh，bash，fish等），运行 /statusline 命令 设置一个命令，它会修改 ~/.claude/settings.json
 
