@@ -176,4 +176,4 @@ https://vibetunnel.sh/
 
 ## 显示上下文
 
-使用 /context 指令 Visualize current context usage as a colored grid
+使用 /context 指令可以将当前上下文使用情况以彩色网格的形式进行可视化展示
