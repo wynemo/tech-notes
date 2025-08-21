@@ -173,3 +173,7 @@ https://vibetunnel.sh/
 ```
 
 这个有用，尤其是你多个工程同步进行的时候
+
+## 显示上下文
+
+使用 /context 指令 Visualize current context usage as a colored grid
