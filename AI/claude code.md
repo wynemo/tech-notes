@@ -125,6 +125,25 @@ hooks 就是可以在 claude code 完成一些动作以后，做一些事情
 
 我是在它写完代码以后播放一个音乐，这样提醒我完成了
 
+```json
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "hooks": {
+      "Stop": [
+        {
+          "matcher": "",
+          "hooks": [
+            {
+              "type": "command",
+              "command": "afplay /Users/tommygreen/Downloads/ready-to-work-101soundboards.mp3"
+            }
+          ]
+        }
+      ]
+  }
+}
+```
+
 ## 压缩上下文
 
 虽然说现在 claude code 可以自动压缩上下文，但你可以使用 `/compact` 手动压缩上下文，这样省一点 token
@@ -151,19 +170,6 @@ https://vibetunnel.sh/
   "statusLine": {
     "type": "command",
     "command": "printf '%s@%s %s %%' \"$(whoami)\" \"$(hostname -s)\" \"$(basename \"$(pwd)\")\""
-  },
-  "hooks": {
-      "Stop": [
-        {
-          "matcher": "",
-          "hooks": [
-            {
-              "type": "command",
-              "command": "afplay /Users/tommygreen/Downloads/ready-to-work-101soundboards.mp3"
-            }
-          ]
-        }
-      ]
   },
   "feedbackSurveyState": {
     "lastShownTime": 1754102969443
