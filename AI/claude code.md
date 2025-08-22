@@ -61,7 +61,6 @@ macos 上可以用 contrl + command + shift + 4 截图，这里贴到 claude cod
 windows 就只能发送图片文件了，用@文件的方式
 
 
-## 调用 gemini
 ## hooks
 
 比如代码完成一个变化，就可以触发一个 hook，然后在这个 hook 里你可以执行一些动作，比如播放一个音乐
