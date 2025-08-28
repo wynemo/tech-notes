@@ -1,10 +1,10 @@
 ## 规则
 
-创建一个 CLAUDE.md
+可以用/init 命令创建一个 CLAUDE.md，这个等于说是项目的记忆，比如项目该使用什么语言（中文、英语）、什么架构、注意事项等
 
 ## vps
 
-我也没有用家宽，就用的一台洛杉矶的 vps 然后用野卡充钱，月付，目前用了几天，没有翻车，账号是注册了好几年的
+我也没有用家宽，就用的一台洛杉矶的 vps 然后用朋友的英国卡充钱，月付，目前用了几天，没有翻车，账号是注册了好几年的
 
 ## 分流规则
 
@@ -57,20 +57,22 @@ windows 是最近支持的 原生支持 之前只能在 wsl 里使用
 有时候需要贴一些设计图给大模型
 支持从剪切板粘贴图片的，不过仅限于 macos
 macos 上可以用 contrl + command + shift + 4 截图，这里贴到 claude code 的快捷键是 ctrl/command + v
-反直觉吧
 windows 就只能发送图片文件了，用@文件的方式
 
 
-## 调用 gemini
 ## hooks
 
 比如代码完成一个变化，就可以触发一个 hook，然后在这个 hook 里你可以执行一些动作，比如播放一个音乐
 
 
 ## 与 IDE 集成
-比如 cursor，可安装扩展，当 claude code 变更代码时，可以在 IDE 里看代码的变化，然后看是否接受
+Claude Code 支持与主流集成开发环境（如 Cursor、VSCode）进行深度集成。通过在 IDE 内置终端中运行 Claude Code，并安装相应的扩展程序，可实现无缝的开发体验。
 
-用 command + option + k 可以选中文件，或者文件的一部分，作为上下文
+使用 `/ide` 命令可查看当前的集成状态信息。
+
+当 Claude Code 对代码进行修改时，IDE 将实时显示代码变更，开发者可以通过差异对比视图审查并决定是否接受这些更改。
+
+通过快捷键 `Command + Option + K` 可以选择文件或代码片段作为上下文，为 Claude Code 提供更精准的代码环境信息。
 
 ## 调用 gemini cli
 gemini 自己改总是想太多 不太遵循提示词；它反正暴力发送大量 input tokens 到服务器 用下 google 算力分析下 倒是效果蛮好的
@@ -117,10 +119,28 @@ claude code 是可以自定义命令的，只需要在.claude/commands 下创建
 
 ## hooks
 
-hooks 就是可以在 claude code 完成一些动作以后，做一些事情
-比如跑一个代码检查脚本啊
+hooks 是在 Claude Code 执行特定操作后触发的自定义脚本功能。它允许用户在工具调用完成后自动执行预定义的命令，例如运行代码质量检查脚本。
 
-我是在它写完代码以后播放一个音乐，这样提醒我完成了
+一个典型的应用场景是在代码生成完成后播放提示音，以便及时通知用户任务已完成。
+
+```json
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "hooks": {
+      "Stop": [
+        {
+          "matcher": "",
+          "hooks": [
+            {
+              "type": "command",
+              "command": "afplay /Users/tommygreen/Downloads/ready-to-work-101soundboards.mp3"
+            }
+          ]
+        }
+      ]
+  }
+}
+```
 
 ## 压缩上下文
 
@@ -132,3 +152,31 @@ hooks 就是可以在 claude code 完成一些动作以后，做一些事情
 https://vibetunnel.sh/
 
 通过 vibe tunnel，可以实现更便捷的远程编程体验。在电脑上安装并配置 vibe tunnel 后，手机可以通过网络连接访问电脑终端。这样就能够在浏览器中使用 Gemini 或 Claude Code 等程序，实现移动端的 vibe coding 体验。手机端可通过 EasyTier 等穿透工具建立与电脑的网络连接。
+
+## status line
+
+命令行里，会有PS1展示信息，比如用户名，当前目录等，claude code也可以做到
+
+告诉claude code你用的什么shell（zsh，bash，fish等），运行 /statusline 命令 设置一个命令，它会修改 ~/.claude/settings.json
+
+比如下面的配置就是zsh，状态栏会显示工作目录，该状态栏会显示在 Claude Code 界面底部：
+
+```json
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "model": "sonnet",
+  "statusLine": {
+    "type": "command",
+    "command": "printf '%s@%s %s %%' \"$(whoami)\" \"$(hostname -s)\" \"$(basename \"$(pwd)\")\""
+  },
+  "feedbackSurveyState": {
+    "lastShownTime": 1754102969443
+  }
+}
+```
+
+这个有用，尤其是你多个工程同步进行的时候
+
+## 显示上下文
+
+使用 /context 指令可以将当前上下文使用情况以彩色网格的形式进行可视化展示
