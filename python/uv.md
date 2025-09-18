@@ -36,3 +36,11 @@ windows 安装：powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv
 + rust编写
 
 缓存到哪里了
+
+## uv 发布包到 pypi
+
+先用 uv build 构建
+
+然后 uv publish
+
+输入用户名 `__token__` 与实际的token 即可发布
