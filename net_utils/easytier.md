@@ -18,7 +18,7 @@ easytier 组网非常简单，下一个[包](https://github.com/EasyTier/EasyTie
 
 相应的，其他节点，也运行同样的命令
 
-然后 可以用 easytier-cli peer 看组网的情况，以及分配的 IP
+然后 可以用 `easytier-cli peer` 看组网的情况，以及分配的 IP
 
 最后用 ping 对方 IP 看是否能 ping 通
 
