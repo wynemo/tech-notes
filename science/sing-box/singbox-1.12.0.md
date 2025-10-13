@@ -26,3 +26,5 @@
 然后这应该是之前也讲过的，这就不赘述了。
 然后完整的链接的话，我一会会贴到那个视频的下方。
 OK，今天就这个样子，谢谢大家观看。
+
+[youtube 链接](https://www.youtube.com/watch?v=DwkB8soH0uU)
