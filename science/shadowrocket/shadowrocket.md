@@ -45,3 +45,8 @@ ShadowRocket 介绍
 ## 银行app以及国网app检测 vpn
 
 小火箭--设置--代理--代理类型从“http”切换为“none”，银行 app 就不提示了 https://v2ex.com/t/1132248#r_16260477
+
+
+# macOS 版
+
+最近小火箭终于出了 macOS 版！系统要求最低只要 10.15，像我这台 2017 款的 MacBook Air 都能跑，太良心了。
