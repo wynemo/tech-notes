@@ -6,3 +6,4 @@
 
 /status 查看用量
 /init 生成 agents.md 规范
+/new 新的窗口，清除上下文
