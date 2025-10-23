@@ -10,3 +10,5 @@
 
 
 它也有vscode等IDE的插件：The Codex IDE extension works with VS Code forks such as Insiders, Cursor, or Windsurf.
+
+macos 上，也可以用 ctrl + v 粘贴图片
