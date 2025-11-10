@@ -107,6 +107,8 @@ claude sonnet 4/gpt 4.1/gemini 2.5 pro 都可以 编程都不错
 
 总之哪个模型用的爽，你可以对比下效果，你就用哪个
 
+现在 cursor 自己的模型，暂时也不收费了，应该是基于开源模型微调的
+
 ### 提交代码
 
 你可以使用 Conventional Commits 规范，然后使用 cursor 的 commit message 生成器
