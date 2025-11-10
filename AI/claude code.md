@@ -177,3 +177,78 @@ https://vibetunnel.sh/
 ## 显示上下文
 
 使用 /context 指令可以将当前上下文使用情况以彩色网格的形式进行可视化展示
+
+## slash commands
+
+slash commands 是 Claude Code 中的自定义命令功能,可以通过在 `.claude/commands/` 目录下创建 markdown 文件来定义。每个文件对应一个命令,文件名就是命令名。
+
+### 创建自定义命令
+
+在项目的 `.claude/commands/` 目录下创建 `.md` 文件,文件内容就是给 Claude Code 的提示词。命令会在输入 `/命令名` 时执行。
+
+### 内置的自定义命令示例
+
+#### /catchup - 查看分支变更
+
+快速了解当前分支的所有改动,适合在切换任务或接手项目时使用。
+
+```markdown
+---
+description: 读取当前 git 分支中所有变更的文件
+---
+
+请读取当前 git 分支相对于主分支的所有变更文件,帮我了解最近的改动。
+
+步骤:
+1. 运行 `git diff --name-only main...HEAD` 获取所有变更的文件列表
+2. 并行读取所有变更的文件内容
+3. 给我一个简洁的总结,说明这个分支主要做了什么改动
+```
+
+#### /git-commit - 智能提交
+
+分析代码改动并生成符合项目规范的 commit message,然后自动提交。
+
+```markdown
+分析当前的 git 改动并创建提交:
+
+1. **查看改动**:
+   - 运行 `git status` 查看所有未跟踪和已修改的文件
+   - 运行 `git diff` 查看具体的代码改动
+
+2. **分析改动内容**:
+   - 识别改动的性质(新功能、修复、重构、文档等)
+   - 理解改动的目的和影响范围
+   - 确保改动符合项目规范
+
+3. **生成 commit 信息**:
+   - 遵循项目的 commit 风格(参考最近的 commit 记录)
+   - 使用中文编写清晰的 commit message
+   - 格式: `<type>: <简短描述>`
+     - feat: 新功能
+     - fix: 修复bug
+     - refactor: 重构
+     - docs: 文档更新
+     - chore: 构建/工具更新
+     - style: 代码格式调整
+     - perf: 性能优化
+
+4. **执行提交**:
+   - 将相关文件添加到暂存区
+   - 使用生成的 commit message 创建提交
+   - 包含 Claude Code 签名
+
+5. **确认结果**:
+   - 运行 `git status` 确认提交成功
+   - 显示 commit 信息供用户确认
+```
+
+### 其他实用命令示例
+
+你可以根据自己的需求创建更多命令,比如:
+
+- `/review` - 代码审查
+- `/test` - 运行测试
+- `/deploy` - 部署流程
+- `/refactor` - 重构建议
+- `/gemini` - 调用 Gemini CLI 分析大型代码库
