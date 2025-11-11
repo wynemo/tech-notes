@@ -122,3 +122,13 @@ cursor 也是会学习你的代码提交习惯的，你用什么风格，它后�
 + 可以用 [context7](https://context7.com/)，它有最新的库的开发文档，这种可以给大模型一些上下文，这样它就可以根据你的上下文生成代码
 + 可以用 [mcp-feedback-enhanced](https://github.com/Minidoracat/mcp-feedback-enhanced)，它是一个 mcp 的反馈增强工具，可以让大模型根据反馈进行修改，这样就不用在 cursor 重新开一次新的请求
 + 但注意 cursor 的工具调用次数是有限的，25 次，不过可以点继续
+
+### 让 cursor 的外观像 vscode
+
+Search for Activity Bar in the settings search box.
+Change Activity Bar: Orientation from horizontal to vertical.
+
+
+### 主题
+
+theme - Workbench: Color Theme - Cursor Light
