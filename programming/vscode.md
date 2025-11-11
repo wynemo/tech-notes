@@ -155,7 +155,8 @@ paste image from clipboard directly
 
 ### 打开 outline
 
-View -> Open View - select (or type) Outline - 最后拖到右边
+View -> Open View - select (or type) Outline - 最后拖到右边  
+（菜单栏选择 View -> Open View，然后选择或输入 "Outline"，最后把 Outline 拖到右边）
 
 
 ### codex 与 Amp 插件布局
