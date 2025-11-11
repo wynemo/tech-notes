@@ -87,9 +87,11 @@ agent 模式不要安排太多任务 最好拆分一下 一个是生成代码太
 
 cursor tab - 非常好用，快速生成一堆代码，不用自己敲键盘了 属于是荒野大镖客里的辅助射击，自动锁定爆头的感觉
 
-command k - 生成代码 - 可以用 cursor small 这种小模型（后者更快）一行变更之类的
+~~command k - 生成代码 - 可以用 cursor small 这种小模型（后者更快）一行变更之类的~~
 
-小模型不要钱 所以这样用下来比较节省
+~~小模型不要钱 所以这样用下来比较节省~~
+
+command k - 生成代码 - 自动选择模型
 
 比如这些场景：
 + 语法不熟 帮你写个 ts 的 filter map
@@ -120,8 +122,9 @@ cursor 也是会学习你的代码提交习惯的，你用什么风格，它后�
 ### mcp
 
 + 可以用 [context7](https://context7.com/)，它有最新的库的开发文档，这种可以给大模型一些上下文，这样它就可以根据你的上下文生成代码
-+ 可以用 [mcp-feedback-enhanced](https://github.com/Minidoracat/mcp-feedback-enhanced)，它是一个 mcp 的反馈增强工具，可以让大模型根据反馈进行修改，这样就不用在 cursor 重新开一次新的请求
-+ 但注意 cursor 的工具调用次数是有限的，25 次，不过可以点继续
+~~+ 可以用 [mcp-feedback-enhanced](https://github.com/Minidoracat/mcp-feedback-enhanced)，它是一个 mcp 的反馈增强工具，可以让大模型根据反馈进行修改，这样就不用在 cursor 重新开一次新的请求~~
+~~+ 但注意 cursor 的工具调用次数是有限的，25 次，不过可以点继续~~
+mcp 消耗上下文，现在 cursor 改为按量收费了，没必要用有些 mcp 了
 
 ### 让 cursor 的外观像 vscode
 Search for Activity Bar in the settings search box.
