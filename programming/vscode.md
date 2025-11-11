@@ -161,3 +161,4 @@ View -> Open View - select (or type) Outline - 最后拖到右边
 ### codex 与 Amp 插件布局
 
 可以从左边拖到右边，这样左边是文件导航，右边是各种 AI agent
+![](2025-11-12-00-02-00.png)
