@@ -6,7 +6,7 @@
 3. Cmd/Ctrl + I（command + k 也可以） - Command 生成代码，类似 cursor 的 inline edit - 可以用 Windsurf Fast 等模型 - Command does NOT consume any premium model credits.（Command 不消耗任何高级模型积分）
 
 ## 布局限制
-- 右侧的 Cascade 侧边栏暂不支持添加其他视图，略有遗憾。
+- 右侧的 Cascade 侧边栏暂不支持添加其他视图，略有遗憾。比如 outline 就不能放到侧边栏。
 - 可以把 Codex 放到 Secondary Side View，不过会遮挡 Cascade 侧边栏。
 
 ## 付费功能
