@@ -124,9 +124,10 @@ cursor 也是会学习你的代码提交习惯的，你用什么风格，它后�
 + 但注意 cursor 的工具调用次数是有限的，25 次，不过可以点继续
 
 ### 让 cursor 的外观像 vscode
-
 Search for Activity Bar in the settings search box.
+在设置搜索框中搜索“Activity Bar”。
 Change Activity Bar: Orientation from horizontal to vertical.
+将“Activity Bar: Orientation”从横向改为纵向。
 
 
 ### 主题
