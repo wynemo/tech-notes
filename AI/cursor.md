@@ -146,3 +146,7 @@ Cursor 商店有时搜不到插件（例如 autocorrect）。可以按需通过�
 3. 安装 Chrome 扩展“Visual Studio Marketplace – Download VSIX”（[链接](https://chromewebstore.google.com/detail/visual-studio-marketplace/pfnjpnflbdpmbpnifkdheagiilnhccgh)），在 VS Code Marketplace 页面上直接出现“Download VSIX”按钮。
 
 下载后在 Cursor 中执行 `Extensions › ... › Install from VSIX` 即可离线安装。
+
+### 最顶上搜索栏
+
+设置里打开 Window：Command Centen
