@@ -2,7 +2,7 @@
 
 ## 功能优势
 1. Tab 补全目前可以免费持续使用。
-2. Agent 模式内的 GPT-5-Codex 也暂时免费。
+2. Cascade(Agent 模式)内的 GPT-5-Codex 也暂时免费。
 3. Cmd/Ctrl + I（command + k 也可以） - Command 生成代码，类似 cursor 的 inline edit - 可以用 Windsurf Fast 等模型 - Command does NOT consume any premium model credits.（Command 不消耗任何高级模型积分）
 
 ## 布局限制
