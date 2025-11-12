@@ -136,3 +136,13 @@ Change Activity Bar: Orientation from horizontal to vertical.
 ### 主题
 
 theme - Workbench: Color Theme - Cursor Light
+
+### 插件
+
+Cursor 商店有时搜不到插件（例如 autocorrect）。可以按需通过以下渠道获取 VSIX：
+
+1. `open-vsx.org` —— 官方开源市场，直接搜索插件名称后下载 VSIX。
+2. `vsixhub.com` —— 第三方收集站点，可根据关键字查找历史版本。
+3. 安装 Chrome 扩展“Visual Studio Marketplace – Download VSIX”（[链接](https://chromewebstore.google.com/detail/visual-studio-marketplace/pfnjpnflbdpmbpnifkdheagiilnhccgh)），在 VS Code Marketplace 页面上直接出现“Download VSIX”按钮。
+
+下载后在 Cursor 中执行 `Extensions › ... › Install from VSIX` 即可离线安装。
