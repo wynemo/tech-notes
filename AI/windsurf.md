@@ -11,3 +11,7 @@
 
 ## 付费功能
 - 提交代码时自动生成 commit message 功能仅对付费用户开放。
+
+## 主题
+
+theme - Workbench: Color Theme - Light Modern
