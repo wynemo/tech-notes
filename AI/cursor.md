@@ -150,3 +150,9 @@ Cursor 商店有时搜不到插件（例如 autocorrect）。可以按需通过�
 ### 最顶上搜索栏
 
 设置里打开 Window：Command Center
+
+### slash commands
+
+最近发现 cursor 居然直接会读 claude code 的自定义 slash commands
+
+这些命令的文件是放在`~/.claude/commands` 目录下
