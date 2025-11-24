@@ -1,5 +1,11 @@
 #  surge 二期
 
+## 日志
+
+首页的 events 可以看到一些日志
+
+more - settings - advanced - show log
+
 ## 搭配 mihomo，sub store使用
 
 surge支持的协议有点少
