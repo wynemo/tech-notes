@@ -8,15 +8,21 @@ more - settings - advanced - show log
 
 ## 搭配 mihomo，sub store 使用
 
-surge 支持的协议有点少
+surge 支持的协议有点少，然后如果想用 vless 协议的话，你可以用 mihomo 来实现，这个要搭配 sub store 使用比较方便
 
 ## 全局模式
 
 ## 局域网 网关
 
-## http 代理/socks5 代理
+在 Surge Mac 中启用“增强模式”或“VM 网关”。
 
-## dns
+将需要被接管的设备的网关地址修改为 Surge Mac 所在设备的 IP 地址
+
+将其 DNS 服务器地址修改为 198.18.0.2
+
+这里还可以让 surge 配置 dhcp
+
+## http 代理/socks5 代理
 
 ## quic
 
