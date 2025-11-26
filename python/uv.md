@@ -61,6 +61,11 @@ ADD . /app
 
 # Sync the project into a new environment, asserting the lockfile is up to date
 WORKDIR /app
+# 如果需要使用国内镜像源，取消下面两行注释（注意：不能与 --locked 同时使用）
+#ENV UV_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+#RUN uv sync
+
+# --locked 确保依赖版本与 uv.lock 完全一致，适合生产环境
 RUN uv sync --locked
 
 FROM ghcr.io/astral-sh/uv:python3.12-bookworm-slim
