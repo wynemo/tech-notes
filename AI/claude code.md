@@ -253,3 +253,62 @@ description: 读取当前 git 分支中所有变更的文件
 - `/deploy` - 部署流程
 - `/refactor` - 重构建议
 - `/gemini` - 调用 Gemini CLI 分析大型代码库
+
+## 自己搭建中转
+
+使用这个项目 https://github.com/Wei-Shaw/claude-relay-service
+
+这是一个开源的Claude Code中转服务，支持：
+- 多账户管理（自动轮换）
+- 自定义API Key
+- 使用统计
+- 监控面板
+- 支持多种客户端（Claude Code、VSCode、Gemini CLI、Codex CLI等）
+
+### 配置步骤
+
+1. **安装完成后访问管理界面**
+   - 访问：`http://你的服务器IP:3000/`
+   - 管理员账号在 `data/init.json` 中
+
+2. **添加Claude账户**
+   - 点击「Claude账户」→「添加账户」
+   - 点击「生成授权链接」完成OAuth授权
+   - 复制Authorization Code完成添加
+
+3. **创建API Key**
+   - 点击「API Keys」→「创建新Key」
+   - 设置使用限制（可选）
+   - 保存生成的Key
+
+4. **配置客户端**
+
+   **Claude Code环境变量**：
+   ```bash
+   export ANTHROPIC_BASE_URL="http://你的服务器IP:3000/api/"
+   export ANTHROPIC_AUTH_TOKEN="你的API密钥"
+   ```
+
+   **VSCode配置**：
+   编辑 `~/.claude/config.json`：
+   ```json
+   {
+     "primaryApiKey": "crs"
+   }
+   ```
+
+### 费用估算
+
+- 服务器：30-60元/月（轻量云服务器）
+- Claude订阅：根据分摊人数确定
+
+### 注意事项
+
+⚠️ **风险提醒**：使用中转可能违反Anthropic服务条款，账号封禁风险自负。
+
+**适合场景**：
+- 三五个朋友拼车分摊费用
+- 隐私敏感不想用第三方镜像
+- 有技术基础愿意自己搭建维护
+
+或者购买别人搭建的
