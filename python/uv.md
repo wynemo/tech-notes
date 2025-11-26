@@ -44,3 +44,7 @@ windows 安装：powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv
 然后 uv publish
 
 输入用户名 `__token__` 与实际的token 即可发布
+
+## uv sync
+
+同步包
