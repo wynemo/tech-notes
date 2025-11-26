@@ -312,3 +312,8 @@ description: 读取当前 git 分支中所有变更的文件
 - 有技术基础愿意自己搭建维护
 
 或者购买别人搭建的
+
+
+### 国产模型编程使用 claude code
+
+平替：Claude Code + GLM-4.6/Kimi-K2-Thinking/Minimax-M2
