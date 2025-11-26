@@ -156,3 +156,9 @@ Cursor 商店有时搜不到插件（例如 autocorrect）。可以按需通过�
 最近发现 cursor 居然直接会读 claude code 的自定义 slash commands
 
 这些命令的文件是放在`~/.claude/commands` 目录下
+
+### 布局
+
+发现某次cursor 更新以后，编辑右上方的 claude code、codex 、预览等按钮不见了，只需要右键打开相应的图标就行了
+
+![](2025-11-26-23-23-22.png)
