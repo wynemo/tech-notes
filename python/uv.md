@@ -45,6 +45,16 @@ windows 安装：powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv
 
 输入用户名 `__token__` 与实际的 token 即可发布
 
+## index url 使用清华源
+
+环境变量为 `UV_INDEX_URL`
+
+```bash
+export UV_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+uv sync
+```
+
+
 ## uv sync
 
 同步包
