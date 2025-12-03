@@ -162,7 +162,7 @@ docker compose up -d
 
 new api 上要配置 claude-haiku-4-5-20251001 这个模型
 
-然后可以有 claude-opus-4-5-20251101 或者 claude-sonnet-4-5-20250929 等模型
+然后可以有 claude-opus-4-5-20251101 或者 claude-sonnet-4-5-20250929 等模型 (通过 /model 来指定)
 
 ### 配置环境变量，命令行使用 claude code
 
