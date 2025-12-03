@@ -163,7 +163,7 @@ docker compose up -d
 new api 上要配置 claude-haiku-4-5-20251001 这个模型（其他家的小模型其实也可以的 当懒得设置环境变量了嘛）
 
 然后可以有 claude-opus-4-5-20251101 或者 claude-sonnet-4-5-20250929 等模型 (通过 /model 来指定)
-其他家比如 openai、deepseek 的模型也是可以的，比如 deepseek-v3.2，gpt-5.1-codex 等
+其他家比如 openai、deepseek 等 的模型也是可以的，比如 deepseek-v3.2，gpt-5.1-codex，glm-4.6 等
 
 ### 配置环境变量，命令行使用 claude code
 
