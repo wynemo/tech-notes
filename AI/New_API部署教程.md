@@ -158,6 +158,26 @@ docker compose up -d
 - 某些模型如果没有设置倍率，将不允许使用
 - 根据实际需要调整付费相关设置
 
+## 集成 Claude Code
+
+### 配置环境变量
+
+Claude Code 可以通过配置环境变量连接到 New API：
+
+```bash
+# 设置 New API 的地址
+export ANTHROPIC_BASE_URL="http://服务器IP:3000"
+
+# 设置 New API 的令牌
+export ANTHROPIC_AUTH_TOKEN="sk-xxxxxx"
+```
+
+**说明：**
+- `ANTHROPIC_BASE_URL`：New API 的 API 地址
+- `ANTHROPIC_AUTH_TOKEN`：在 New API 的"令牌管理"中创建的令牌
+
+配置完成后，Claude Code 会自动使用 New API 作为后端服务。
+
 ## 集成 Cherry Studio
 
 Cherry Studio 是一个 AI 聊天客户端，可以连接 New API：
