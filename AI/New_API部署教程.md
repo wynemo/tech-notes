@@ -160,7 +160,7 @@ docker compose up -d
 
 ## 集成 Claude Code
 
-### 配置环境变量
+### 配置环境变量，命令行使用 claude code
 
 Claude Code 可以通过配置环境变量连接到 New API：
 
@@ -177,6 +177,25 @@ export ANTHROPIC_AUTH_TOKEN="sk-xxxxxx"
 - `ANTHROPIC_AUTH_TOKEN`：在 New API 的"令牌管理"中创建的令牌
 
 配置完成后，Claude Code 会自动使用 New API 作为后端服务。
+
+
+### VSCode Claude Code 插件配置
+
+如需在 VSCode 中使用 Claude Code 插件，可参考此 issue：https://github.com/musistudio/claude-code-router/issues/852
+
+**配置方法：** 编辑 `~/.claude/settings.json` 文件
+
+```json
+{
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "sk-xxxx",
+    "ANTHROPIC_BASE_URL": "http://127.0.0.1:3456"
+  },
+  "model": "volcengine,deepseek-v3-1-terminus"
+}
+```
+
+**注意：** 这里使用的是 `ANTHROPIC_AUTH_TOKEN`，而不是 `ANTHROPIC_API_KEY`。
 
 ## 集成 Cherry Studio
 
