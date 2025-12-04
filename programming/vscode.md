@@ -7,6 +7,9 @@
 修改 VS Code 的设置文件 (settings.json) 在 JSON 文件的顶层添加 "files.autoSave": "onFocusChange"
 3. 在一个新标签打开文件
     "workbench.editor.enablePreview": false
+4. 添加文件夹到工作区
+    File > Add Folder to Workspace 命令会弹出一个文件夹选择对话框，选择要添加的文件夹即可。
+    多文件夹工作区的意义：在 AI 时代，多个工程可以共享上下文，AI 助手能同时理解和访问多个项目的代码
 
 ## 插件
 
