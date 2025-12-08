@@ -9,6 +9,7 @@
     "workbench.editor.enablePreview": false
 4. 添加文件夹到工作区
     File > Add Folder to Workspace 命令会弹出一个文件夹选择对话框，选择要添加的文件夹即可。
+    在 VS Code 中，"工作区名称"不能直接编辑——但你可以通过保存为工作区文件（.code-workspace）来命名。点击 File → Save Workspace As…
     多文件夹工作区的意义：在 AI 时代，多个工程可以共享上下文，AI 助手能同时理解和访问多个项目的代码
 
 ## 插件
