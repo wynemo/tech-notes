@@ -321,6 +321,7 @@ description: 读取当前 git 分支中所有变更的文件
 ## 中转站
 
 也可以自己找一些中转站点使用
+比如 https://newapi.netlib.re/ https://anyrouter.top/ 这些站都是公益站 也都是用 new api 搭建的
 
 ## 国产模型编程使用 claude code
 
