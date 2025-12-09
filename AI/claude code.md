@@ -201,12 +201,12 @@ slash commands 是 Claude Code 中的自定义命令功能,可以通过在 `.cla
 description: 读取当前 git 分支中所有变更的文件
 ---
 
-请读取当前 git 分支相对于主分支的所有变更文件,帮我了解最近的改动。
+请读取当前 git 分支相对于主分支的所有变更文件，帮我了解最近的改动。
 
-步骤:
+步骤：
 1. 运行 `git diff --name-only main...HEAD` 获取所有变更的文件列表
 2. 并行读取所有变更的文件内容
-3. 给我一个简洁的总结,说明这个分支主要做了什么改动
+3. 给我一个简洁的总结，说明这个分支主要做了什么改动
 ```
 
 #### /git-commit - 智能提交
@@ -214,7 +214,7 @@ description: 读取当前 git 分支中所有变更的文件
 分析代码改动并生成符合项目规范的 commit message,然后自动提交。
 
 ```markdown
-分析当前的 git 改动并创建提交:
+分析当前的 git 改动并创建提交：
 
 1. **查看改动**:
    - 运行 `git status` 查看所有未跟踪和已修改的文件
@@ -222,16 +222,16 @@ description: 读取当前 git 分支中所有变更的文件
    - 分析修改的文件，和已经在暂存区的文件
 
 2. **分析改动内容**:
-   - 识别改动的性质(新功能、修复、重构、文档等)
+   - 识别改动的性质 (新功能、修复、重构、文档等)
    - 理解改动的目的和影响范围
    - 确保改动符合项目规范
 
 3. **生成 commit 信息**:
-   - 遵循项目的 commit 风格(参考最近的 commit 记录)
+   - 遵循项目的 commit 风格 (参考最近的 commit 记录)
    - 使用中文编写清晰的 commit message
-   - 格式: `<type>: <简短描述>`
+   - 格式：`<type>: <简短描述>`
      - feat: 新功能
-     - fix: 修复bug
+     - fix: 修复 bug
      - refactor: 重构
      - docs: 文档更新
      - chore: 构建/工具更新
@@ -290,10 +290,10 @@ description: 读取当前 git 分支中所有变更的文件
    **Claude Code环境变量**：
    ```bash
    export ANTHROPIC_BASE_URL="http://你的服务器IP:3000/api/"
-   export ANTHROPIC_AUTH_TOKEN="你的API密钥"
+   export ANTHROPIC_AUTH_TOKEN="你的 API 密钥"
    ```
 
-   **VSCode配置**：
+   **VSCode 配置**：
    编辑 `~/.claude/config.json`：
    ```json
    {
@@ -303,12 +303,12 @@ description: 读取当前 git 分支中所有变更的文件
 
 ### 费用估算
 
-- 服务器：30-60元/月（轻量云服务器）
-- Claude订阅：根据分摊人数确定
+- 服务器：30-60 元/月（轻量云服务器）
+- Claude 订阅：根据分摊人数确定
 
 ### 注意事项
 
-⚠️ **风险提醒**：使用中转可能违反Anthropic服务条款，账号封禁风险自负。
+⚠️ **风险提醒**：使用中转可能违反 Anthropic 服务条款，账号封禁风险自负。
 
 **适合场景**：
 - 三五个朋友拼车分摊费用
@@ -320,4 +320,6 @@ description: 读取当前 git 分支中所有变更的文件
 
 ### 国产模型编程使用 claude code
 
-平替：Claude Code + GLM-4.6/Kimi-K2-Thinking/Minimax-M2
+deepseek、智谱等厂家都提供了 anthropic 的接口
+或者也可以使用 new api 转发 
+平替：Claude Code + GLM-4.6/Kimi-K2-Thinking/Minimax-M2/deepseek
