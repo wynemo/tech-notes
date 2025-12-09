@@ -320,6 +320,12 @@ description: 读取当前 git 分支中所有变更的文件
 
 ## 中转站
 
+**技术方案**：可以使用 OpenRouter + New API 自行搭建中转服务，在 new api 上添加 Haiku、Sonnet、Opus 等模型。
+
+**注意事项**：
+- API 调用成本较高
+- 工具调用稳定性可能不如官方服务
+
 也可以自己找一些中转站点使用
 比如 https://newapi.netlib.re/ https://anyrouter.top/ 这些站都是公益站 也都是用 new api 搭建的
 
