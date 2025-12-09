@@ -318,7 +318,11 @@ description: 读取当前 git 分支中所有变更的文件
 或者购买别人搭建的
 
 
-### 国产模型编程使用 claude code
+## 中转站
+
+也可以自己找一些中转站点使用
+
+## 国产模型编程使用 claude code
 
 deepseek、智谱等厂家都提供了 anthropic 的接口
 或者也可以使用 new api 转发 
