@@ -150,3 +150,38 @@ sing-box服务端模式 
     },
   ]
 ```
+
+## hysteria2 例子
+
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-in",
+      "listen": "::",
+      "listen_port": 1957,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "up_mbps": 600,
+      "down_mbps": 600,
+      "users": [
+        {
+          "name": "anyone",
+          "password": "your password"
+        }
+      ],
+      "ignore_client_bandwidth": false,
+      "masquerade": "https://news.ycombinator.com/",
+      "tls": {
+        "enabled": true,
+        "server_name": "xx.your_domain.info",
+        "alpn": ["h3"],
+        "min_version": "1.2",
+        "max_version": "1.3",
+        "acme": {
+          "domain": ["xx.your_domain.info"],
+          "data_directory": "/etc/sing-box",
+          "default_server_name": "",
+          "email": "your_email@gmail.com",
+          "provider": "letsencrypt"
+        }
+      }
+    }
