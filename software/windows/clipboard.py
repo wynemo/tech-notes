@@ -46,10 +46,18 @@ def normalize_clipboard_image():
             output.close()
 
             # 重新设置剪贴板内容
-            win32clipboard.OpenClipboard()
-            win32clipboard.EmptyClipboard()
-            win32clipboard.SetClipboardData(win32con.CF_DIB, image_to_dib(image))
-            win32clipboard.CloseClipboard()
+            clipboard_opened = False
+            try:
+                win32clipboard.OpenClipboard()
+                clipboard_opened = True
+                win32clipboard.EmptyClipboard()
+                win32clipboard.SetClipboardData(win32con.CF_DIB, image_to_dib(image))
+            finally:
+                if clipboard_opened:
+                    try:
+                        win32clipboard.CloseClipboard()
+                    except Exception:
+                        pass
 
             print("图像已重新设置为标准格式，macOS 可识别。")
             return True
@@ -72,20 +80,26 @@ def main_loop():
     print("启动剪贴板监听器...（按 Ctrl+C 停止）")
     last_data = None
     while True:
+        clipboard_opened = False
+        need_normalize = False
         try:
             win32clipboard.OpenClipboard()
+            clipboard_opened = True
             if win32clipboard.IsClipboardFormatAvailable(win32con.CF_DIB):
                 current = win32clipboard.GetClipboardData(win32con.CF_DIB)
                 if current != last_data:
                     last_data = current
-                    win32clipboard.CloseClipboard()
-                    normalize_clipboard_image()
-                else:
-                    win32clipboard.CloseClipboard()
-            else:
-                win32clipboard.CloseClipboard()
+                    need_normalize = True
         except Exception as e:
             print(f"监听时出错：{e}")
+        finally:
+            if clipboard_opened:
+                try:
+                    win32clipboard.CloseClipboard()
+                except Exception:
+                    pass
+        if need_normalize:
+            normalize_clipboard_image()
         time.sleep(1)
 
 
