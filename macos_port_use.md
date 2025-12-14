@@ -1,17 +1,17 @@
-the method to get the id and name of the process which is listening on some port for macos
+# macOS 查看端口占用进程的方法
 
-On macOS, you can use the lsof command to get the process ID (PID) and name of the process that is listening on a specific port. Here's the command you can run in the terminal:
+在 macOS 上，你可以使用 `lsof` 命令来获取监听特定端口的进程 ID (PID) 和进程名称。以下是可以在终端中运行的命令：
 
-Copy code
+```bash
+sudo lsof -i :<端口号>
 ```
-sudo lsof -i :<PORT_NUMBER>
-```
-Replace <PORT_NUMBER> with the actual port number you want to check. For example, to find the process that is listening on port 8080, you can use the following command:
 
-Copy code
-```
+将 `<端口号>` 替换为你要检查的实际端口号。例如，要查找监听 8080 端口的进程，可以使用以下命令：
+
+```bash
 sudo lsof -i :8080
 ```
-This will display a list of processes that are using the specified port. Look for the process with the status LISTEN. The second column of the output will be the PID and the first column will be the name of the process.
 
-Note that you need to run this command with superuser privileges (i.e., using sudo) to get the full list of open ports and processes.
+这将显示正在使用指定端口的进程列表。查找状态为 `LISTEN` 的进程。输出的第二列是 PID，第一列是进程的名称。
+
+**注意**：你需要使用超级用户权限（即使用 `sudo`）运行此命令，才能获取完整的开放端口和进程列表。
