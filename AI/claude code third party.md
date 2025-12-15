@@ -45,7 +45,6 @@ $env:ANTHROPIC_MODEL="anthropic/claude-sonnet-4.5"
     "ANTHROPIC_SMALL_FAST_MODEL": "z-ai/glm-4.5-air",
     "ANTHROPIC_MODEL": "anthropic/claude-sonnet-4.5"
   },
-  "primaryApiKey": "crs",
   "model": "anthropic/claude-sonnet-4.5"
 }
 ```
@@ -80,3 +79,12 @@ https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code
 VSCode 插件会自动读取 `~/.claude/settings.json` 配置文件（参见上文"持久化配置"章节）。
 
 **注意**：VSCode Claude Code 插件暂时没有办法指定模型，也就是上面设置的 ANTHROPIC_MODEL 等参数没有用
+
+### 3. 跳过登录
+
+需要在 ~/.claude/config.json 文件中配置：
+
+{
+    "primaryApiKey": "crs"
+}
+如果该文件不存在，请手动创建。Windows 用户路径为 C:\Users\你的用户名\.claude\config.json。
