@@ -121,7 +121,7 @@ paths: src/api/**/*.ts
 使用内置命令快速创建 CLAUDE.md：
 
 ```bash
-/init    # 自动生成包含项目信息的 CLAUDE.md
+/init    # 自动生成包含项目信息的 CLAUDE.md （不推荐，自己手写比较好）
 /memory  # 查看已加载的内存文件
 ```
 + 自定义 slash commands
