@@ -199,6 +199,7 @@ export ANTHROPIC_AUTH_TOKEN="sk-xxxxxx"
   "model": "volcengine,deepseek-v3-1-terminus"
 }
 ```
+如果该文件不存在，请手动创建。Windows 用户路径为 C:\Users\你的用户名\.claude\config.json。
 
 **注意：** 这里使用的是 `ANTHROPIC_AUTH_TOKEN`，而不是 `ANTHROPIC_API_KEY`。
 

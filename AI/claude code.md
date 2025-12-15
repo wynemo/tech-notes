@@ -301,6 +301,7 @@ description: 读取当前 git 分支中所有变更的文件
    {
      "primaryApiKey": "crs"
    }
+   如果该文件不存在，请手动创建。Windows 用户路径为 C:\Users\你的用户名\.claude\config.json。
    ```
 
 ### 费用估算
