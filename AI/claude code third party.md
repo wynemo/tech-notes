@@ -9,7 +9,7 @@
 **注意：** 这里使用的是 `ANTHROPIC_AUTH_TOKEN`，而不是 `ANTHROPIC_API_KEY`。
 
 ```bash
-export ANTHROPIC_BASE_URL="http://118.145.82.210:8787"
+export ANTHROPIC_BASE_URL="https://your-proxy-url.com"
 export ANTHROPIC_AUTH_TOKEN="sk-your-token"
 export ANTHROPIC_SMALL_FAST_MODEL=z-ai/glm-4.5-air
 export ANTHROPIC_MODEL=anthropic/claude-sonnet-4.5
@@ -19,7 +19,7 @@ export ANTHROPIC_MODEL=anthropic/claude-sonnet-4.5
 
 **CMD:**
 ```cmd
-set ANTHROPIC_BASE_URL=http://118.145.82.210:8787
+set ANTHROPIC_BASE_URL=https://your-proxy-url.com
 set ANTHROPIC_AUTH_TOKEN=sk-your-token
 set ANTHROPIC_SMALL_FAST_MODEL=z-ai/glm-4.5-air
 set ANTHROPIC_MODEL=anthropic/claude-sonnet-4.5
@@ -27,7 +27,7 @@ set ANTHROPIC_MODEL=anthropic/claude-sonnet-4.5
 
 **PowerShell:**
 ```powershell
-$env:ANTHROPIC_BASE_URL="http://118.145.82.210:8787"
+$env:ANTHROPIC_BASE_URL="https://your-proxy-url.com"
 $env:ANTHROPIC_AUTH_TOKEN="sk-your-token"
 $env:ANTHROPIC_SMALL_FAST_MODEL="z-ai/glm-4.5-air"
 $env:ANTHROPIC_MODEL="anthropic/claude-sonnet-4.5"
@@ -41,7 +41,7 @@ $env:ANTHROPIC_MODEL="anthropic/claude-sonnet-4.5"
 {
   "env": {
     "ANTHROPIC_AUTH_TOKEN": "sk-your-token",
-    "ANTHROPIC_BASE_URL": "http://118.145.82.210:8787",
+    "ANTHROPIC_BASE_URL": "https://your-proxy-url.com",
     "ANTHROPIC_SMALL_FAST_MODEL": "z-ai/glm-4.5-air",
     "ANTHROPIC_MODEL": "anthropic/claude-sonnet-4.5"
   },
