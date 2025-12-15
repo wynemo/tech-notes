@@ -35,7 +35,7 @@ $env:ANTHROPIC_MODEL="anthropic/claude-sonnet-4.5"
 
 ### 持久化配置（可选）
 
-如果不想每次都设置环境变量，可以编辑配置文件 `~/.claude/settings.json`（如不存在请手动创建）：
+如果不想每次都设置环境变量，可以编辑配置文件（macOS/Linux: `~/.claude/settings.json`，Windows: `C:\Users\你的用户名\.claude\settings.json`）：
 
 ```json
 {
@@ -48,13 +48,6 @@ $env:ANTHROPIC_MODEL="anthropic/claude-sonnet-4.5"
   "model": "anthropic/claude-sonnet-4.5"
 }
 ```
-
-**配置文件路径：**
-
-| 系统 | 路径 |
-|------|------|
-| macOS / Linux | `~/.claude/settings.json` |
-| Windows | `C:\Users\你的用户名\.claude\settings.json` |
 
 ## 二、启动
 
