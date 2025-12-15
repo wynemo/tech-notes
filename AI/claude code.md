@@ -334,7 +334,7 @@ description: 读取当前 git 分支中所有变更的文件
 - 工具调用稳定性可能不如官方服务
 
 也可以自己找一些中转站点使用
-比如 https://newapi.netlib.re/ https://anyrouter.top/ 这些站都是公益站 也都是用 new api 搭建的
+比如 https://wzw.de5.net/ https://anyrouter.top/ 这些站都是公益站 也都是用 new api 搭建的
 
 ### y-router
 
