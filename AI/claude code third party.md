@@ -6,6 +6,8 @@
 
 ### macOS / Linux
 
+**注意：** 这里使用的是 `ANTHROPIC_AUTH_TOKEN`，而不是 `ANTHROPIC_API_KEY`。
+
 ```bash
 export ANTHROPIC_BASE_URL="http://118.145.82.210:8787"
 export ANTHROPIC_AUTH_TOKEN="sk-your-token"
