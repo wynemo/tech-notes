@@ -81,7 +81,7 @@ VSCode 插件会自动读取 `~/.claude/settings.json` 配置文件（参见上�
 **注意**：VSCode Claude Code 插件暂时没有办法指定模型，也就是上面设置的 ANTHROPIC_MODEL 等参数没有用
 
 ### 3. 跳过登录
-
+(如果能正常使用 就不需要了)
 需要在 ~/.claude/config.json 文件中配置：
 
 {
