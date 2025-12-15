@@ -289,20 +289,7 @@ description: 读取当前 git 分支中所有变更的文件
 
 4. **配置客户端**
 
-   **Claude Code环境变量**：
-   ```bash
-   export ANTHROPIC_BASE_URL="http://你的服务器IP:3000/"
-   export ANTHROPIC_AUTH_TOKEN="你的 API 密钥"
-   ```
-
-   **VSCode 配置**：
-   编辑 `~/.claude/config.json`：
-   ```json
-   {
-     "primaryApiKey": "crs"
-   }
-   如果该文件不存在，请手动创建。Windows 用户路径为 C:\Users\你的用户名\.claude\config.json。
-   ```
+   详细配置方法请参考 [Claude Code 第三方中转服务配置指南](claude%20code%20third%20party.md)，将 `ANTHROPIC_BASE_URL` 设置为 `http://你的服务器IP:3000/`。
 
 ### 费用估算
 
