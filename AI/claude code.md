@@ -324,6 +324,8 @@ description: 读取当前 git 分支中所有变更的文件
 
 ### new api
 
+详细部署教程请参考：[New API 部署教程](./New_API部署教程.md)
+
 **技术方案**：可以使用 OpenRouter + New API 自行搭建中转服务，在 new api 上添加 Haiku、Sonnet、Opus 等模型。
 
 **注意事项**：
