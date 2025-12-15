@@ -291,7 +291,7 @@ description: 读取当前 git 分支中所有变更的文件
 
    **Claude Code环境变量**：
    ```bash
-   export ANTHROPIC_BASE_URL="http://你的服务器IP:3000/api/"
+   export ANTHROPIC_BASE_URL="http://你的服务器IP:3000/"
    export ANTHROPIC_AUTH_TOKEN="你的 API 密钥"
    ```
 
