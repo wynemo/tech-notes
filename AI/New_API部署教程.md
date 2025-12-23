@@ -165,43 +165,9 @@ new api 上要配置 claude-haiku-4-5-20251001 这个模型（其他家的小模
 然后可以有 claude-opus-4-5-20251101 或者 claude-sonnet-4-5-20250929 等模型 (通过 /model 来指定)
 其他家比如 openai、deepseek 等 的模型也是可以的，比如 deepseek-v3.2，gpt-5.1-codex，glm-4.6 等
 
-### 配置环境变量，命令行使用 claude code
+### 配置 Claude Code
 
-Claude Code 可以通过配置环境变量连接到 New API：
-
-```bash
-# 设置 New API 的地址
-export ANTHROPIC_BASE_URL="http://服务器IP:3000"
-
-# 设置 New API 的令牌
-export ANTHROPIC_AUTH_TOKEN="sk-xxxxxx"
-```
-
-**说明：**
-- `ANTHROPIC_BASE_URL`：New API 的 API 地址
-- `ANTHROPIC_AUTH_TOKEN`：在 New API 的"令牌管理"中创建的令牌
-
-配置完成后，Claude Code 会自动使用 New API 作为后端服务。
-
-
-### VSCode Claude Code 插件配置
-
-如需在 VSCode 中使用 Claude Code 插件，可参考此 issue：https://github.com/musistudio/claude-code-router/issues/852
-
-**配置方法：** 编辑 `~/.claude/settings.json` 文件
-
-```json
-{
-  "env": {
-    "ANTHROPIC_AUTH_TOKEN": "sk-xxxx",
-    "ANTHROPIC_BASE_URL": "http://127.0.0.1:3456"
-  },
-  "model": "volcengine,deepseek-v3-1-terminus"
-}
-```
-如果该文件不存在，请手动创建。Windows 用户路径为 C:\Users\你的用户名\.claude\config.json。
-
-**注意：** 这里使用的是 `ANTHROPIC_AUTH_TOKEN`，而不是 `ANTHROPIC_API_KEY`。
+详细配置方法请参考 [Claude Code 第三方中转服务配置指南](claude%20code%20third%20party.md)，将 `ANTHROPIC_BASE_URL` 设置为 `http://你的服务器IP:3000/`。
 
 ## 集成 Cherry Studio
 
