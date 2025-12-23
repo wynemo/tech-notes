@@ -24,23 +24,7 @@ claude sonnet 3.5
 
 3.7 有人说还退步不好用了
 
-surge rule set:
-
-```
-# claude
-DOMAIN-SUFFIX,servd-anthropic-website.b-cdn.net
-DOMAIN-SUFFIX,anthropic.com
-DOMAIN-SUFFIX,claude.com
-DOMAIN-SUFFIX,claude.ai
-DOMAIN-SUFFIX,claudeusercontent.com
-DOMAIN-SUFFIX,intercomcdn.com
-DOMAIN-SUFFIX,cdn.usefathom.com
-# stripe
-DOMAIN-SUFFIX,stripe.com
-DOMAIN-KEYWORD,stripe
-# cloudflare
-DOMAIN-SUFFIX,challenges.cloudflare.com
-```
+surge rule set: 参考 [claude code.md 分流规则](claude%20code.md#分流规则)
 
 OpenRouter新政:
 
