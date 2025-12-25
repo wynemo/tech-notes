@@ -38,6 +38,10 @@ plan模式不写代码，你可以让claude给出一个计划后自动执行代�
 
 ![](2025-12-25-17-00-08.png)
 
+然后它自带了很多工具，比如编辑代码的，在手动执行模式下，你需要确认代码改动
+
+![](2025-12-25-17-30-29.png)
+
 ## 2. CLAUDE.md 记忆系统
 
 CLAUDE.md 是 Claude Code 的**记忆和指令文件**，用于存储项目级、个人级或企业级的指令和上下文信息，让 Claude 记住你的工作流程、编码风格和项目特定的约定。
@@ -293,13 +297,15 @@ plugin-name/
 - **粘贴图片** - 复制图片后使用 `ctrl+v` 粘贴（注意：不是 `cmd+v`）
 - **提供图片路径** - 例如："分析这张图片：/path/to/image.png"
 
-## 7. 与 IDE 集成
+## 7. 与 vscode 集成
 
 选中项目文件、文件若干行，ctrl/command + alt/options +  k，把上下文放到插件中去
 
 这个不管是在插件、命令行里都可以实现
 
 也可以用@文件的方式
+
+![](2025-12-25-17-22-57.png)
 
 
 ## 8. vscode 插件
@@ -322,4 +328,101 @@ Claude Code 提供了 VS Code、Cursor 等编辑器插件支持，可以方便�
 
 
 
-## 9. mcp
+## 9. MCP (Model Context Protocol)
+
+MCP 是 Anthropic 开发的开放协议,用于在 Claude 和外部数据源、工具之间建立标准化连接。通过 MCP 服务器,Claude 可以访问文件系统、数据库、API 等各种资源。
+
+### MCP 服务器配置
+
+配置文件位于 `~/.claude/mcp.json`
+
+### Playwright (浏览器自动化)
+
+允许 Claude 控制浏览器进行网页操作、截图、数据提取等。
+
+**配置:**
+
+```json
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@executeautomation/playwright-mcp-server"]
+    }
+  }
+}
+```
+
+**使用方法:**
+
+在提问时,需要**明确要求使用 Playwright MCP**:
+
+```
+"Use playwright mcp to open a browser to example.com"
+"使用 playwright mcp 打开浏览器访问 https://example.com 并截图"
+"用 playwright mcp 在这个网页上填写登录表单"
+```
+
+**使用场景:**
+- 自动化网页测试
+- 网页截图和数据抓取
+- 表单自动填写
+- 模拟用户交互
+
+### Context7 (获取最新文档)
+
+Context7 用于获取编程语言、框架和库的最新官方文档,解决 Claude 知识截止日期的限制。
+
+**第一步:配置 MCP 服务器**
+
+编辑 `~/.claude/mcp.json` 文件:
+
+```json
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@context7/mcp-server"]
+    }
+  }
+}
+```
+
+**第二步:使用 Context7**
+
+在提问时,需要**明确要求使用 Context7**:
+
+```
+"使用 context7 查询 React 19 有哪些新特性"
+"用 context7 查看 Next.js 15 的最新 API"
+"通过 context7 了解 Python 3.13 的新功能"
+```
+
+或者先告诉 Claude 使用 Context7,再提问:
+
+```
+"请使用 context7 获取最新文档"
+然后提问: "Tailwind CSS v4 的配置方式是什么?"
+```
+
+Claude 会调用 Context7 MCP 服务器从网络获取这些技术的最新官方文档。
+
+**适用场景:**
+- 查询最新版本的框架/库特性
+- 获取最新 API 文档
+- 了解新版本的变更和用法
+- 解决 Claude 知识截止日期后的技术问题
+
+### 管理 MCP 服务器
+
+```bash
+/mcp list                    # 查看已配置的 MCP 服务器
+/mcp restart <server-name>   # 重启 MCP 服务器
+/mcp stop <server-name>      # 停止 MCP 服务器
+```
+
+### 注意事项
+
+- MCP 服务器在首次使用时会自动启动
+- 确保已安装 Node.js (基于 npx 运行)
+- Playwright 首次运行会下载浏览器二进制文件
