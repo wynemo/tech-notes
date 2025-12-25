@@ -4,6 +4,8 @@
 
 安装完成后即可使用 Zen 提供的 `x-ai/grok-code-fast-1` 免费模型，不需要登录，直接就能运行，使用体验比较顺畅。
 
+[使用 OpenCode 使用现在限时免费的glm-4.7模型](https://youtube.com/shorts/ymY-CMbBGnE)
+
 ## 前置要求
 
 使用 OpenCode 前，需要一个现代化终端（任选其一）：
