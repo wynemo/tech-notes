@@ -226,7 +226,7 @@ Hooks 是在 Claude Code 执行特定操作时触发的自定义脚本功能，�
 - 在文件修改后自动运行 lint 或格式化
 - 执行特定命令后触发自定义脚本
 
-## 4. skills
+## 5. skills
 
 例子：https://raw.githubusercontent.com/wynemo/my-claude-skills/refs/heads/main/skills/nextjs-frontend/SKILL.md
 
@@ -234,7 +234,7 @@ Hooks 是在 Claude Code 执行特定操作时触发的自定义脚本功能，�
 
 ![](2025-12-25-16-44-07.png)
 
-## 5. plugins
+## 6. plugins
 
 Plugins 是扩展 Claude Code 功能的模块，可以包含 slash commands、agents、skills、hooks 和 MCP 服务器配置。
 
@@ -289,7 +289,7 @@ plugin-name/
 2. 安装插件：
 /plugin install commit-commands
 
-## 6. 粘贴图片
+## 7. 粘贴图片
 
 可以通过以下方式将图片添加到对话中：
 
@@ -297,7 +297,7 @@ plugin-name/
 - **粘贴图片** - 复制图片后使用 `ctrl+v` 粘贴（注意：不是 `cmd+v`）
 - **提供图片路径** - 例如："分析这张图片：/path/to/image.png"
 
-## 7. 与 vscode 集成
+## 8. 与 vscode 集成
 
 选中项目文件、文件若干行，ctrl/command + alt/options +  k，把上下文放到插件中去
 
@@ -308,7 +308,7 @@ plugin-name/
 ![](2025-12-25-17-22-57.png)
 
 
-## 8. vscode 插件
+## 9. vscode 插件
 
 Claude Code 提供了 VS Code、Cursor 等编辑器插件支持，可以方便地在编辑器中使用。
 
@@ -328,7 +328,7 @@ Claude Code 提供了 VS Code、Cursor 等编辑器插件支持，可以方便�
 
 
 
-## 9. MCP (Model Context Protocol)
+## 10. MCP (Model Context Protocol)
 
 MCP 是 Anthropic 开发的开放协议,用于在 Claude 和外部数据源、工具之间建立标准化连接。通过 MCP 服务器,Claude 可以访问文件系统、数据库、API 等各种资源。
 
