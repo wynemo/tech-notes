@@ -1,3 +1,22 @@
+# Claude Code 培训文档
+
+## 目录
+
+- [1. claude code 安装、基本使用](#1-claude-code-安装基本使用)
+  - [命令行工具安装方法](#命令行工具安装方法)
+  - [基本使用](#基本使用)
+- [2. CLAUDE.md 记忆系统](#2-claudemd-记忆系统)
+- [3. 自定义 slash commands](#3-自定义-slash-commands)
+- [4. hooks](#4-hooks)
+- [5. skills](#5-skills)
+- [6. plugins](#6-plugins)
+- [7. 粘贴图片](#7-粘贴图片)
+- [8. 与 vscode 集成](#8-与-vscode-集成)
+- [9. vscode 插件](#9-vscode-插件)
+- [10. MCP (Model Context Protocol)](#10-mcp-model-context-protocol)
+
+---
+
 ## 1. claude code 安装、基本使用
 
 ## 命令行工具安装方法
