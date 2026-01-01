@@ -43,7 +43,23 @@ vscode 说真的，git 这一块不怎么样
 
 ![Screenshot 2025-03-13 at 00.06.42.png](<Screenshot 2025-03-13 at 00.06.42.png>)
 
+### Git History
 
+Git History, Search and More (including git log)
+
+**查看 Git 历史**
+- 查看文件的完整提交历史
+- 查看仓库的提交历史
+- 支持 git log 的可视化展示
+
+**比较功能**
+- 比较不同版本的文件
+- 与工作区比较
+- 查看具体的代码变更
+
+只要用 options + H，就可以把文件历史呼出
+
+![](2026-01-01-09-19-55.png)
 
 ### vscodevim
  vim 插件 输入法切换
