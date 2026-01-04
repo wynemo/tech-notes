@@ -59,3 +59,29 @@ Snell 是 Surge 官方推出的代理协议，特点：
 开启增强模式并启用网络共享后，可代理 UTM 等虚拟机的流量。
 
 **注意**：如遇到网络问题（如企业微信下载文件失败），可尝试关闭增强模式排查。
+
+## Remote & Unattended
+
+Surge 支持远程控制和无人值守模式，可通过以下方式实现：
+
+### Remote Controller
+
+- **Allow**：勾选后允许 Surge Dashboard 从其他机器访问
+- **Port**：默认端口 6170
+- 需要设置密码用于身份验证
+
+### HTTP API
+
+- **Allow**：启用后可使用 HTTP API 控制 Surge
+- **Port**：默认端口 6166
+- **HTTPS**：启用 HTTPS 加密
+- **Allow access from other machines**：允许其他机器访问 API
+- 需要设置 API 密码
+
+启用 HTTP API 后，可通过编程方式控制 Surge，详见官方手册。
+
+### Web Dashboard
+
+- **Enable**：启用后可通过浏览器控制 Surge
+- 前提条件：必须先启用 HTTP API
+- Web Dashboard 与 HTTP API 共享同一端口
