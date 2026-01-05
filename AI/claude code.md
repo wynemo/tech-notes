@@ -14,21 +14,7 @@
 
 ## 分流规则
 
-```
-# claude
-DOMAIN-SUFFIX,servd-anthropic-website.b-cdn.net
-DOMAIN-SUFFIX,anthropic.com
-DOMAIN-SUFFIX,claude.com
-DOMAIN-SUFFIX,claude.ai
-DOMAIN-SUFFIX,claudeusercontent.com
-DOMAIN-SUFFIX,intercomcdn.com
-DOMAIN-SUFFIX,cdn.usefathom.com
-# stripe
-DOMAIN-SUFFIX,stripe.com
-DOMAIN-KEYWORD,stripe
-# cloudflare
-DOMAIN-SUFFIX,challenges.cloudflare.com
-```
+详见 [claude.list](claude.list)
 
 要注意的是需要关闭 QUIC，比如在 mihomo 里需要添加规则，要不然依然可以通过 QUIC 查询 dns 的时候知道你的真实 IP
 

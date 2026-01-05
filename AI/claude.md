@@ -24,7 +24,7 @@ claude sonnet 3.5
 
 3.7 有人说还退步不好用了
 
-surge rule set: 参考 [claude code.md 分流规则](claude%20code.md#分流规则)
+surge rule set: 参考 [claude.list](claude.list)
 
 OpenRouter新政:
 
