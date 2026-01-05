@@ -73,6 +73,26 @@ description: 分析 Excel 电子表格，生成数据透视表，创建图表—
 - 需要 Claude 自动判断使用时机 → Skills
 - 团队标准化复杂流程 → Skills
 
+## VSCode 插件中使用 Skills
+
+Claude Code 的 VSCode 插件已支持通过 slash commands 调用 skills。在聊天框中输入 `/skill-name` 即可快速调用对应的 skill。
+
+### 使用方式
+
+1. 在 VSCode 中打开 Claude Code 面板
+2. 在输入框中输入 `/` 会显示可用的 skills 列表
+3. 选择或输入完整的 skill 名称（如 `/git-commit`）
+4. 按回车执行
+
+### 查看可用 Skills
+
+在命令行工具中，使用 `/skills` 命令可以查看所有可用的 skills 列表：
+
+```bash
+/skills
+```
+
+
 ## 实用场景
 
 1. **安全审查自动化**：定义安全检查清单和流程
