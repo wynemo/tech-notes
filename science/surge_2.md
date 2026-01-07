@@ -39,6 +39,8 @@ Surge 支持作为 HTTP 代理和 SOCKS5 代理服务器，供局域网内其他
 
 此外，Surge 还支持配置 DHCP 服务，自动为设备分配网络配置。
 
+surge dashboard 中可以看到 remote clients 的网络活动，位于 local clients 之下
+
 ## QUIC 阻断
 
 Surge 默认阻断 QUIC 协议。
