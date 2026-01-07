@@ -98,3 +98,4 @@ Surge 支持远程控制和无人值守模式，可通过以下方式实现：
 - **Enable**：启用后可通过浏览器控制 Surge
 - 前提条件：必须先启用 HTTP API
 - Web Dashboard 与 HTTP API 共享同一端口
+- 注意用 https 访问
