@@ -9,7 +9,7 @@ Surge 提供两种日志查看方式：
 
 ## 搭配 Mihomo 和 Sub Store 使用
 
-Surge 原生支持的协议有限，如需使用 VLESS 等协议，可通过 Mihomo 实现。建议配合 Sub Store 管理订阅，操作更便捷。
+Surge 原生支持的协议有限，如需使用 vless + reality 等协议，可通过 Mihomo 代理。建议配合 Sub Store 管理订阅，操作更便捷。
 
 ## 代理模式
 
