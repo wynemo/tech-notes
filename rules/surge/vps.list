@@ -1,0 +1,8 @@
+DOMAIN-SUFFIX,chinadigitaltimes.net
+DOMAIN-SUFFIX,pincong.rocks
+DOMAIN-SUFFIX,epochtimes.com
+DOMAIN-SUFFIX,neodb.social
+DOMAIN-SUFFIX,linux.do
+DOMAIN-SUFFIX,bbc.com,force-remote-dns
+DOMAIN-SUFFIX,bbci.co.uk,force-remote-dns
+DOMAIN-SUFFIX,v2ex.com,force-remote-dns

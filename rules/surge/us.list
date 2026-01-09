@@ -1,0 +1,24 @@
+# openai
+# 这个仓库 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Surge/OpenAI/OpenAI.list
+
+
+
+# zed
+DOMAIN-SUFFIX,zed.dev
+
+# nvidia
+DOMAIN-SUFFIX,nvidia.com
+
+# twitter（不含小视频）
+DOMAIN-SUFFIX,x.com
+DOMAIN-SUFFIX,twitter.com
+DOMAIN-SUFFIX,pbs.twimg.com
+
+# github
+DOMAIN-SUFFIX,github.com
+DOMAIN-SUFFIX,github.io
+DOMAIN-SUFFIX,githubusercontent.com
+
+# cursor
+DOMAIN-SUFFIX,cursor.sh
+
