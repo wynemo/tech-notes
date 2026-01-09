@@ -1,1 +1,13 @@
-../../AI/claude.list
+# claude
+DOMAIN-SUFFIX,servd-anthropic-website.b-cdn.net
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN-SUFFIX,cdn.usefathom.com
+# stripe
+DOMAIN-SUFFIX,stripe.com
+DOMAIN-KEYWORD,stripe
+# cloudflare
+DOMAIN-SUFFIX,challenges.cloudflare.com
