@@ -80,3 +80,18 @@ static=OpenAI, vps, DIRECT, 香港, 台湾, 日本, 韩国, 新加坡, 美国, �
 - 确保 VPS 节点的 tag 名称与策略组中引用的名称一致
 - `ip-cidr` 规则中的 IP 必须是 VPS 的实际公网 IP
 - 中转节点需要能够正常访问你的 VPS
+
+## 自定义规则
+
+在 `[filter_local]` 中可以添加自定义分流规则，实现指定域名走代理链：
+
+```ini
+[filter_local]
+host-suffix, xxx.com, vps, via-interface=%TUN%
+```
+
+**规则格式说明**：
+- `host-suffix`：匹配域名后缀
+- `xxx.com`：要匹配的域名
+- `vps`：使用的策略（即落地 VPS 节点）
+- `via-interface=%TUN%`：通过 TUN 接口实现链式代理
