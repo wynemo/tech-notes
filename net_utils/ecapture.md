@@ -54,7 +54,12 @@ sudo ecapture gotls --elfpath=/path/to/binary
 ecapture gotls --elfpath=/proc/$(pgrep -f '/new-api' | head -1)/root/new-api --hex > /tmp/1.hex
 ```
 
-**注意**: Go 程序编译时不能使用 strip，需要保留符号表才能正常抓取。
+**注意**: Go 程序编译时不能使用 `-s -w` 标志，需要保留符号表才能正常抓取。
+
+- `-s`: 移除符号表（会导致 eCapture 无法定位 TLS 函数）
+- `-w`: 移除调试信息
+
+参考: [wynemo/new-api#1](https://github.com/wynemo/new-api/pull/1/changes)
 
 ## 高级功能
 
