@@ -1,5 +1,9 @@
 # 手机端生成 Sing-box 配置教程
 
+## youtube 视频教程
+
+https://www.youtube.com/watch?v=OEhebRFrzA4
+
 ## 背景
 
 经常有朋友问有了节点，订阅链接，怎么使用 sing-box
