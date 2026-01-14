@@ -53,3 +53,7 @@ https://singbox-to-uri.pages.dev/singbox_full_config
 - 目前 iOS App Store 的 Sing-box 版本为 1.11
 - 工具默认生成 1.11 版本配置
 - 也支持生成 1.12 版本配置
+
+## 致谢
+
+感谢 [xishang0128/sub-store-template](https://github.com/xishang0128/sub-store-template) 提供的模板。
