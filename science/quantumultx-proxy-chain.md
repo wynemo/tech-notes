@@ -28,11 +28,7 @@ resource_parser_url = https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/mas
 
 ```ini
 [server_local]
-# 示例：vmess 节点
-vmess=your_vps_ip:port, method=chacha20-poly1305, password=xxx, tag=vps
-
-# 示例：trojan 节点
-trojan=your_vps_ip:port, password=xxx, tag=vps
+shadowsocks=your_domain:5443,method=2022-blake3-aes-256-gcm,password=DgrOjcmCMEr97iLy2V99BUelOI2b08vApCrR+osYsJs=, fast-open=true, udp-relay=true, tag=vps-落地节点
 ```
 
 ### 3. 配置分流规则
@@ -67,12 +63,12 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Quant
 static=节点选择, 自动选择, 香港, 台湾, 日本, 韩国, 新加坡, 美国, PROXY, DIRECT, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png
 
 # OpenAI 专用策略组，选择 vps 即可走代理链
-static=OpenAI, vps, DIRECT, 香港, 台湾, 日本, 韩国, 新加坡, 美国, 节点选择, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bot.png
+static=OpenAI, vps-落地节点, DIRECT, 香港, 台湾, 日本, 韩国, 新加坡, 美国, 节点选择, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bot.png
 ```
 
 ## 使用方法
 
-1. 在 `OpenAI` 策略组中选择 `vps`
+1. 在 `OpenAI` 策略组中选择 `vps-落地节点`
 2. 流量路径：`设备 → 机场节点 → VPS → OpenAI`
 
 ## 注意事项
