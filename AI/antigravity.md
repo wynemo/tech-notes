@@ -1,5 +1,9 @@
 # Google Antigravity IDE 登录使用指南
 
+## 视频讲解：
+
+[![视频讲解](https://img.youtube.com/vi/gYIMPFIKePw/0.jpg)](https://www.youtube.com/watch?v=gYIMPFIKePw)
+
 Google 新推出的 IDE —— Antigravity，需要特定网络环境才能访问。以下是完整的配置步骤。
 
 ## 一、代理工具配置
