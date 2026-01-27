@@ -1,3 +1,12 @@
+---
+name: singbox-config
+description: "将 v2ray/clash 订阅或 URI 转换为 Sing-box 完整配置。"
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+---
+
 # 生成 Sing-box 配置
 
 将 v2ray/clash 订阅或 URI 转换为 Sing-box 完整配置。
