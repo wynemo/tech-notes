@@ -1,5 +1,9 @@
 # QuantumultX 链式代理配置指南
 
+## 视频讲解：
+
+[![视频讲解](https://img.youtube.com/vi/ggBtMM7hoy8/0.jpg)](https://www.youtube.com/watch?v=ggBtMM7hoy8)
+
 链式代理（Proxy Chain）允许流量经过多个代理节点转发，常用于：
 - 解锁特定服务（如 OpenAI）
 - 提高隐私性
