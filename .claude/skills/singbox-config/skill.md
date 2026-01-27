@@ -13,6 +13,27 @@
 - TUIC
 - WireGuard
 
+## 环境要求
+
+执行前需确认已安装 Node.js 或 Bun:
+
+```bash
+# 检测 Node.js
+node --version
+
+# 检测 Bun (可选，速度更快)
+bun --version
+```
+
+如未安装，可通过以下方式安装:
+
+| 运行时 | macOS | Windows |
+|--------|-------|---------|
+| Node.js | `brew install node` | `winget install OpenJS.NodeJS` |
+| Bun | `brew install oven-sh/bun/bun` | `powershell -c "irm bun.sh/install.ps1 \| iex"` |
+
+或直接从官网下载: [Node.js](https://nodejs.org/) / [Bun](https://bun.sh/)
+
 ## 执行方法
 
 脚本位于当前 skill 目录下，使用时需先 cd 到该目录:
