@@ -1,0 +1,3 @@
+[submodule "singbox-config-plugin"]
+	path = singbox-config-plugin
+	url = https://github.com/wynemo/singbox-config-plugin
