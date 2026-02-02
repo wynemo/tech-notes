@@ -11,6 +11,7 @@ https://youtu.be/50CZp5NarFA
 - 需要配置 SSH 免密登录（`ssh root@your.server.info` 可以直接登陆）
 - 服务器需要安装好 docker，以及能正常访问外网
 - 这个服务器可以在莱卡云这里购买，比如香港的 vps
+- **建议部署在海外服务器**，如果使用 Sing-box 等代理工具，且开启了 FakeIP 模式，需要配置不返回 IPv6 地址
 
 ### Telegram Bot
 - 使用 BotFather 创建机器人，获取 Token 和机器人 ID
