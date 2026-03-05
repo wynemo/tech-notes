@@ -331,3 +331,36 @@ description: 读取当前 git 分支中所有变更的文件
 deepseek、智谱等厂家都提供了 anthropic 的接口
 或者也可以使用 new api 转发 
 平替：Claude Code + GLM-4.6/Kimi-K2-Thinking/Minimax-M2/deepseek
+
+## Checkpoint（检查点）
+
+Checkpoint 是 Claude Code 的自动安全回滚机制，在会话中自动跟踪文件编辑和对话状态，允许你随时"倒带"到之前的任意时刻。
+
+### 核心机制
+
+- **自动追踪**：每次用户发送 prompt 时自动创建 checkpoint，记录代码状态
+- **跨会话持久化**：关闭再打开会话后仍然可以访问之前的 checkpoint
+- **自动清理**：30 天后自动清理（可配置）
+
+### 使用方式
+
+按 **Esc 两次** 或输入 `/rewind` 打开 checkpoint 菜单，选择任意历史节点后有以下操作：
+
+| 操作 | 说明 |
+|------|------|
+| Restore code and conversation | 同时回滚代码和对话 |
+| Restore conversation | 只回滚对话，保留当前代码 |
+| Restore code | 只回滚代码，保留对话 |
+| Summarize from here | 从该点之后压缩对话，释放上下文空间 |
+
+### 限制
+
+1. **Bash 命令的改动不追踪** — `rm`、`mv`、`cp` 等直接文件操作无法回滚
+2. **外部修改不追踪** — 只追踪 Claude Code 会话内的编辑
+3. **不能替代 Git** — 仅用于会话级别的快速恢复
+
+### 典型场景
+
+- 想尝试大胆的重构但怕搞坏 → 随时可以回滚
+- 调试了很多轮、对话太长 → 用 Summarize 压缩释放上下文
+- 想对比不同实现方案 → 回到某个节点重新走另一条路
