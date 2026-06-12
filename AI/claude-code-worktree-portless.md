@@ -124,6 +124,7 @@ claude -w               # 在当前 worktree 启动新实例
 
 ## 参考资料
 
+- [Portless 包裹任意服务（原理 + proxy.mjs 方案）](../programming/portless-wrap-services.md)
 - [portless GitHub](https://github.com/vercel-labs/portless)
 - [pnpm global virtual store 文档](https://pnpm.io/cli/enable-global-virtual-store)
 - [git worktree 官方文档](https://git-scm.com/docs/git-worktree)
